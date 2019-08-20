@@ -1,0 +1,7 @@
+!.gitkeep
+!**/.gitkeep
+data/*
+!data/mongo
+!data/mysql
+data/mongo/data/*
+data/mysql/data/*
