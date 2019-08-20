@@ -38,7 +38,7 @@ services:
     working_dir: /code
     container_name: phoenix
     networks:
-      - sinistro
+      - gradi
     ports:
       - 4000:4000
     volumes:
@@ -51,7 +51,7 @@ services:
     build:
       context: ./front
     working_dir: /var/www/app
-    container_name: sinistro-front
+    container_name: gradi-front
     command: bash -c 'yarn && yarn run serve'
     volumes:
       - ./:/var/www/app
