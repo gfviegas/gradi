@@ -1,8 +1,6 @@
 <template>
-  <div id="app">
-    <div id="title">
-      <ListMovies movies="[]"/>
-    </div>
+  <div id="main">
+    <ListMovies movies="[]"/>
   </div>
 </template>
 
@@ -18,5 +16,5 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "./styles/home.sass"
+  @import "./styles/main.sass"
 </style>
