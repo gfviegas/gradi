@@ -3,12 +3,29 @@
 body
     background: $base-color
 
+#logo
+    -webkit-animation: fadein 1s
+    -moz-animation: fadein 1s
+
+.hello
+    padding: $small-space
+
 #app
     background: #f0f0f5
     box-shadow: 3px 3px 10px #000
-    font-family: 'Avenir', Helvetica, Arial, sans-serif
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
     text-align: center
     color: $title-color
     margin: 7% 14% 14%
+
+@keyframes fadein
+    0%
+        width: 20%
+        height: 20%
+        opacity: 0
+    100%
+        width: 44%
+        height: 44%
+        opacity: 1
