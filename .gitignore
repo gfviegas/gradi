@@ -5,3 +5,6 @@ data/*
 !data/mysql
 data/mongo/data/*
 data/mysql/data/*
+front/node_modules
+node_modules
+yarn.lock

@@ -1,60 +1,60 @@
-version: '3'
+version: "3"
 
 networks:
-  gradi:
-    driver: bridge
+    gradi:
+        driver: bridge
 
 services:
-  mongo:
-    container_name: gradi-mongo
-    image: mongo:4.2
-    ports:
-      - "27017:27017"
-    networks:
-      - gradi
-    volumes:
-      - ./data/mongo/data:/data/db
-      - ./data/mongo/backups:/data/backups
-      - ./data/mongo/mongobackups:/data/mongobackups
+    mongo:
+        container_name: gradi-mongo
+        image: mongo:4.2
+        ports:
+            - "27017:27017"
+        networks:
+            - gradi
+        volumes:
+            - ./data/mongo/data:/data/db
+            - ./data/mongo/backups:/data/backups
+            - ./data/mongo/mongobackups:/data/mongobackups
 
-  mysql:
-    image: mysql:5.7
-    container_name: gradi-mysql
-    ports:
-      - "3306:3306"
-    networks:
-      - gradi
-    environment:
-      - MYSQL_ROOT_PASSWORD=gradi
-      - MYSQL_DATABASE=gradi
-      - MYSQL_USER=gradi
-      - MYSQL_PASSWORD=gradi
-    volumes:
-      - ./data/mysql:/var/lib/mysql
+    mysql:
+        image: mysql:5.7
+        container_name: gradi-mysql
+        ports:
+            - "3306:3306"
+        networks:
+            - gradi
+        environment:
+            - MYSQL_ROOT_PASSWORD=gradi
+            - MYSQL_DATABASE=gradi
+            - MYSQL_USER=gradi
+            - MYSQL_PASSWORD=gradi
+        volumes:
+            - ./data/mysql:/var/lib/mysql
 
-  api:
-    build:
-      context: ./api
-    working_dir: /code
-    container_name: phoenix
-    networks:
-      - gradi
-    ports:
-      - 4000:4000
-    volumes:
-      - ./api/:/code
-    depends_on:
-      - mongo
-      - mysql
+    api:
+        build:
+            context: ./api
+        working_dir: /code
+        container_name: phoenix
+        networks:
+            - gradi
+        ports:
+            - 4000:4000
+        volumes:
+            - ./api/:/code
+        depends_on:
+            - mongo
+            - mysql
 
-  front:
-    build:
-      context: ./front
-    working_dir: /var/www/app
-    container_name: gradi-front
-    command: bash -c 'yarn && yarn run serve'
-    volumes:
-      - ./:/var/www/app
-      - ./node_modules:/var/www/app/node_modules
-    ports:
-      - 80:8080
+    front:
+        build:
+            context: ./front
+        working_dir: /var/www/app/front
+        container_name: gradi-front
+        command: bash -c 'yarn && npm start'
+        volumes:
+            - ./:/var/www/app
+            - ./node_modules:/var/www/app/node_modules
+        ports:
+            - 80:8080
