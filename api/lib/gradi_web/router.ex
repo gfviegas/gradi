@@ -8,4 +8,9 @@ defmodule GradiWeb.Router do
   scope "/api", GradiWeb do
     pipe_through :api
   end
+
+  forward "/graphiql", Absinthe.Plug.GraphiQL,
+    schema: GradiWeb.Schema,
+    interface: :simple,
+    context: %{pubsub: GradiWeb.Endpoint}
 end

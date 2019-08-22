@@ -9,6 +9,7 @@ RUN mix local.hex --force
 RUN mix local.rebar --force
 RUN mix archive.install hex phx_new 1.4.8 --force
 
+RUN mix deps.get
 RUN mix do compile
 
 CMD ["mix", "phx.server"]
