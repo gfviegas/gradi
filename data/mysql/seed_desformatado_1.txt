@@ -1,0 +1,107 @@
+---MOVIE---
+imdb_id = 
+title = Matrix
+classification = 12
+description = A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.
+release_date = 31/03/1999
+vote_count = 1529756
+rating = 8.7
+poster_path = https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg
+revenue = 463517383.0
+
+---Actor---
+name = Keanu Reeves
+character = Neo
+protagonist = 1
+
+---Actor---
+name = Laurence Fishburne
+character = Morpheus
+protagonist = 0
+
+---Actor---
+name = Carrie-Anne Moss
+character = Trinity
+protagonist = 0
+
+---Actor---
+name = Hugo Weaving
+character = Agent Smith
+protagonist = 0
+
+---Actor---
+name = Joe Pantoliano
+character = Cypher
+protagonist = 0
+
+---Actor---
+name = Marcus Chong
+character = Tank
+protagonist = 0
+
+---Actor---
+name = Julian Arahanga
+character = Apoc
+protagonist = 0
+
+---Actor---
+name = Matt Doran
+character = Mouse
+protagonist = 0
+
+...
+
+---Genre---
+name = Action
+
+---Genre---
+name = Sci-fi
+
+...
+
+---Director---
+name = Lana Wachowski
+
+---Director---
+name = Lilly Wachowski
+
+...
+
+---Writer---
+name = Lana Wachowski
+
+---Writer---
+name = Lilly Wachowski
+
+...
+
+---ProductionCompany---
+name = Warner Bros.
+origin_country = United States
+logo_path = https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Warner_Bros_logo.svg/800px-Warner_Bros_logo.svg.png
+
+---ProductionCompany---
+name = Village Roadshow Pictures
+origin_country = United States
+logo_path = https://upload.wikimedia.org/wikipedia/en/c/c8/Village_roadshow_pictures_logo.jpg
+
+---ProductionCompany---
+name = Silver Pictures
+origin_country = United States
+logo_path = https://upload.wikimedia.org/wikipedia/en/3/37/Silver_pictures_2.jpg
+
+...
+
+---Language---
+language = en-us
+subtitle_only = 0
+
+---Language---
+language = pt-br
+subtitle_only = 0
+
+---Language---
+language = uk
+subtitle_only = 0
+
+...
