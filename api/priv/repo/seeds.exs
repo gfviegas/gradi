@@ -66,14 +66,14 @@ alias Gradi.Writers.Writer
 } |> Repo.insert!
 
 # Creating Characters...
-%Character{protagonist: true, movie_id: 1, actor_id: 1} |> Repo.insert!
-%Character{protagonist: false, movie_id: 1, actor_id: 2} |> Repo.insert!
-%Character{protagonist: false, movie_id: 1, actor_id: 3} |> Repo.insert!
-%Character{protagonist: false, movie_id: 1, actor_id: 4} |> Repo.insert!
-%Character{protagonist: false, movie_id: 1, actor_id: 5} |> Repo.insert!
-%Character{protagonist: false, movie_id: 1, actor_id: 6} |> Repo.insert!
-%Character{protagonist: false, movie_id: 1, actor_id: 7} |> Repo.insert!
-%Character{protagonist: false, movie_id: 1, actor_id: 8} |> Repo.insert!
+%Character{protagonist: true, character: "Neo", movie_id: 1, actor_id: 1} |> Repo.insert!
+%Character{protagonist: false, character: "Morpheus", movie_id: 1, actor_id: 2} |> Repo.insert!
+%Character{protagonist: false, character: "Trinity", movie_id: 1, actor_id: 3} |> Repo.insert!
+%Character{protagonist: false, character: "Agent Smith", movie_id: 1, actor_id: 4} |> Repo.insert!
+%Character{protagonist: false, character: "Cypher", movie_id: 1, actor_id: 5} |> Repo.insert!
+%Character{protagonist: false, character: "Tank", movie_id: 1, actor_id: 6} |> Repo.insert!
+%Character{protagonist: false, character: "Apoc", movie_id: 1, actor_id: 7} |> Repo.insert!
+%Character{protagonist: false, character: "Mouse", movie_id: 1, actor_id: 8} |> Repo.insert!
 
 # Creating M2M Associations
 Repo.insert_all("movies_genres", [%{movie_id: 1, genre_id: 1}, %{movie_id: 1, genre_id: 2}])
