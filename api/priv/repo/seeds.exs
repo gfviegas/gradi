@@ -224,11 +224,11 @@ Repo.insert_all("movies_genres", [%{movie_id: 4, genre_id: 1}, %{movie_id: 4, ge
 Repo.insert_all("movies_genres", [%{movie_id: 5, genre_id: 1}, %{movie_id: 5, genre_id: 2}, %{movie_id: 5, genre_id: 5}, %{movie_id: 5, genre_id: 6}])
 
 
-Repo.insert_all("movies_languages", [%{movie_id: 1, language_id: 1}, %{movie_id: 1, language_id: 2}])
-Repo.insert_all("movies_languages", [%{movie_id: 2, language_id: 1}, %{movie_id: 2, language_id: 2}, %{movie_id: 2, language_id: 3}, %{movie_id: 2, language_id: 4}, %{movie_id: 2, language_id: 5}, %{movie_id: 2, language_id: 6}])
-Repo.insert_all("movies_languages", [%{movie_id: 3, language_id: 1}, %{movie_id: 3, language_id: 2}])
-Repo.insert_all("movies_languages", [%{movie_id: 4, language_id: 1}, %{movie_id: 4, language_id: 2}, %{movie_id: 4, language_id: 3}])
-Repo.insert_all("movies_languages", [%{movie_id: 5, language_id: 1}, %{movie_id: 5, language_id: 2}, %{movie_id: 5, language_id: 3}])
+Repo.insert_all("movies_languages", [%{movie_id: 1, language_id: 1}])
+Repo.insert_all("movies_languages", [%{movie_id: 2, language_id: 1}, %{movie_id: 2, language_id: 5}, %{movie_id: 2, language_id: 6}])
+Repo.insert_all("movies_languages", [%{movie_id: 3, language_id: 1}, %{movie_id: 3, language_id: 4}])
+Repo.insert_all("movies_languages", [%{movie_id: 4, language_id: 1}])
+Repo.insert_all("movies_languages", [%{movie_id: 5, language_id: 1}])
 
 
 Repo.insert_all("movies_directors", [%{movie_id: 1, director_id: 1}, %{movie_id: 1, director_id: 2}])
