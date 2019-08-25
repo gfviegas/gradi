@@ -10,7 +10,7 @@ defmodule GradiWeb.Router do
   end
 
   forward "/graphiql", Absinthe.Plug.GraphiQL,
-    schema: GradiWeb.Schema,
+    schema: GradiGraphql.Schema,
     interface: :simple,
     context: %{pubsub: GradiWeb.Endpoint}
 end

@@ -2,18 +2,23 @@ defmodule Gradi.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
-
   use Application
+  import Supervisor.Spec
 
   def start(_type, _args) do
+    mongo_config = Application.get_env(:gradi, :mongo_config)
+
     # List all child processes to be supervised
     children = [
       # Start the Ecto repository
       Gradi.Repo,
       # Start the endpoint when the application starts
-      GradiWeb.Endpoint
+      GradiWeb.Endpoint,
       # Starts a worker by calling: Gradi.Worker.start_link(arg)
       # {Gradi.Worker, arg},
+
+      # Start the MongoDB Connection
+      # worker(Mongo, [mongo_config])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

@@ -43,7 +43,11 @@ defmodule Gradi.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:absinthe, "~> 1.4"},
       {:absinthe_plug, "~> 1.4"},
-      {:absinthe_ecto, "~> 0.1.3"}
+      {:absinthe_ecto, "~> 0.1.3"},
+      {:mongodb, ">= 0.0.0"},
+      {:poolboy, ">= 0.0.0"},
+      {:httpoison, "~> 1.5"},
+      {:poison, "~> 4.0"}
     ]
   end
 
