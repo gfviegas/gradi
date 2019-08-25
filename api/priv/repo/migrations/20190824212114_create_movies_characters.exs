@@ -3,7 +3,7 @@ defmodule Gradi.Repo.Migrations.CreateMoviesCharacters do
 
   def change do
     create table(:movies_characters, primary_key: false) do
-      add :character, :string
+      add :character, :varchar, size: 150
       add :protagonist, :boolean
       add :movie_id, references(:movies)
       add :actor_id, references(:actors)

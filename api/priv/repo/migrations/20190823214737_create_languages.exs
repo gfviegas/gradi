@@ -3,7 +3,7 @@ defmodule Gradi.Repo.Migrations.CreateLanguages do
 
   def change do
     create table(:languages) do
-      add :name, :string
+      add :name, :varchar, size: 20
 
       timestamps()
     end

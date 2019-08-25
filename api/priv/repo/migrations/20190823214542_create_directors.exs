@@ -3,7 +3,7 @@ defmodule Gradi.Repo.Migrations.CreateDirectors do
 
   def change do
     create table(:directors) do
-      add :name, :string
+      add :name, :varchar, size: 150
 
       timestamps()
     end

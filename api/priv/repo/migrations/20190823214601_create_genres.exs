@@ -3,7 +3,7 @@ defmodule Gradi.Repo.Migrations.CreateGenres do
 
   def change do
     create table(:genres) do
-      add :name, :string
+      add :name, :varchar, size: 50
 
       timestamps()
     end

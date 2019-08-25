@@ -3,8 +3,8 @@ defmodule Gradi.Repo.Migrations.CreateCompanies do
 
   def change do
     create table(:companies) do
-      add :name, :string
-      add :country, :string
+      add :name, :varchar, size: 150
+      add :country, :varchar, size: 150
       add :logo, :string
 
       timestamps()

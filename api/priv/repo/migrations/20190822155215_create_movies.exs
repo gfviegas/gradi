@@ -3,10 +3,10 @@ defmodule Gradi.Repo.Migrations.CreateMovies do
 
   def change do
     create table(:movies) do
-      add :imdb_id, :string
-      add :title, :string
+      add :imdb_id, :varchar, size: 10
+      add :title, :varchar, size: 125
       add :classification, :integer
-      add :description, :string
+      add :description, :text
       add :release_date, :date
       add :revenue, :float
       add :poster, :string

@@ -3,7 +3,7 @@ defmodule Gradi.Repo.Migrations.CreateWriters do
 
   def change do
     create table(:writers) do
-      add :name, :string
+      add :name, :varchar, size: 150
 
       timestamps()
     end
