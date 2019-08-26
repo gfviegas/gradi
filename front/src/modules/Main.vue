@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ListMovies from "./components/ListMovies.vue";
+import ListMovies from "../components/ListMovies.vue";
 import Vue from "vue";
 import Buefy from "buefy";
 
@@ -20,9 +20,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./styles/buefy.scss";
+@import "../styles/buefy.scss";
 </style>
 
 <style lang="sass">
-  @import "./styles/main.sass"
+  @import "../styles/main.sass"
 </style>
