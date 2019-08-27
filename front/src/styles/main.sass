@@ -1,6 +1,6 @@
 @import "./variables.sass"
 
-#main
+#content
     background: $light-grey
     box-shadow: 3px 3px 10px #000
     -webkit-font-smoothing: antialiased
@@ -9,11 +9,51 @@
     color: $title-color
     height: 670px
     margin: $small-space
+    padding-top: 1%
 
     h1
         margin: $small-space
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-    
+        font-size: 24px    
+
+.fa-ul
+    margin-left: 0 !important
+
+    li
+        list-style-type: none
+        list-style-position: inside
+
+        .icon
+            margin-right: 1%
+
+.small-padding
+    padding: $small-space
+
+.small-lateral
+    padding: 0 2% 0 2%
+
+.scrollable
+    overflow-y: auto
+    max-height: 500px
+
+.top .level
+    position: fixed
+
+#details
+    h2
+        color: $primary-color
+        font-size: 24px
+    h3
+        color: $secondary-color
+        font-size: 16px
+    h4
+        font-size: 12px
+    p
+        font-size: 14px
+
+    .protagonist
+        background: $primary-color
+        font-weight: bold
 
 .listMovies
     width: 100%
