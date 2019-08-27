@@ -20,7 +20,7 @@ defmodule Gradi.MixProject do
   def application do
     [
       mod: {Gradi.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :mongodb]
     ]
   end
 
@@ -45,7 +45,6 @@ defmodule Gradi.MixProject do
       {:absinthe_plug, "~> 1.4"},
       {:absinthe_ecto, "~> 0.1.3"},
       {:mongodb, ">= 0.0.0"},
-      {:poolboy, ">= 0.0.0"},
       {:httpoison, "~> 1.5"},
       {:poison, "~> 4.0"}
     ]
