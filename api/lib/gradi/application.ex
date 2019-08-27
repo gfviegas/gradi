@@ -18,7 +18,7 @@ defmodule Gradi.Application do
       # {Gradi.Worker, arg},
 
       # Start the MongoDB Connection
-      # worker(Mongo, [mongo_config])
+      worker(Mongo, [mongo_config])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

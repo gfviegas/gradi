@@ -13,7 +13,7 @@ config :gradi, :mongo_config,
   name: :mongo,
   database: "gradi",
   seeds: ["mongo"],
-  pool: DBConnection.Poolboy
+  pool_size: 10
 
 # For development, we disable any cache and enable
 # debugging and code reloading.

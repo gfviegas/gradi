@@ -56,7 +56,7 @@ services:
       context: ./front
     working_dir: /var/www/app/front
     container_name: gradi-front
-    command: bash -c 'yarn && npm start'
+    command: bash -c 'npm i && npm start'
     volumes:
       - ./:/var/www/app
       - ./node_modules:/var/www/app/node_modules
