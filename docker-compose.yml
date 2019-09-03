@@ -37,6 +37,7 @@ services:
       # - ./mysql//docker-entrypoint-initdb.d
 
   api:
+    restart: always
     build:
       context: ./api
     working_dir: /code
