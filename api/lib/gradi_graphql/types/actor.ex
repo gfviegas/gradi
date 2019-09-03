@@ -1,7 +1,7 @@
-defmodule GradiGraphql.Schema.Author do
+defmodule GradiGraphql.Schema.Actor do
   use Absinthe.Schema.Notation
 
-  object :author do
+  object :actor do
     field :id, :id
     field :name, non_null(:string)
     field :date_created, non_null(:datetime)

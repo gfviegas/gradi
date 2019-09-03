@@ -8,6 +8,11 @@ defmodule GradiGraphql.MoviesResolver do
   end
 
   def all_movies(_root, _args, _info) do
-    {:ok, Movies.list_movies()}
+     movies = Movies.list_movies()
+     movies['genre'] = 'Action'
+
+    {:ok, movies}
   end
 end
+
+/* http://localhost:4000/graphiql */
