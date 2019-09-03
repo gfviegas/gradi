@@ -5,8 +5,8 @@ defmodule Gradi.Movies.Character do
   schema "movies_characters" do
     field :character, :string
     field :protagonist, :boolean
-    belongs_to :movie, Gradi.Movies.Movie
-    belongs_to :actor, Gradi.Actors.Actor
+    belongs_to :movie, Gradi.Movies.Movie, foreign_key: :movie_id
+    belongs_to :actor, Gradi.Actors.Actor, foreign_key: :actor_id
   end
 
   @doc false

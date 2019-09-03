@@ -4,7 +4,7 @@ defmodule Gradi.Actors.Actor do
 
   schema "actors" do
     field :name, :string
-
+    has_many :characters, Gradi.Movies.Character
     timestamps()
   end
 

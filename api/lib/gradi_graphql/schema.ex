@@ -2,7 +2,7 @@ defmodule GradiGraphql.Schema do
   use Absinthe.Schema
 
   import_types(Absinthe.Type.Custom)
-  import_types(GradiGraphql.Schema.{Actor, Author, Movie, Company, MovieCharacter, Writer})
+  import_types(GradiGraphql.Schema.{Movie, Company, MovieCharacter, Property})
 
   query do
     field :all_movies, :movie |> list_of do

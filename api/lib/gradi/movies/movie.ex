@@ -13,7 +13,7 @@ defmodule Gradi.Movies.Movie do
 
     has_many :characters, Gradi.Movies.Character
     many_to_many :languages, Gradi.Languages.Language, join_through: "movies_languages"
-    many_to_many :comapnies, Gradi.Companies.Company, join_through: "movies_comapnies"
+    many_to_many :companies, Gradi.Companies.Company, join_through: "movies_companies"
     many_to_many :directors, Gradi.Directors.Director, join_through: "movies_directors"
     many_to_many :genres, Gradi.Genres.Genre, join_through: "movies_genres"
     many_to_many :writers, Gradi.Writers.Writer, join_through: "movies_writers"

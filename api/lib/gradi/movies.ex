@@ -18,7 +18,7 @@ defmodule Gradi.Movies do
 
   """
   def list_movies do
-    Repo.all(Movie)
+    Repo.all(from m in Movie, preload: [{:characters, :actor}, :languages, :directors, :genres, :writers, :companies])
   end
 
   @doc """

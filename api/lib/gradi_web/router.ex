@@ -5,9 +5,12 @@ defmodule GradiWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", GradiWeb do
-    pipe_through :api
-  end
+  # scope "/api", GradiWeb do
+  #   pipe_through :api
+  # end
+
+  forward "/api", Absinthe.Plug,
+    schema: GradiGraphql.Schema
 
   forward "/graphiql", Absinthe.Plug.GraphiQL,
     schema: GradiGraphql.Schema,

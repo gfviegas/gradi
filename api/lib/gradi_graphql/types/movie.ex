@@ -8,10 +8,11 @@ defmodule GradiGraphql.Schema.Movie do
     field :imdb_id, :id
     field :title, non_null(:string)
     field :description, :string
-    field :genres, list_of(:string)
-    field :languages, list_of(:string)
-    field :authors, list_of(:author)
-    field :writers, list_of(:writer)
+    field :genres, list_of(:property)
+    field :languages, list_of(:property)
+    field :authors, list_of(:property)
+    field :directors, list_of(:property)
+    field :writers, list_of(:property)
     field :characters, list_of(:movie_character)
     field :rating, :float, resolve: &MoviesResolver.resolve_rating/3
     field :date_released, non_null(:date)

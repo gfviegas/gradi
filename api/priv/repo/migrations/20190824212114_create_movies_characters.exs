@@ -2,7 +2,7 @@ defmodule Gradi.Repo.Migrations.CreateMoviesCharacters do
   use Ecto.Migration
 
   def change do
-    create table(:movies_characters, primary_key: false) do
+    create table(:movies_characters) do
       add :character, :varchar, size: 150
       add :protagonist, :boolean
       add :movie_id, references(:movies)
