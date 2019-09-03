@@ -1,5 +1,6 @@
 <template>
-  <div id="main">
+  <div id="content">
+    <h1>Lista dos Filmes mais tops</h1>
     <ListMovies/>
   </div>
 </template>
@@ -12,7 +13,7 @@ import Buefy from "buefy";
 Vue.use(Buefy);
 
 export default {
-  name: "main",
+  name: "principal",
   components: {
     ListMovies
   }

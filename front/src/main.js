@@ -13,11 +13,13 @@ new Vue({
   data: {
     currentRoute: window.location.pathname
   },
+
   computed: {
     ViewComponent() {
       return routes[this.currentRoute] || App;
     }
   },
+
   render(h) {
     return h(this.ViewComponent);
   }
