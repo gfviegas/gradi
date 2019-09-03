@@ -1,7 +1,7 @@
 <template>
   <div id="content">
-    <h1>Lista dos Filmes mais tops</h1>
-    <ListMovies/>
+    <h1>Suas séries e filmes favoritos</h1>
+    <ListMovies />
   </div>
 </template>
 
