@@ -3,11 +3,11 @@
     <nav class="level small-lateral">
       <div class="level-left">
         <b-field grouped group-multiline>
-          <b-select v-model="defaultSortDirection">
+          <b-select @input="changeOrder" v-model="defaultSortDirection">
             <option value="asc">Ordenação Ascendente</option>
             <option value="desc">Ordenação Decrescente</option>
           </b-select>
-          <b-select v-model="perPage" :disabled="!isPaginated">
+          <b-select v-model="perPage" @input="changeQnt" :disabled="!isPaginated">
             <option value="5">5 Filmes por página</option>
             <option value="10">10 Filmes por página</option>
             <option value="15">15 Filmes por página</option>
@@ -24,6 +24,8 @@
       </div>
     </nav>
     <b-table
+      @sort="sortWith"
+      @details-open="detailsOpen"
       class="scrollable"
       :data="data"
       :paginated="isPaginated"
@@ -54,7 +56,7 @@
         <article class="media">
           <figure class="media-left">
             <p class="image is-64x64">
-              <img :src="props.row.poster">
+              <img :src="props.row.poster" />
             </p>
           </figure>
           <div class="media-content">
@@ -69,6 +71,11 @@
                     v-if="props.row.revenue"
                     class="subtitle"
                   >Renda: R$ {{ props.row.revenue | formatPrice }}</h3>
+                  <h3
+                    v-if="props.row.runtime"
+                    class="subtitle"
+                  >Tempo de duração: {{ props.row.runtime }}</h3>
+                  <h3 v-if="props.row.seasons" class="subtitle">{{ props.row.seasons }} Temporadas</h3>
                 </div>
               </div>
               <h3>Descrição:</h3>
@@ -166,7 +173,7 @@
                 <div class="column is-2">
                   <figure class="media-left">
                     <p class="image is-64x64">
-                      <img :src="company.logo">
+                      <img :src="company.logo" />
                     </p>
                   </figure>
                 </div>
@@ -308,6 +315,18 @@ export default {
     }
   },
   methods: {
+    changeQnt(value) {
+      console.log(value);
+    },
+    changeOrder(value) {
+      console.log(value);
+    },
+    sortWith(column) {
+      console.log(column);
+    },
+    detailsOpen(data) {
+      console.log(data);
+    },
     toggle(row) {
       this.$refs.table.toggleDetails(row);
     }
