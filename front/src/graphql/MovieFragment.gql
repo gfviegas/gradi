@@ -1,0 +1,5 @@
+fragment movie on Movie {
+  title
+  imdbId
+  dateReleased
+}

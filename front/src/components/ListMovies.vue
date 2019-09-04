@@ -199,103 +199,107 @@
 </template>
 
 <script>
-const data = [
-  {
-    imdb_id: "sdfsfasdf",
-    title: "Star Wars II",
-    classifcation: 12,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.",
-    release_date: new Date(),
-    revenue: 12000000,
-    poster:
-      "https://images-na.ssl-images-amazon.com/images/I/61zAkpvYLqL._SY741_.jpg",
-    actors: [
-      {
-        name: "Mark Hemler",
-        character: "Anakin Skywalker",
-        protagonist: true
-      },
-      {
-        name: "Willian Sheakspeare",
-        character: "Padmee"
-      }
-    ],
-    languages: ["Inglês", "Português", "Mandarin"],
-    writers: ["George Lucas"],
-    directors: ["George Lucas"],
-    genres: ["Ficção Científica", "Romance", "Drama", "Ação"],
-    companies: [
-      {
-        name: "Lucas Arts Studios",
-        country: "EUA",
-        logo:
-          "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Lucasarts_logo.svg/1200px-Lucasarts_logo.svg.png"
-      }
-    ]
-  },
-  {
-    actors: [
-      {
-        character: "Sam Winchester",
-        name: "Jared Padalecki",
-        protagonist: true
-      },
-      {
-        character: "Dean Winchester",
-        name: "Jensen Ackles",
-        protagonist: true
-      },
-      {
-        character: "Castiel",
-        name: "Misha Collins"
-      },
-      {
-        character: "Crowley",
-        name: "Mark Sheppard"
-      },
-      {
-        character: "Bobby Singer",
-        name: "Jim Beaver"
-      },
-      {
-        character: "Mary Winchester",
-        name: "Samantha Smith"
-      },
-      {
-        character: "Lucifer",
-        name: "Mark Pellegrino"
-      },
-      {
-        character: "Rowena MacLeod",
-        name: "Ruth Connell"
-      },
-      {
-        character: "Jack",
-        name: "Alexander Calvert"
-      }
-    ],
-    classification: "PG",
-    countries: ["USA"],
-    description:
-      "Two brothers follow their father's footsteps as hunters, fighting evil supernatural beings of many kinds, including monsters, demons, and gods that roam the earth.",
-    genres: ["Drama", "Fantasy", "Horror", "Mystery", "Thriller"],
-    imdb_id: "tt0460681",
-    languages: ["English"],
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BMjZmYWYwNWMtNGVjNy00NjA4LTgwODQtMThjODNlNjA4ZDdlXkEyXkFqcGdeQXVyNjg3MDMxNzU@._V1_SX300.jpg",
-    release_date: "2005-09-13",
-    runtime: "44 min",
-    seasons: 15,
-    title: "Supernatural",
-    writers: ["Eric Kripke"]
-  }
-];
+import { createProvider } from "../vue-apollo";
+import Movies from "../graphql/Movies.gql";
+import gql from "graphql-tag";
+
+// const data = [
+//   {
+//     imdb_id: "sdfsfasdf",
+//     title: "Star Wars II",
+//     classifcation: 12,
+//     description:
+//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.",
+//     release_date: new Date(),
+//     revenue: 12000000,
+//     poster:
+//       "https://images-na.ssl-images-amazon.com/images/I/61zAkpvYLqL._SY741_.jpg",
+//     actors: [
+//       {
+//         name: "Mark Hemler",
+//         character: "Anakin Skywalker",
+//         protagonist: true
+//       },
+//       {
+//         name: "Willian Sheakspeare",
+//         character: "Padmee"
+//       }
+//     ],
+//     languages: ["Inglês", "Português", "Mandarin"],
+//     writers: ["George Lucas"],
+//     directors: ["George Lucas"],
+//     genres: ["Ficção Científica", "Romance", "Drama", "Ação"],
+//     companies: [
+//       {
+//         name: "Lucas Arts Studios",
+//         country: "EUA",
+//         logo:
+//           "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Lucasarts_logo.svg/1200px-Lucasarts_logo.svg.png"
+//       }
+//     ]
+//   },
+//   {
+//     actors: [
+//       {
+//         character: "Sam Winchester",
+//         name: "Jared Padalecki",
+//         protagonist: true
+//       },
+//       {
+//         character: "Dean Winchester",
+//         name: "Jensen Ackles",
+//         protagonist: true
+//       },
+//       {
+//         character: "Castiel",
+//         name: "Misha Collins"
+//       },
+//       {
+//         character: "Crowley",
+//         name: "Mark Sheppard"
+//       },
+//       {
+//         character: "Bobby Singer",
+//         name: "Jim Beaver"
+//       },
+//       {
+//         character: "Mary Winchester",
+//         name: "Samantha Smith"
+//       },
+//       {
+//         character: "Lucifer",
+//         name: "Mark Pellegrino"
+//       },
+//       {
+//         character: "Rowena MacLeod",
+//         name: "Ruth Connell"
+//       },
+//       {
+//         character: "Jack",
+//         name: "Alexander Calvert"
+//       }
+//     ],
+//     classification: "PG",
+//     countries: ["USA"],
+//     description:
+//       "Two brothers follow their father's footsteps as hunters, fighting evil supernatural beings of many kinds, including monsters, demons, and gods that roam the earth.",
+//     genres: ["Drama", "Fantasy", "Horror", "Mystery", "Thriller"],
+//     imdb_id: "tt0460681",
+//     languages: ["English"],
+//     poster:
+//       "https://m.media-amazon.com/images/M/MV5BMjZmYWYwNWMtNGVjNy00NjA4LTgwODQtMThjODNlNjA4ZDdlXkEyXkFqcGdeQXVyNjg3MDMxNzU@._V1_SX300.jpg",
+//     release_date: "2005-09-13",
+//     runtime: "44 min",
+//     seasons: 15,
+//     title: "Supernatural",
+//     writers: ["Eric Kripke"]
+//   }
+// ];
 
 export default {
   data() {
     return {
-      data,
+      data: [],
       activeTab: 0,
       defaultOpenedDetails: [1],
       isPaginated: true,
@@ -304,6 +308,17 @@ export default {
       currentPage: 1,
       perPage: 5
     };
+  },
+  apollo: {
+    data: gql`
+      {
+        allMovies {
+          title
+          imdbId
+          dateReleased
+        }
+      }
+    `
   },
   filters: {
     formatDate(date) {

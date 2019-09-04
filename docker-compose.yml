@@ -24,7 +24,7 @@ services:
     image: mysql:5.7
     container_name: gradi-mysql
     ports:
-      - "3306:3306"
+      - "13306:3306"
     networks:
       - gradi
     environment:
