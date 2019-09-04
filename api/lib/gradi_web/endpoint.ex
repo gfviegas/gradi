@@ -40,5 +40,6 @@ defmodule GradiWeb.Endpoint do
     key: "_gradi_key",
     signing_salt: "e2qszWh2"
 
+  plug Corsica, origins: "http://localhost", allow_headers: ["authorization", "content-type"]
   plug GradiWeb.Router
 end
