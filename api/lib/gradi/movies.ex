@@ -21,6 +21,20 @@ defmodule Gradi.Movies do
     Repo.all(from m in Movie, preload: [{:characters, :actor}, :languages, :directors, :genres, :writers, :companies])
   end
 
+  def list_movies(%{limit: limit, page: page}) do
+    query = from m in Movie,
+        limit: ^limit,
+        offset: ^((page-1) * limit),
+        preload: [{:characters, :actor}, :languages, :directors, :genres, :writers, :companies]
+
+    Repo.all query
+  end
+
+  def count_movies do
+    Repo.aggregate(Movie, :count, :id)
+  end
+
+
   @doc """
   Gets a single movie.
 
