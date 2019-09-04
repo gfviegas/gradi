@@ -1,7 +1,7 @@
 defmodule GradiGraphql.Schema.Movie do
   use Absinthe.Schema.Notation
   alias GradiGraphql.Schema
-  alias GradiGraphql.MoviesResolver
+  alias GradiGraphql.RatingResolver
 
   object :movie do
     field :id, :id
@@ -15,7 +15,7 @@ defmodule GradiGraphql.Schema.Movie do
     field :directors, list_of(:property)
     field :writers, list_of(:property)
     field :characters, list_of(:movie_character)
-    field :rating, :float, resolve: &MoviesResolver.resolve_rating/3
+    field :rating, :float, resolve: &RatingResolver.resolve_rating/3
     field :date_released, non_null(:date)
     field :date_created, non_null(:naive_datetime)
     field :date_modified, non_null(:naive_datetime)
