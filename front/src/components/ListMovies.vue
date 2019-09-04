@@ -1,28 +1,39 @@
 <template>
   <section class="small-lateral">
-    <nav class="level small-lateral">
-      <div class="level-left">
-        <b-field grouped group-multiline>
-          <b-select @input="changeOrder" v-model="defaultSortDirection">
-            <option value="asc">Ordenação Ascendente</option>
-            <option value="desc">Ordenação Decrescente</option>
-          </b-select>
-          <b-select v-model="perPage" @input="changeQnt" :disabled="!isPaginated">
-            <option value="5">5 Filmes por página</option>
-            <option value="10">10 Filmes por página</option>
-            <option value="15">15 Filmes por página</option>
-          </b-select>
-          <div class="control is-flex">
-            <b-switch v-model="isPaginated">Ativar Paginação</b-switch>
+    <div class="small-updown">
+      <b-collapse class="card" aria-id="contentIdForA11y3">
+          <div
+              slot="trigger" 
+              slot-scope="props"
+              class="card-header"
+              role="button"
+              aria-controls="contentIdForA11y3">
+              <p class="card-header-title">
+                  Filtros
+              </p>
+              <a class="card-header-icon">
+                  <b-icon
+                      :icon="props.open ? 'menu-down' : 'menu-up'">
+                  </b-icon>
+              </a>
           </div>
-          <b-select v-model="paginationPosition" :disabled="!isPaginated">
-            <option value="bottom">Paginação em baixo</option>
-            <option value="top">Paginação em cima</option>
-            <option value="both">Ambas</option>
-          </b-select>
-        </b-field>
-      </div>
-    </nav>
+          <div class="card-content">
+              <div class="content">
+                <b-field grouped group-multiline>
+                  <b-select v-model="perPage" @input="changeQnt" :disabled="!isPaginated">
+                    <option value="5">5 Filmes por página</option>
+                    <option value="10">10 Filmes por página</option>
+                    <option value="15">15 Filmes por página</option>
+                  </b-select>
+                </b-field>
+              </div>
+          </div>
+          <footer class="card-footer">
+              <a class="card-footer-item">Buscar</a>
+              <a class="card-footer-item">Limpar</a>
+          </footer>
+      </b-collapse>
+    </div>
     <b-table
       @sort="sortWith"
       @details-open="detailsOpen"
@@ -209,7 +220,7 @@ export default {
       activeTab: 0,
       defaultOpenedDetails: [1],
       isPaginated: true,
-      paginationPosition: "top",
+      paginationPosition: "bottom",
       defaultSortDirection: "asc",
       currentPage: 1,
       perPage: 5

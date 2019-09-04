@@ -1,9 +1,11 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <a class="home-button" href="/principal">
+    <a class="home-button" href="/filmes">
       <span>Quero encontrar meu filme</span>
-      <img class="icon-button" alt="Logo" src="../assets/icon-button.png">
+    </a>
+    <a class="home-button" href="/filmes">
+      <span>Quero encontrar minha série</span>
     </a>
   </div>
 </template>
