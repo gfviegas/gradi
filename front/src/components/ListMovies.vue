@@ -199,6 +199,7 @@
 </template>
 
 <script>
+import { createProvider } from "../vue-apollo";
 import Movies from "../graphql/Movies.gql";
 
 export default {

@@ -24,6 +24,7 @@ new Vue({
   data: {
     currentRoute: window.location.pathname
   },
+
   apolloProvider,
   computed: {
     ViewComponent() {
