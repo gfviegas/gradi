@@ -49,7 +49,8 @@ defmodule Gradi.Movies do
       ** (Ecto.NoResultsError)
 
   """
-  def get_movie!(id), do: Repo.get!(Movie, id)
+  # def get_movie!(id), do: Repo.get!(Movie, id)
+  def get_movie!(id), do: Repo.get!(Movie, id) |> Repo.preload([{:characters, :actor}, :languages, :directors, :genres, :writers, :companies])
 
   @doc """
   Creates a movie.

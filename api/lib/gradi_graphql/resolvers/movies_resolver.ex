@@ -29,4 +29,8 @@ defmodule GradiGraphql.MoviesResolver do
       total_count: Movies.count_movies()
     }}
   end
+
+  def get_movie(_r, %{id: id}, _i) do
+    {:ok, Movies.get_movie!(id)}
+  end
 end

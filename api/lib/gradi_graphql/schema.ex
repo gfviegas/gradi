@@ -1,5 +1,7 @@
 defmodule GradiGraphql.Schema do
   use Absinthe.Schema
+  alias GradiGraphql.MoviesResolver
+  alias GradiGraphql.SeriesResolver
 
   import_types(Absinthe.Type.Custom)
   import_types(GradiGraphql.Schema.{Movie, Company, MovieCharacter, Property, Series, SeriesActor, SeriesSpinoff})
@@ -14,15 +16,20 @@ defmodule GradiGraphql.Schema do
     field :movies_list, :movies_list do
       arg :page, :integer
       arg :limit, :integer
-      resolve &GradiGraphql.MoviesResolver.list_movies/3
+      resolve &MoviesResolver.list_movies/3
     end
 
     field :all_movies, :movie |> list_of do
-      resolve(&GradiGraphql.MoviesResolver.all_movies/3)
+      resolve(&MoviesResolver.all_movies/3)
     end
 
     field :all_series, :series |> list_of do
-      resolve(&GradiGraphql.SeriesResolver.all_series/3)
+      resolve(&SeriesResolver.all_series/3)
+    end
+
+    field :movie, :movie do
+      arg :id, :id
+      resolve &MoviesResolver.get_movie/3
     end
   end
 end
