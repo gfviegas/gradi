@@ -8,6 +8,7 @@ defmodule GradiGraphql.Schema.Movie do
     field :imdb_id, :id
     field :title, non_null(:string)
     field :description, :string
+    field :revenue, :float
     field :genres, list_of(:property)
     field :languages, list_of(:property)
     field :authors, list_of(:property)
