@@ -31,5 +31,10 @@ defmodule GradiGraphql.Schema do
       arg :id, :id
       resolve &MoviesResolver.get_movie/3
     end
+
+    field :movie, :movie do
+      arg :title, :string
+      resolve &MoviesResolver.list_movies/3
+    end
   end
 end

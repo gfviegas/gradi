@@ -33,4 +33,9 @@ defmodule GradiGraphql.MoviesResolver do
   def get_movie(_r, %{id: id}, _i) do
     {:ok, Movies.get_movie!(id)}
   end
+
+  def get_movie(_r, %{title: title}, _i) do
+    {:ok, Movies.list_movies(title)}
+  end
+
 end

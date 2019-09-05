@@ -21,11 +21,21 @@ defmodule Gradi.Movies do
     Repo.all(from m in Movie, preload: [{:characters, :actor}, :languages, :directors, :genres, :writers, :companies])
   end
 
-  def list_movies(%{limit: limit, page: page}) do
-    query = from m in Movie,
-        limit: ^limit,
-        offset: ^((page-1) * limit),
-        preload: [{:characters, :actor}, :languages, :directors, :genres, :writers, :companies]
+  def list_movies(filter = %{}) do
+    query = from m in Movie, preload: [{:characters, :actor}, :languages, :directors, :genres, :writers, :companies]
+
+    case filter do
+      %{limit: limit, page: page} ->
+        query = from query,
+          limit: ^limit,
+          offset: ^((page-1) * limit)
+    end
+
+    case filter do
+      %{title: title} ->
+        query = from query,
+          where: ilike(m.title, ^"%#{title}%")
+    end
 
     Repo.all query
   end
