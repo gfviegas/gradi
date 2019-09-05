@@ -4,7 +4,7 @@
     <a class="home-button" href="/filmes">
       <span>Quero encontrar meu filme</span>
     </a>
-    <a class="home-button" href="/filmes">
+    <a class="home-button" href="/series">
       <span>Quero encontrar minha série</span>
     </a>
   </div>

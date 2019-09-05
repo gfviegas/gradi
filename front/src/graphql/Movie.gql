@@ -1,0 +1,6 @@
+query movie($id: Int) {
+  movie: movie(id: $id) {
+      title
+      dateReleased
+  }
+}

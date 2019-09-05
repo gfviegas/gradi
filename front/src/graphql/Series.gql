@@ -1,0 +1,10 @@
+query series($limit: Int, $page: Int) {
+  allSeries: allSeries(limit: $limit, page: $page) {
+    totalCount,
+    movies {
+        title
+        imdbId
+        dateReleased
+    }    
+  }
+}

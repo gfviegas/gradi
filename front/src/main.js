@@ -1,6 +1,7 @@
 import Vue from "vue";
 import App from "./modules/App.vue";
 import Movies from "./modules/Movies.vue";
+import Series from "./modules/Series.vue";
 import VueApollo from "vue-apollo";
 import ApolloClient from "apollo-boost";
 
@@ -17,7 +18,8 @@ const apolloProvider = new VueApollo({
 
 const routes = {
   "/": App,
-  "/filmes": Movies
+  "/filmes": Movies,
+  "/series": Series
 };
 
 new Vue({

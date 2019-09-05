@@ -21,10 +21,10 @@
               <div class="content">
                 <b-field grouped group-multiline>
                   <b-select v-model="perPage" :disabled="!isPaginated">
-                    <option value="2">2 Filmes por página</option>
-                    <option value="5">5 Filmes por página</option>
-                    <option value="10">10 Filmes por página</option>
-                    <option value="15">15 Filmes por página</option>
+                    <option value="2">2 Séries por página</option>
+                    <option value="5">5 Séries por página</option>
+                    <option value="10">10 Séries por página</option>
+                    <option value="15">15 Séries por página</option>
                   </b-select>
                 </b-field>
               </div>
@@ -39,18 +39,18 @@
       @sort="sortWith"
       @details-open="detailsOpen"
       class="scrollable"
-      :data="moviesList.movies"
+      :data="seriesList.series"
       :paginated="isPaginated"
       :current-page.sync="currentPage"
       :pagination-position="paginationPosition"
       :default-sort-direction="defaultSortDirection"
       :narrowed="true"
-      :total="moviesList.totalCount"
+      :total="seriesList.totalCount"
       :per-page="perPage"
       :backend-pagination="true"
       :backend-sorting="true"
       detailed
-      detail-key="id"
+      detail-key="imdbId"
       default-sort="title"
       aria-next-label="Next page"
       aria-previous-label="Previous page"
@@ -58,9 +58,7 @@
       aria-current-label="Current page"
     >
       <template slot-scope="props">
-        <b-table-column field="Id" label="ID" width="40" sortable>{{ props.row.id }}</b-table-column>
-
-        <b-table-column field="imdbId" label="imdbId" width="40" sortable>{{ props.row.imdbId }}</b-table-column>
+        <b-table-column field="imdbId" label="ID" width="40" sortable>{{ props.row.imdbId }}</b-table-column>
 
         <b-table-column field="title" label="Título" sortable>{{ props.row.title }}</b-table-column>
 
@@ -69,39 +67,39 @@
         </b-table-column>
       </template>
 
-      <template slot="detail">
+      <template slot="detail" slot-scope="props">
         <article class="media">
           <figure class="media-left">
             <p class="image is-64x64">
-              <img :src="movie.poster" />
+              <img :src="props.row.poster" />
             </p>
           </figure>
           <div class="media-content">
             <div id="details" class="content">
               <div class="columns">
                 <div class="column is-8">
-                  <h2 class="title">{{ movie.title }}</h2>
-                  <h3 class="subtitle">Data de Lançamento: {{ movie.dateReleased | formatDate }}</h3>
+                  <h2 class="title">{{ props.row.title }}</h2>
+                  <h3 class="subtitle">Data de Lançamento: {{ props.row.dateReleased | formatDate }}</h3>
                 </div>
                 <div class="column is-4">
                   <h3
-                    v-if="movie.revenue"
+                    v-if="props.row.revenue"
                     class="subtitle"
-                  >Renda: R$ {{ movie.revenue | formatPrice }}</h3>
+                  >Renda: R$ {{ props.row.revenue | formatPrice }}</h3>
                   <h3
-                    v-if="movie.runtime"
+                    v-if="props.row.runtime"
                     class="subtitle"
-                  >Tempo de duração: {{ movie.runtime }}</h3>
-                  <h3 v-if="movie.seasons" class="subtitle">{{ movie.seasons }} Temporadas</h3>
+                  >Tempo de duração: {{ props.row.runtime }}</h3>
+                  <h3 v-if="props.row.seasons" class="subtitle">{{ props.row.seasons }} Temporadas</h3>
                 </div>
               </div>
               <h3>Descrição:</h3>
-              <p>{{ movie.description }}</p>
+              <p>{{ props.row.description }}</p>
               <div class="columns">
                 <div class="column is-8">
                   <h3>Atores:</h3>
                   <ul class="fa-ul">
-                    <li v-for="actor of movie.actors" v-bind:key="actor.name">
+                    <li v-for="actor of props.row.actors" v-bind:key="actor.name">
                       <b-icon icon="account" size="is-small"></b-icon>
                       <strong>{{actor.name}}</strong> Estrelando
                       <strong>{{actor.character}}</strong> -
@@ -113,12 +111,12 @@
                 <div class="column is-4">
                   <h3>Línguas:</h3>
                   <ul class="fa-ul">
-                    <li v-for="language of movie.languages" v-bind:key="language">
+                    <li v-for="language of props.row.languages" v-bind:key="language">
                       <b-icon pack="fas" icon="globe" size="is-small"></b-icon>
                       {{language}}
                     </li>
                   </ul>
-                  <section v-if="!movie.languages">
+                  <section v-if="!props.row.languages">
                     <div class="content has-text-grey has-text-centered">
                       <p>
                         <b-icon pack="fas" icon="sad-tear" size="is-large"></b-icon>
@@ -132,12 +130,12 @@
                 <div class="column is-4">
                   <h3>Escritores:</h3>
                   <ul class="fa-ul">
-                    <li v-for="writer of movie.writers" v-bind:key="writer">
+                    <li v-for="writer of props.row.writers" v-bind:key="writer">
                       <b-icon pack="fas" icon="user-edit" size="is-small"></b-icon>
                       {{writer}}
                     </li>
                   </ul>
-                  <section v-if="!movie.writers">
+                  <section v-if="!props.row.writers">
                     <div class="content has-text-grey has-text-centered">
                       <p>
                         <b-icon pack="fas" icon="sad-tear" size="is-large"></b-icon>
@@ -149,12 +147,12 @@
                 <div class="column is-4">
                   <h3>Diretores:</h3>
                   <ul class="fa-ul">
-                    <li v-for="director of movie.directors" v-bind:key="director">
+                    <li v-for="director of props.row.directors" v-bind:key="director">
                       <b-icon pack="fas" icon="user-tie" size="is-small"></b-icon>
                       {{director}}
                     </li>
                   </ul>
-                  <section v-if="!movie.directors">
+                  <section v-if="!props.row.directors">
                     <div class="content has-text-grey has-text-centered">
                       <p>
                         <b-icon pack="fas" icon="sad-tear" size="is-large"></b-icon>
@@ -166,12 +164,12 @@
                 <div class="column is-4">
                   <h3>Gêneros:</h3>
                   <ul class="fa-ul">
-                    <li v-for="genre of movie.genres" v-bind:key="genre">
+                    <li v-for="genre of props.row.genres" v-bind:key="genre">
                       <b-icon pack="fas" icon="genderless" size="is-small"></b-icon>
                       {{genre}}
                     </li>
                   </ul>
-                  <section v-if="!movie.genres">
+                  <section v-if="!props.row.genres">
                     <div class="content has-text-grey has-text-centered">
                       <p>
                         <b-icon pack="fas" icon="sad-tear" size="is-large"></b-icon>
@@ -186,7 +184,7 @@
                   <h3 class="subtitle">Empresas Produtoras:</h3>
                 </div>
               </div>
-              <div class="columns" v-for="company of movie.companies" v-bind:key="company.name">
+              <div class="columns" v-for="company of props.row.companies" v-bind:key="company.name">
                 <div class="column is-2">
                   <figure class="media-left">
                     <p class="image is-64x64">
@@ -199,7 +197,7 @@
                   <h4>Origem: {{company.country}}</h4>
                 </div>
               </div>
-              <section v-if="!movie.companies">
+              <section v-if="!props.row.companies">
                 <div class="content has-text-grey has-text-centered">
                   <p>
                     <b-icon pack="fas" icon="sad-tear" size="is-large"></b-icon>
@@ -217,15 +215,12 @@
 
 <script>
 import { createProvider } from "../vue-apollo";
-import Movies from "../graphql/Movies.gql";
-import Movie from "../graphql/Movie.gql";
+import Series from "../graphql/Series.gql";
 
 export default {
   data() {
     return {
-      id: 1,
-      movie: {},
-      moviesList: [],
+      seriesList: [],
       activeTab: 0,
       defaultOpenedDetails: [1],
       isPaginated: true,
@@ -236,20 +231,12 @@ export default {
     };
   },
   apollo: {
-    moviesList: {
-      query: Movies,
+    seriesList: {
+      query: Series,
       variables() {
         return {
           limit: parseInt(this.perPage),
           page: this.currentPage
-        }
-      }
-    },
-    movie: {
-      query: Movie,
-      variables() {
-        return {
-            id: this.id
         }
       }
     }
@@ -271,7 +258,7 @@ export default {
       console.log(column);
     },
     detailsOpen(data) {
-      this.id = data.id;
+      console.log(data);
     },
     toggle(row) {
       this.$refs.table.toggleDetails(row);
