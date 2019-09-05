@@ -16,6 +16,7 @@ defmodule GradiGraphql.Schema.Movie do
     field :authors, list_of(:property)
     field :directors, list_of(:property)
     field :writers, list_of(:property)
+    field :companies, list_of(:company)
     field :characters, list_of(:movie_character)
     field :rating, :float, resolve: &RatingResolver.resolve_rating/3
     field :date_released, non_null(:date), resolve: &MoviesResolver.resolve_date_released/3
