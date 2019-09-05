@@ -59,6 +59,17 @@ alias Gradi.Writers.Writer
 %Actor{id: 32, name: "Frank Oz"} |> Repo.insert!
 %Actor{id: 33, name: "Jeremy Bulloch"} |> Repo.insert!
 
+%Actor{id: 34, name: "Ian McDiarmid"} |> Repo.insert!
+
+%Actor{id: 35, name: "Will Smith"} |> Repo.insert!
+%Actor{id: 36, name: "Alice Braga"} |> Repo.insert!
+%Actor{id: 37, name: "Charlie Tahan"} |> Repo.insert!
+%Actor{id: 38, name: "Salli Richardson-Whitfield"} |> Repo.insert!
+%Actor{id: 39, name: "Willow Smith"} |> Repo.insert!
+%Actor{id: 40, name: "Darrel Foster"} |> Repo.insert!
+%Actor{id: 41, name: "April Grace"} |> Repo.insert!
+
+
 
 
 # Creating Genres...
@@ -68,6 +79,7 @@ alias Gradi.Writers.Writer
 %Genre{id: 4, name: "Romance"} |> Repo.insert!
 %Genre{id: 5, name: "Adventure"} |> Repo.insert!
 %Genre{id: 6, name: "Fantasy"} |> Repo.insert!
+%Genre{id: 7, name: "Thriller"} |> Repo.insert!
 
 # Creating Languages...
 %Language{id: 1, name: "English"} |> Repo.insert!
@@ -83,6 +95,8 @@ alias Gradi.Writers.Writer
 %Director{id: 3, name: "James Cameron"} |> Repo.insert!
 %Director{id: 4, name: "George Lucas"} |> Repo.insert!
 %Director{id: 5, name: "Irvin Kershner"} |> Repo.insert!
+%Director{id: 6, name: "Richard Marquand"} |> Repo.insert!
+%Director{id: 7, name: "Francis Lawrence"} |> Repo.insert!
 
 # Creating Writers...
 %Writer{id: 1, name: "Lana Wachowski"} |> Repo.insert!
@@ -91,6 +105,9 @@ alias Gradi.Writers.Writer
 %Writer{id: 4, name: "George Lucas"} |> Repo.insert!
 %Writer{id: 5, name: "Leigh Brackett"} |> Repo.insert!
 %Writer{id: 6, name: "Lawrence Kasdan"} |> Repo.insert!
+%Writer{id: 7, name: "Mark Protosevich"} |> Repo.insert!
+%Writer{id: 8, name: "Akiva Goldsman"} |> Repo.insert!
+%Writer{id: 9, name: "Richard Matheson"} |> Repo.insert!
 
 # Creating Companies...
 %Company{id: 1, name: "Warner Bros.", country: "United States", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Warner_Bros_logo.svg/800px-Warner_Bros_logo.svg.png"} |> Repo.insert!
@@ -159,6 +176,27 @@ alias Gradi.Writers.Writer
   poster: "https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg"
 } |> Repo.insert!
 
+%Movie{
+  id: 6,
+  imdb_id: "tt0086190",
+  title: "Star Wars: Episode VI - Return of the Jedi",
+  classification: 0,
+  description: "After a daring mission to rescue Han Solo from Jabba the Hutt, the Rebels dispatch to Endor to destroy the second Death Star. Meanwhile, Luke struggles to help Darth Vader back from the dark side without falling into the Emperor's trap.",
+  release_date: ~D[1983-05-25],
+  revenue: 475347111.0,
+  poster: "https://m.media-amazon.com/images/M/MV5BOWZlMjFiYzgtMTUzNC00Y2IzLTk1NTMtZmNhMTczNTk0ODk1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+} |> Repo.insert!
+
+%Movie{
+  id: 7,
+  imdb_id: "tt0480249",
+  title: "I Am Legend",
+  classification: 14,
+  description: "Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+  release_date: ~D[2007-12-14],
+  revenue: 585349010.0,
+  poster: "https://m.media-amazon.com/images/M/MV5BYTE1ZTBlYzgtNmMyNS00ZTQ2LWE4NjEtZjUxNDJkNTg2MzlhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+} |> Repo.insert!
 
 
 # Creating Characters...
@@ -213,6 +251,27 @@ alias Gradi.Writers.Writer
 %Character{protagonist: false, character: "Lando Calrissian", movie_id: 5, actor_id: 31} |> Repo.insert!
 %Character{protagonist: false, character: "Yoda", movie_id: 5, actor_id: 32} |> Repo.insert!
 %Character{protagonist: false, character: "Boba Fett", movie_id: 5, actor_id: 33} |> Repo.insert!
+#Star Wars: Episode VI - Return of the Jedi
+%Character{protagonist: true, character: "Luke Skywalker", movie_id: 6, actor_id: 22} |> Repo.insert!
+%Character{protagonist: true, character: "Han Solo", movie_id: 6, actor_id: 23} |> Repo.insert!
+%Character{protagonist: true, character: "Princess Leia Organa", movie_id: 6, actor_id: 24} |> Repo.insert!
+%Character{protagonist: false, character: "Ben Obi-Wan Kenobi", movie_id: 6, actor_id: 26} |> Repo.insert!
+%Character{protagonist: false, character: "C-3PO", movie_id: 6, actor_id: 27} |> Repo.insert!
+%Character{protagonist: false, character: "R2-D2", movie_id: 6, actor_id: 28} |> Repo.insert!
+%Character{protagonist: false, character: "Chewbacca", movie_id: 6, actor_id: 29} |> Repo.insert!
+%Character{protagonist: false, character: "Darth Vader", movie_id: 6, actor_id: 30} |> Repo.insert!
+%Character{protagonist: false, character: "Lando Calrissian", movie_id: 6, actor_id: 31} |> Repo.insert!
+%Character{protagonist: false, character: "Yoda", movie_id: 6, actor_id: 32} |> Repo.insert!
+%Character{protagonist: false, character: "Boba Fett", movie_id: 6, actor_id: 33} |> Repo.insert!
+%Character{protagonist: false, character: "The Emperor", movie_id: 6, actor_id: 34} |> Repo.insert!
+#I am Legend
+%Character{protagonist: true, character: "Robert Neville", movie_id: 7, actor_id: 35} |> Repo.insert!
+%Character{protagonist: true, character: "Anna", movie_id: 7, actor_id: 36} |> Repo.insert!
+%Character{protagonist: true, character: "Ethan", movie_id: 7, actor_id: 37} |> Repo.insert!
+%Character{protagonist: true, character: "Zoe Neville", movie_id: 7, actor_id: 38} |> Repo.insert!
+%Character{protagonist: true, character: "Marley Neville", movie_id: 7, actor_id: 39} |> Repo.insert!
+%Character{protagonist: true, character: "Mike - Military Escort", movie_id: 7, actor_id: 40} |> Repo.insert!
+%Character{protagonist: true, character: "TV Personality", movie_id: 7, actor_id: 41} |> Repo.insert!
 
 
 
@@ -222,6 +281,8 @@ Repo.insert_all("movies_genres", [%{movie_id: 2, genre_id: 3}, %{movie_id: 2, ge
 Repo.insert_all("movies_genres", [%{movie_id: 3, genre_id: 1}, %{movie_id: 3, genre_id: 2}])
 Repo.insert_all("movies_genres", [%{movie_id: 4, genre_id: 1}, %{movie_id: 4, genre_id: 2}, %{movie_id: 4, genre_id: 5}, %{movie_id: 4, genre_id: 6}])
 Repo.insert_all("movies_genres", [%{movie_id: 5, genre_id: 1}, %{movie_id: 5, genre_id: 2}, %{movie_id: 5, genre_id: 5}, %{movie_id: 5, genre_id: 6}])
+Repo.insert_all("movies_genres", [%{movie_id: 6, genre_id: 1}, %{movie_id: 6, genre_id: 2}, %{movie_id: 6, genre_id: 5}, %{movie_id: 6, genre_id: 6}])
+Repo.insert_all("movies_genres", [%{movie_id: 7, genre_id: 2}, %{movie_id: 7, genre_id: 3}, %{movie_id: 7, genre_id: 7}])
 
 
 Repo.insert_all("movies_languages", [%{movie_id: 1, language_id: 1}])
@@ -229,6 +290,8 @@ Repo.insert_all("movies_languages", [%{movie_id: 2, language_id: 1}, %{movie_id:
 Repo.insert_all("movies_languages", [%{movie_id: 3, language_id: 1}, %{movie_id: 3, language_id: 4}])
 Repo.insert_all("movies_languages", [%{movie_id: 4, language_id: 1}])
 Repo.insert_all("movies_languages", [%{movie_id: 5, language_id: 1}])
+Repo.insert_all("movies_languages", [%{movie_id: 6, language_id: 1}])
+Repo.insert_all("movies_languages", [%{movie_id: 7, language_id: 1}])
 
 
 Repo.insert_all("movies_directors", [%{movie_id: 1, director_id: 1}, %{movie_id: 1, director_id: 2}])
@@ -236,6 +299,8 @@ Repo.insert_all("movies_directors", [%{movie_id: 2, director_id: 3}])
 Repo.insert_all("movies_directors", [%{movie_id: 3, director_id: 1}, %{movie_id: 3, director_id: 2}])
 Repo.insert_all("movies_directors", [%{movie_id: 4, director_id: 4}])
 Repo.insert_all("movies_directors", [%{movie_id: 5, director_id: 5}])
+Repo.insert_all("movies_directors", [%{movie_id: 6, director_id: 6}])
+Repo.insert_all("movies_directors", [%{movie_id: 7, director_id: 7}])
 
 
 Repo.insert_all("movies_writers", [%{movie_id: 1, writer_id: 1}, %{movie_id: 1, writer_id: 2}])
@@ -243,6 +308,8 @@ Repo.insert_all("movies_writers", [%{movie_id: 2, writer_id: 3}])
 Repo.insert_all("movies_writers", [%{movie_id: 3, writer_id: 1}, %{movie_id: 3, writer_id: 2}])
 Repo.insert_all("movies_writers", [%{movie_id: 4, writer_id: 4}])
 Repo.insert_all("movies_writers", [%{movie_id: 5, writer_id: 4}, %{movie_id: 5, writer_id: 5}, %{movie_id: 5, writer_id: 6}])
+Repo.insert_all("movies_writers", [%{movie_id: 6, writer_id: 4}, %{movie_id: 6, writer_id: 6}])
+Repo.insert_all("movies_writers", [%{movie_id: 7, writer_id: 7}, %{movie_id: 7, writer_id: 8}, %{movie_id: 7, writer_id: 9}])
 
 
 Repo.insert_all("movies_companies", [%{movie_id: 1, company_id: 1}, %{movie_id: 1, company_id: 2}, %{movie_id: 1, company_id: 3}])
@@ -250,5 +317,7 @@ Repo.insert_all("movies_companies", [%{movie_id: 2, company_id: 4}, %{movie_id: 
 Repo.insert_all("movies_companies", [%{movie_id: 3, company_id: 1}, %{movie_id: 3, company_id: 2}, %{movie_id: 3, company_id: 3}])
 Repo.insert_all("movies_companies", [%{movie_id: 4, company_id: 7}])
 Repo.insert_all("movies_companies", [%{movie_id: 5, company_id: 7}])
+Repo.insert_all("movies_companies", [%{movie_id: 6, company_id: 7}])
+Repo.insert_all("movies_companies", [%{movie_id: 7, company_id: 1}, %{movie_id: 7, company_id: 2}])
 
 
