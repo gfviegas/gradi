@@ -38,7 +38,7 @@ defmodule GradiGraphql.Schema do
       arg :limit, :integer
       arg :sort, :string
       arg :sort_direction, :string
-      resolve &SeriesResolver.list_movies/3
+      resolve &SeriesResolver.list_series/3
     end
 
     field :all_series, :series |> list_of do

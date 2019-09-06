@@ -26,12 +26,7 @@ defmodule GradiGraphql.SeriesResolver do
   def load_series(filter), do: Series.list_series
 
   def list_series(_r, filter, _i) do
-    series = load_series(filter)
-    {:ok, %{
-      series: series,
-      # Tem que chamar a função que conta
-      # total_count: Series.count_series()
-      total_count: 0
-    }}
+    {series, total_count} = load_series(filter)
+    {:ok, %{ series: series, total_count: total_count}}
   end
 end
