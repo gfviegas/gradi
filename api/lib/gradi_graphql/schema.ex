@@ -12,6 +12,12 @@ defmodule GradiGraphql.Schema do
     field :total_count, :integer |> non_null
   end
 
+  object :series_list do
+
+    field :series, :series |> list_of
+    field :total_count, :integer |> non_null
+  end
+
   query do
     field :movies_list, :movies_list do
       arg :title, :string
@@ -24,6 +30,15 @@ defmodule GradiGraphql.Schema do
 
     field :all_movies, :movie |> list_of do
       resolve(&MoviesResolver.all_movies/3)
+    end
+
+    field :series_list, :series_list do
+      arg :title, :string
+      arg :page, :integer
+      arg :limit, :integer
+      arg :sort, :string
+      arg :sort_direction, :string
+      resolve &SeriesResolver.list_movies/3
     end
 
     field :all_series, :series |> list_of do
