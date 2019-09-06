@@ -8,6 +8,16 @@ defmodule Gradi.Movies do
 
   alias Gradi.Movies.Movie
 
+  defp base_query, do: from m in Movie, preload: [{:characters, :actor}, :languages, :directors, :genres, :writers, :companies]
+
+  defp with_pagination(query, %{limit: limit, page: page}) do
+    from(m in query, limit: ^limit, offset: ^((page-1) * limit))
+  end
+
+  defp with_search(query, %{title: title}) do
+    from(m in query, where: like(m.title, ^"%#{title}%"))
+  end
+
   @doc """
   Returns the list of movies.
 
@@ -21,29 +31,26 @@ defmodule Gradi.Movies do
     Repo.all(from m in Movie, preload: [{:characters, :actor}, :languages, :directors, :genres, :writers, :companies])
   end
 
-  def list_movies(filter = %{}) do
-    query = from m in Movie, preload: [{:characters, :actor}, :languages, :directors, :genres, :writers, :companies]
-
-    case filter do
-      %{limit: limit, page: page} ->
-        query = from query,
-          limit: ^limit,
-          offset: ^((page-1) * limit)
-    end
-
-    case filter do
-      %{title: title} ->
-        query = from query,
-          where: ilike(m.title, ^"%#{title}%")
-    end
-
-    Repo.all query
+  def list_movies(filter = %{limit: limit, page: page, title: title}) do
+    base_query
+      |> with_search(filter)
+      |> with_pagination(filter)
+      |> Repo.all
+  end
+  def list_movies(filter = %{limit: limit, page: page}) do
+    base_query
+      |> with_pagination(filter)
+      |> Repo.all
+  end
+  def list_movies(filter = %{title: title}) do
+    base_query
+      |> with_search(filter)
+      |> Repo.all
   end
 
   def count_movies do
     Repo.aggregate(Movie, :count, :id)
   end
-
 
   @doc """
   Gets a single movie.
