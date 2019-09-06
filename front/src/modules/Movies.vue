@@ -1,6 +1,8 @@
 <template>
   <div id="content">
-    <h1>Seus Filmes Favoritos</h1>
+    <div class="has-text-centered">
+      <h1>Seus Filmes Favoritos</h1>
+    </div>
     <ListMovies />
   </div>
 </template>

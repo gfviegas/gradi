@@ -17,6 +17,8 @@ defmodule GradiGraphql.Schema do
       arg :title, :string
       arg :page, :integer
       arg :limit, :integer
+      arg :sort, :string
+      arg :sort_direction, :string
       resolve &MoviesResolver.list_movies/3
     end
 

@@ -1,7 +1,7 @@
 #import "./MovieFragment.gql"
 
-query movies($limit: Int, $page: Int) {
-  moviesList: moviesList(limit: $limit, page: $page) {
+query movies($limit: Int, $page: Int, $title: String, $sort: String, $sortDirection: String) {
+  moviesList: moviesList(limit: $limit, page: $page, title: $title, sort: $sort, sortDirection: $sortDirection) {
     totalCount,
     movies {
       ...movie
