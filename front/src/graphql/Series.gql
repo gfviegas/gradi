@@ -1,10 +1,10 @@
+#import "./SeriesFragment.gql"
+
 query series($limit: Int, $page: Int, $title: String, $sort: String, $sortDirection: String) {
-  allSeries: allSeries(limit: $limit, page: $page, title: $title, sort: $sort, sortDirection: $sortDirection) {
+  seriesList: seriesList(limit: $limit, page: $page, title: $title, sort: $sort, sortDirection: $sortDirection) {
     totalCount,
     series {
-        title
-        imdbId
-        dateReleased
+      ...series
     }
   }
 }

@@ -1,0 +1,7 @@
+fragment series on Series {
+  id
+  title
+  imdbId
+  dateReleased
+  rating
+}

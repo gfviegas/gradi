@@ -7,7 +7,7 @@
       class="scrollable"
       :data="seriesList.series"
       :paginated="isPaginated"
-      :pagination-simples="true"
+      :pagination-simple="true"
       :current-page.sync="currentPage"
       :default-sort-direction="sortDirection"
       :default-sort="sort"
@@ -16,6 +16,7 @@
       :per-page="perPage"
       :backend-pagination="true"
       :backend-sorting="true"
+      :loading="$apollo.loading"
       detailed
       detail-key="imdbId"
     >
@@ -26,6 +27,10 @@
 
         <b-table-column field="dateReleased" label="Date" sortable centered>
           <span class="tag is-success">{{ props.row.dateReleased | formatDate }}</span>
+        </b-table-column>
+
+        <b-table-column field="rating" label="Avaliação" centered>
+          <span class="tag">{{ props.row.rating }}</span>
         </b-table-column>
       </template>
 
@@ -44,6 +49,7 @@
   import MovieDetail from './MovieDetail.vue'
 
   export default {
+    components: { FilterSection, MovieDetail },
     data () {
       return {
         seriesList: [],
@@ -54,6 +60,7 @@
         defaultSortDirection: 'asc',
         currentPage: 1,
         perPage: 2,
+        title: '',
         sort: 'title',
         sortDirection: 'asc'
       }

@@ -1,5 +1,0 @@
-fragment serie on Serie {
-  title
-  imdbId
-  dateReleased
-}
