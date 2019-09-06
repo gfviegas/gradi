@@ -11,13 +11,13 @@ defmodule Gradi.Series do
 
   # Busca por título
   defp with_search(query, %{title: title}) do
-    # pattern = %BSON.Regex{pattern: title}
-    Map.merge(query, %{title: title})
+    pattern = %BSON.Regex{pattern: "#{title}", options: "i"}
+    Map.merge(query, %{title: pattern})
   end
   defp with_search(query, _), do: query
 
   # Contagem de recursos
-  defp count_series(query), do: 20
+  defp count_series(query), do: Mongo.count_documents(:mongo, "series", query)
 
   # Paginação
   defp with_pagination(options, %{limit: limit, page: page}) do
@@ -50,7 +50,7 @@ defmodule Gradi.Series do
       |> with_search(filter)
 
       # A paginação é feita depois para não influenciar na contagem
-    count = count_series(query)
+    {:ok, count} = count_series(query)
 
     options = []
       |> with_pagination(filter)
@@ -61,9 +61,6 @@ defmodule Gradi.Series do
       _ -> Mongo.find(:mongo, "series", query, options)
     end
 
-    IO.inspect query
-    IO.inspect options
-    IO.inspect series
     series = series
       |> Enum.to_list
       |> Enum.map_every(1, &format_map/1)
