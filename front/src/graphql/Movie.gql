@@ -1,6 +1,35 @@
 query movie($id: Int) {
   movie: movie(id: $id) {
       title
+      imdbId
       dateReleased
+      revenue
+      description
+      poster
+      rating
+      companies {
+        name
+        logo
+        country
+      }
+      characters {
+        actor {
+          name
+        }
+        name
+        protagonist
+      }
+      directors {
+        name
+      }
+      languages {
+        name
+      }
+      writers {
+        name
+      }
+      genres {
+        name
+      }
   }
 }

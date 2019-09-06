@@ -3,4 +3,6 @@ fragment movie on Movie {
   title
   imdbId
   dateReleased
+  revenue
+  rating
 }

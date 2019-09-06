@@ -58,14 +58,18 @@
       aria-current-label="Current page"
     >
       <template slot-scope="props">
-        <b-table-column field="Id" label="ID" width="40" sortable>{{ props.row.id }}</b-table-column>
-
         <b-table-column field="imdbId" label="imdbId" width="40" sortable>{{ props.row.imdbId }}</b-table-column>
 
         <b-table-column field="title" label="Título" sortable>{{ props.row.title }}</b-table-column>
 
-        <b-table-column field="dateReleased" label="Date" sortable centered>
+        <b-table-column field="dateReleased" label="Data de Lançamento" sortable centered>
           <span class="tag is-success">{{ props.row.dateReleased | formatDate }}</span>
+        </b-table-column>
+        <b-table-column field="revenue" label="Receita" sortable centered>
+          <span class="tag">R$ {{ props.row.revenue | formatPrice }}</span>
+        </b-table-column>
+        <b-table-column field="rating" label="Avaliação" sortable centered>
+          <span class="tag">{{ props.row.rating }}</span>
         </b-table-column>
       </template>
 
@@ -87,12 +91,11 @@
                   <h3
                     v-if="movie.revenue"
                     class="subtitle"
-                  >Renda: R$ {{ movie.revenue | formatPrice }}</h3>
+                  >Receita: R$ {{ movie.revenue | formatPrice }}</h3>
                   <h3
-                    v-if="movie.runtime"
+                    v-if="movie.rating"
                     class="subtitle"
-                  >Tempo de duração: {{ movie.runtime }}</h3>
-                  <h3 v-if="movie.seasons" class="subtitle">{{ movie.seasons }} Temporadas</h3>
+                  >Nota: {{ movie.rating }}</h3>
                 </div>
               </div>
               <h3>Descrição:</h3>
@@ -101,21 +104,21 @@
                 <div class="column is-8">
                   <h3>Atores:</h3>
                   <ul class="fa-ul">
-                    <li v-for="actor of movie.actors" v-bind:key="actor.name">
+                    <li v-for="character of movie.characters" v-bind:key="character.actor.name">
                       <b-icon icon="account" size="is-small"></b-icon>
-                      <strong>{{actor.name}}</strong> Estrelando
-                      <strong>{{actor.character}}</strong> -
-                      <em v-if="actor.protagonist">Protagonista</em>
-                      <em v-else>Quadjuvante</em>
+                      <strong>{{character.actor.name}}</strong> Estrelando
+                      <strong>{{character.name}}</strong> -
+                      <em v-if="character.protagonist">Protagonista</em>
+                      <em v-else>Coadjuvante</em>
                     </li>
                   </ul>
                 </div>
                 <div class="column is-4">
                   <h3>Línguas:</h3>
                   <ul class="fa-ul">
-                    <li v-for="language of movie.languages" v-bind:key="language">
+                    <li v-for="language of movie.languages" v-bind:key="language.name">
                       <b-icon pack="fas" icon="globe" size="is-small"></b-icon>
-                      {{language}}
+                      {{language.name}}
                     </li>
                   </ul>
                   <section v-if="!movie.languages">
@@ -132,9 +135,9 @@
                 <div class="column is-4">
                   <h3>Escritores:</h3>
                   <ul class="fa-ul">
-                    <li v-for="writer of movie.writers" v-bind:key="writer">
+                    <li v-for="writer of movie.writers" v-bind:key="writer.name">
                       <b-icon pack="fas" icon="user-edit" size="is-small"></b-icon>
-                      {{writer}}
+                      {{writer.name}}
                     </li>
                   </ul>
                   <section v-if="!movie.writers">
@@ -149,9 +152,9 @@
                 <div class="column is-4">
                   <h3>Diretores:</h3>
                   <ul class="fa-ul">
-                    <li v-for="director of movie.directors" v-bind:key="director">
+                    <li v-for="director of movie.directors" v-bind:key="director.name">
                       <b-icon pack="fas" icon="user-tie" size="is-small"></b-icon>
-                      {{director}}
+                      {{director.name}}
                     </li>
                   </ul>
                   <section v-if="!movie.directors">
@@ -166,9 +169,9 @@
                 <div class="column is-4">
                   <h3>Gêneros:</h3>
                   <ul class="fa-ul">
-                    <li v-for="genre of movie.genres" v-bind:key="genre">
+                    <li v-for="genre of movie.genres" v-bind:key="genre.name">
                       <b-icon pack="fas" icon="genderless" size="is-small"></b-icon>
-                      {{genre}}
+                      {{genre.name}}
                     </li>
                   </ul>
                   <section v-if="!movie.genres">
@@ -264,17 +267,11 @@ export default {
     }
   },
   methods: {
-    changeOrder(value) {
-      console.log(value);
-    },
     sortWith(column) {
       console.log(column);
     },
     detailsOpen(data) {
       this.id = data.id;
-    },
-    toggle(row) {
-      this.$refs.table.toggleDetails(row);
     }
   }
 };
