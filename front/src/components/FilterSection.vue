@@ -57,7 +57,6 @@
     },
     methods: {
       search () {
-        console.log('ok')
         this.$emit('submit', this.filter)
       },
       clear () {

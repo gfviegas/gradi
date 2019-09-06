@@ -31,7 +31,7 @@
         <b-table-column field="revenue" label="Receita" sortable centered>
           <span class="tag">U$ {{ props.row.revenue | formatPrice }}</span>
         </b-table-column>
-        <b-table-column field="rating" label="Avaliação" sortable centered>
+        <b-table-column field="rating" label="Avaliação" centered>
           <span class="tag">{{ props.row.rating }}</span>
         </b-table-column>
       </template>
@@ -96,7 +96,6 @@
         this.title = title
       },
       sortWith (column, direction) {
-        console.log(column, direction)
         this.sort = column
         this.sortDirection = direction
       },

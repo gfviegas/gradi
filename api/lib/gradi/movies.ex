@@ -23,7 +23,6 @@ defmodule Gradi.Movies do
   defp with_pagination(query, _), do: query
 
   # Ordenação
-  defp with_sort(query, %{sort: order_field}) when order_field in ["rating"], do: query
   defp with_sort(query, filter = %{sort: order_field}) do
     field_atom = sort_field(order_field)
     direction = sort_direction(filter)
@@ -31,6 +30,7 @@ defmodule Gradi.Movies do
   end
   defp with_sort(query, _), do: query
 
+  defp sort_field("dateReleased"), do: :release_date
   defp sort_field(field), do: Macro.underscore(field) |> String.to_existing_atom
 
   defp sort_direction(%{sort_direction: "asc"}), do: :asc
@@ -46,9 +46,9 @@ defmodule Gradi.Movies do
       [%Movie{}, ...]
 
   """
-  def list_movies, do: {Repo.all(base_query), count_movies(base_query)}
+  def list_movies, do: {Repo.all(base_query()), count_movies(base_query())}
   def list_movies(filter = %{}) do
-    query = base_query
+    query = base_query()
       |> with_search(filter)
 
       # A paginação é feita depois para não influenciar na contagem
