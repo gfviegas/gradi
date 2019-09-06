@@ -1,10 +1,10 @@
-query series($limit: Int, $page: Int) {
-  allSeries: allSeries(limit: $limit, page: $page) {
+query series($limit: Int, $page: Int, $title: String, $sort: String, $sortDirection: String) {
+  allSeries: allSeries(limit: $limit, page: $page, title: $title, sort: $sort, sortDirection: $sortDirection) {
     totalCount,
-    movies {
+    series {
         title
         imdbId
         dateReleased
-    }    
+    }
   }
 }

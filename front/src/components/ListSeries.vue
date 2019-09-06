@@ -1,49 +1,16 @@
 <template>
   <section class="small-lateral">
-    <div class="small-updown">
-      <b-collapse class="card" aria-id="contentIdForA11y3">
-          <div
-              slot="trigger" 
-              slot-scope="props"
-              class="card-header"
-              role="button"
-              aria-controls="contentIdForA11y3">
-              <p class="card-header-title">
-                  Filtros
-              </p>
-              <a class="card-header-icon">
-                  <b-icon
-                      :icon="props.open ? 'menu-down' : 'menu-up'">
-                  </b-icon>
-              </a>
-          </div>
-          <div class="card-content">
-              <div class="content">
-                <b-field grouped group-multiline>
-                  <b-select v-model="perPage" :disabled="!isPaginated">
-                    <option value="2">2 Séries por página</option>
-                    <option value="5">5 Séries por página</option>
-                    <option value="10">10 Séries por página</option>
-                    <option value="15">15 Séries por página</option>
-                  </b-select>
-                </b-field>
-              </div>
-          </div>
-          <footer class="card-footer">
-              <a class="card-footer-item">Buscar</a>
-              <a class="card-footer-item">Limpar</a>
-          </footer>
-      </b-collapse>
-    </div>
+    <filter-section label="Séries" :isPaginated="isPaginated" @submit="applyFilter" />
     <b-table
       @sort="sortWith"
       @details-open="detailsOpen"
       class="scrollable"
       :data="seriesList.series"
       :paginated="isPaginated"
+      :pagination-simples="true"
       :current-page.sync="currentPage"
-      :pagination-position="paginationPosition"
-      :default-sort-direction="defaultSortDirection"
+      :default-sort-direction="sortDirection"
+      :default-sort="sort"
       :narrowed="true"
       :total="seriesList.totalCount"
       :per-page="perPage"
@@ -51,11 +18,6 @@
       :backend-sorting="true"
       detailed
       detail-key="imdbId"
-      default-sort="title"
-      aria-next-label="Next page"
-      aria-previous-label="Previous page"
-      aria-page-label="Page"
-      aria-current-label="Current page"
     >
       <template slot-scope="props">
         <b-table-column field="imdbId" label="ID" width="40" sortable>{{ props.row.imdbId }}</b-table-column>
@@ -68,201 +30,66 @@
       </template>
 
       <template slot="detail" slot-scope="props">
-        <article class="media">
-          <figure class="media-left">
-            <p class="image is-64x64">
-              <img :src="props.row.poster" />
-            </p>
-          </figure>
-          <div class="media-content">
-            <div id="details" class="content">
-              <div class="columns">
-                <div class="column is-8">
-                  <h2 class="title">{{ props.row.title }}</h2>
-                  <h3 class="subtitle">Data de Lançamento: {{ props.row.dateReleased | formatDate }}</h3>
-                </div>
-                <div class="column is-4">
-                  <h3
-                    v-if="props.row.revenue"
-                    class="subtitle"
-                  >Renda: R$ {{ props.row.revenue | formatPrice }}</h3>
-                  <h3
-                    v-if="props.row.runtime"
-                    class="subtitle"
-                  >Tempo de duração: {{ props.row.runtime }}</h3>
-                  <h3 v-if="props.row.seasons" class="subtitle">{{ props.row.seasons }} Temporadas</h3>
-                </div>
-              </div>
-              <h3>Descrição:</h3>
-              <p>{{ props.row.description }}</p>
-              <div class="columns">
-                <div class="column is-8">
-                  <h3>Atores:</h3>
-                  <ul class="fa-ul">
-                    <li v-for="actor of props.row.actors" v-bind:key="actor.name">
-                      <b-icon icon="account" size="is-small"></b-icon>
-                      <strong>{{actor.name}}</strong> Estrelando
-                      <strong>{{actor.character}}</strong> -
-                      <em v-if="actor.protagonist">Protagonista</em>
-                      <em v-else>Quadjuvante</em>
-                    </li>
-                  </ul>
-                </div>
-                <div class="column is-4">
-                  <h3>Línguas:</h3>
-                  <ul class="fa-ul">
-                    <li v-for="language of props.row.languages" v-bind:key="language">
-                      <b-icon pack="fas" icon="globe" size="is-small"></b-icon>
-                      {{language}}
-                    </li>
-                  </ul>
-                  <section v-if="!props.row.languages">
-                    <div class="content has-text-grey has-text-centered">
-                      <p>
-                        <b-icon pack="fas" icon="sad-tear" size="is-large"></b-icon>
-                      </p>
-                      <p>Nenhuma Língua Reconhecida.</p>
-                    </div>
-                  </section>
-                </div>
-              </div>
-              <div class="columns">
-                <div class="column is-4">
-                  <h3>Escritores:</h3>
-                  <ul class="fa-ul">
-                    <li v-for="writer of props.row.writers" v-bind:key="writer">
-                      <b-icon pack="fas" icon="user-edit" size="is-small"></b-icon>
-                      {{writer}}
-                    </li>
-                  </ul>
-                  <section v-if="!props.row.writers">
-                    <div class="content has-text-grey has-text-centered">
-                      <p>
-                        <b-icon pack="fas" icon="sad-tear" size="is-large"></b-icon>
-                      </p>
-                      <p>Nenhum Escritor Reconhecido.</p>
-                    </div>
-                  </section>
-                </div>
-                <div class="column is-4">
-                  <h3>Diretores:</h3>
-                  <ul class="fa-ul">
-                    <li v-for="director of props.row.directors" v-bind:key="director">
-                      <b-icon pack="fas" icon="user-tie" size="is-small"></b-icon>
-                      {{director}}
-                    </li>
-                  </ul>
-                  <section v-if="!props.row.directors">
-                    <div class="content has-text-grey has-text-centered">
-                      <p>
-                        <b-icon pack="fas" icon="sad-tear" size="is-large"></b-icon>
-                      </p>
-                      <p>Nenhum Diretor Reconhecido.</p>
-                    </div>
-                  </section>
-                </div>
-                <div class="column is-4">
-                  <h3>Gêneros:</h3>
-                  <ul class="fa-ul">
-                    <li v-for="genre of props.row.genres" v-bind:key="genre">
-                      <b-icon pack="fas" icon="genderless" size="is-small"></b-icon>
-                      {{genre}}
-                    </li>
-                  </ul>
-                  <section v-if="!props.row.genres">
-                    <div class="content has-text-grey has-text-centered">
-                      <p>
-                        <b-icon pack="fas" icon="sad-tear" size="is-large"></b-icon>
-                      </p>
-                      <p>Nenhum Gênero Reconhecido.</p>
-                    </div>
-                  </section>
-                </div>
-              </div>
-              <div class="columns">
-                <div class="column">
-                  <h3 class="subtitle">Empresas Produtoras:</h3>
-                </div>
-              </div>
-              <div class="columns" v-for="company of props.row.companies" v-bind:key="company.name">
-                <div class="column is-2">
-                  <figure class="media-left">
-                    <p class="image is-64x64">
-                      <img :src="company.logo" />
-                    </p>
-                  </figure>
-                </div>
-                <div class="column">
-                  <h3 class="subtitle">{{company.name}}</h3>
-                  <h4>Origem: {{company.country}}</h4>
-                </div>
-              </div>
-              <section v-if="!props.row.companies">
-                <div class="content has-text-grey has-text-centered">
-                  <p>
-                    <b-icon pack="fas" icon="sad-tear" size="is-large"></b-icon>
-                  </p>
-                  <p>Nenhuma Empresa Reconhecida.</p>
-                </div>
-              </section>
-            </div>
-          </div>
-        </article>
+        <series-detail :series="series" />
       </template>
     </b-table>
   </section>
 </template>
 
 <script>
-import { createProvider } from "../vue-apollo";
-import Series from "../graphql/Series.gql";
+  import { createProvider } from '../vue-apollo'
+  import Series from '../graphql/Series.gql'
 
-export default {
-  data() {
-    return {
-      seriesList: [],
-      activeTab: 0,
-      defaultOpenedDetails: [1],
-      isPaginated: true,
-      paginationPosition: "bottom",
-      defaultSortDirection: "asc",
-      currentPage: 1,
-      perPage: 2
-    };
-  },
-  apollo: {
-    seriesList: {
-      query: Series,
-      variables() {
-        return {
-          limit: parseInt(this.perPage),
-          page: this.currentPage
+  import FilterSection from './FilterSection.vue'
+  import MovieDetail from './MovieDetail.vue'
+
+  export default {
+    data () {
+      return {
+        seriesList: [],
+        activeTab: 0,
+        defaultOpenedDetails: [1],
+        isPaginated: true,
+        paginationPosition: 'bottom',
+        defaultSortDirection: 'asc',
+        currentPage: 1,
+        perPage: 2,
+        sort: 'title',
+        sortDirection: 'asc'
+      }
+    },
+    apollo: {
+      seriesList: {
+        query: Series,
+        variables () {
+          const { perPage, currentPage, title, sort, sortDirection } = this
+
+          return {
+            limit: parseInt(this.perPage),
+            page: this.currentPage,
+            title: title || undefined,
+            sort: sort || undefined,
+            sortDirection: sortDirection || undefined
+          }
         }
       }
-    }
-  },
-  filters: {
-    formatDate(date) {
-      return new Date(date).toLocaleDateString();
     },
-    formatPrice(value) {
-      let val = (value / 1).toFixed(2).replace(".", ",");
-      return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    }
-  },
-  methods: {
-    changeOrder(value) {
-      console.log(value);
-    },
-    sortWith(column) {
-      console.log(column);
-    },
-    detailsOpen(data) {
-      console.log(data);
-    },
-    toggle(row) {
-      this.$refs.table.toggleDetails(row);
+    methods: {
+      applyFilter (filter) {
+        const { perPage, title } = filter
+        this.perPage = perPage
+        this.title = title
+      },
+      sortWith (column, direction) {
+        this.sort = column
+        this.sortDirection = direction
+      },
+      detailsOpen (data) {
+        console.log(data)
+      },
+      toggle (row) {
+        this.$refs.table.toggleDetails(row)
+      }
     }
   }
-};
 </script>
