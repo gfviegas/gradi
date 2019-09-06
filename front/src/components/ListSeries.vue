@@ -35,7 +35,7 @@
       </template>
 
       <template slot="detail" slot-scope="props">
-        <series-detail :series="series" />
+        <series-detail :series="series" :props="props" />
       </template>
     </b-table>
   </section>
@@ -46,12 +46,13 @@
   import Series from '../graphql/Series.gql'
 
   import FilterSection from './FilterSection.vue'
-  import MovieDetail from './MovieDetail.vue'
+  import SeriesDetail from './SeriesDetail.vue'
 
   export default {
-    components: { FilterSection, MovieDetail },
+    components: { FilterSection, SeriesDetail },
     data () {
       return {
+        series: {},
         seriesList: [],
         activeTab: 0,
         defaultOpenedDetails: [1],

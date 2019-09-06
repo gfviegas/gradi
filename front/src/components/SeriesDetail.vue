@@ -144,7 +144,8 @@
 <script>
   export default {
     props: {
-      series: { type: Object, required: true }
+      series: { type: Object, required: true },
+      props: { required: true }
     }
   }
 </script>
