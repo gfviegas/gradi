@@ -1,11 +1,6 @@
 defmodule GradiGraphql.SeriesResolver do
   alias Gradi.Series
 
-  def all_series(_r, _a, _i) do
-    series = Series.list_series()
-    {:ok, series}
-  end
-
   def resolve_date_release(%{release_date: date}, _a, _i) do
     {:ok, date |> Date.from_iso8601!}
   end
@@ -14,12 +9,29 @@ defmodule GradiGraphql.SeriesResolver do
     {:ok, BSON.ObjectId.encode! id}
   end
 
-
   def format_genre(%{name: name}), do: name
   def format_genre(name), do: name
 
   def resolve_genres(%{genres: genres}, _a, _i) do
     genres = Enum.map_every(genres, 1, &format_genre/1)
     {:ok, genres}
+  end
+
+  def all_series(_r, _a, _i) do
+    series = Series.list_series()
+    {:ok, series}
+  end
+
+  def load_series(filter = %{}), do: Series.list_series filter
+  def load_series(filter), do: Series.list_series
+
+  def list_series(_r, filter, _i) do
+    series = load_series(filter)
+    {:ok, %{
+      series: series,
+      # Tem que chamar a função que conta
+      # total_count: Series.count_series()
+      total_count: 0
+    }}
   end
 end
