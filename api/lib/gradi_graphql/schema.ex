@@ -14,6 +14,7 @@ defmodule GradiGraphql.Schema do
 
   query do
     field :movies_list, :movies_list do
+      arg :title, :string
       arg :page, :integer
       arg :limit, :integer
       resolve &MoviesResolver.list_movies/3
@@ -30,11 +31,6 @@ defmodule GradiGraphql.Schema do
     field :movie, :movie do
       arg :id, :id
       resolve &MoviesResolver.get_movie/3
-    end
-
-    field :movie, :movie do
-      arg :title, :string
-      resolve &MoviesResolver.list_movies/3
     end
   end
 end
