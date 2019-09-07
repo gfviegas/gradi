@@ -67,4 +67,12 @@ defmodule Gradi.Series do
 
     {series, count}
   end
+
+  def get_serie!(id) when is_binary(id) do
+    get_serie!(id |> BSON.ObjectId.decode!)
+  end
+
+  def get_serie!(id = %BSON.ObjectId{}) do
+    Mongo.find_one(:mongo, "series", %{_id: id}) |> format_map
+  end
 end

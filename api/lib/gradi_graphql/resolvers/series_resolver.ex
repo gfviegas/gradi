@@ -29,4 +29,8 @@ defmodule GradiGraphql.SeriesResolver do
     {series, total_count} = load_series(filter)
     {:ok, %{ series: series, total_count: total_count}}
   end
+
+  def get_series(_r, %{id: id}, _i) do
+    {:ok, Series.get_serie!(id)}
+  end
 end

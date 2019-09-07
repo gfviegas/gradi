@@ -7,13 +7,11 @@ defmodule GradiGraphql.Schema do
   import_types(GradiGraphql.Schema.{Movie, Company, MovieCharacter, Property, Series, SeriesActor, SeriesSpinoff})
 
   object :movies_list do
-
     field :movies, :movie |> list_of
     field :total_count, :integer |> non_null
   end
 
   object :series_list do
-
     field :series, :series |> list_of
     field :total_count, :integer |> non_null
   end
@@ -48,6 +46,11 @@ defmodule GradiGraphql.Schema do
     field :movie, :movie do
       arg :id, :id
       resolve &MoviesResolver.get_movie/3
+    end
+
+    field :series, :series do
+      arg :id, :id
+      resolve &SeriesResolver.get_series/3
     end
   end
 end
