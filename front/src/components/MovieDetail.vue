@@ -149,4 +149,28 @@
 </script>
 
 <style lang="sass" scoped>
+  @import "~@/styles/variables.sass"
+
+  .fa-ul
+    margin-left: 0 !important
+    li
+      list-style-type: none
+      list-style-position: inside
+      .icon
+        margin-right: 1%
+  #details
+    h2
+      color: $primary
+      font-size: 24px
+    h3
+      color: $secondary
+      font-size: 16px
+    h4
+      font-size: 12px
+    p
+      font-size: 14px
+
+    .protagonist
+      background: $primary
+      font-weight: bold
 </style>

@@ -1,0 +1,40 @@
+@import './variables'
+@import '~bulma'
+@import '~buefy/src/scss/buefy'
+
+html
+  // background: linear-gradient(to top, $primary-color, $secondary-color)
+  background-blend-mode: darken
+  background-color: rgba(0,0,0,0.3)
+  background-image: url('~@/assets/background.png')
+  background-size: auto
+  background-repeat: revert
+  background-position: center
+  height: 100%
+  padding: 0
+  margin: 0
+
+  #content
+    height: -webkit-fill-available
+
+  main
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+    min-height: 100vh
+
+    #app
+      min-height: 40rem
+      width: 80%
+      background: $light-grey
+      box-shadow: 3px 3px 10px #000
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      text-align: center
+      color: $title-color
+      display: flex
+      justify-content: space-around
+      align-self: center
+      flex-direction: column

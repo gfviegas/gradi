@@ -1,12 +1,37 @@
-//colors
-$primary-color: #B11518
-$secondary-color: #9C93A9
-$light-grey: #f0f0f5
-$title-color: #ff1a1a
-$subtitle-color: #FFF
+@import '~bulma/sass/utilities/_all'
 
-//spaces
+//colors
+$primary: #B11518
+$primary-invert: findColorInvert($primary)
+
+$secondary: #9C93A9
+$secondary-invert: findColorInvert($secondary)
+
+$light-grey: #f0f0f5
+$title: #ff1a1a
+$subtitle: #FFF
+
+// Spaces
 $small-space: 2% 2% 2% 2%
 
-//sizes
+// Sizes
 $title: 36px
+
+// Links
+$link: $primary
+$link-invert: $primary-invert
+$link-focus-border: $primary
+$link-hover: lighten($primary, 25%)
+
+@keyframes fadein
+  0%
+    width: 20%
+    height: 20%
+    opacity: 0
+  100%
+    width: 44%
+    height: 44%
+    opacity: 1
+
+
+$colors: ("white": ($white, $black), "black": ($black, $white), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert), "secondary": ($secondary, $secondary-invert), "info": ($info, $info-invert), "success": ($success, $success-invert), "warning": ($warning, $warning-invert), "danger": ($danger, $danger-invert))

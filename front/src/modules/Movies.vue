@@ -1,31 +1,28 @@
 <template>
-  <div id="content">
-    <div class="has-text-centered">
-      <h1>Seus Filmes Favoritos</h1>
+  <article>
+    <div class="has-text-centered title-wrapper">
+      <h1 class="title is-3"> Seus Filmes Favoritos </h1>
     </div>
+
     <ListMovies />
-  </div>
+  </article>
 </template>
 
 <script>
-import ListMovies from "../components/ListMovies.vue";
-import Vue from "vue";
-import Buefy from "buefy";
+  import ListMovies from '../components/ListMovies.vue'
+  import Vue from 'vue'
 
-Vue.use(Buefy);
-
-export default {
-  name: "filmes",
-  components: {
-    ListMovies
+  export default {
+    components: {
+      ListMovies
+    }
   }
-};
 </script>
 
-<style lang="scss">
-@import "../styles/buefy.scss";
-</style>
-
-<style lang="sass">
-  @import "../styles/main.sass"
+<style lang="sass" scoped>
+  @import "~@/styles/variables.sass"
+  .title-wrapper
+    padding-bottom: 1rem
+    h1
+      color: $primary
 </style>

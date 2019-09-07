@@ -1,23 +1,17 @@
 <template>
-  <div id="app">
-    <div id="title">
-      <img id="logo" alt="Logo" src="../assets/logo.png" />
-      <HelloWorld msg="Seja bem vindo ao nosso gerenciador de filmes e séries" />
-    </div>
-  </div>
+  <main>
+    <section id="app">
+      <router-view/>
+    </section>
+  </main>
 </template>
 
 <script>
-import HelloWorld from "../components/HelloWorld.vue";
-
-export default {
-  name: "app",
-  components: {
-    HelloWorld
+  export default {
+    name: 'app'
   }
-};
 </script>
 
 <style lang="sass">
-  @import "../styles/home.sass"
+  @import "../styles/global.sass"
 </style>
