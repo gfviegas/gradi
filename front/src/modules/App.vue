@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="title">
-      <img id="logo" alt="Logo" src="../assets/logo.png">
-      <HelloWorld msg="Seja bem vindo ao nosso gerenciador de filmes"/>
+      <img id="logo" alt="Logo" src="../assets/logo.png" />
+      <HelloWorld msg="Seja bem vindo ao nosso gerenciador de filmes e séries" />
     </div>
   </div>
 </template>

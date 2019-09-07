@@ -19,6 +19,7 @@
       :loading="$apollo.loading"
       detailed
       detail-key="id"
+      :opened-detailed="rowsOpen"
     >
       <template slot-scope="props">
         <b-table-column field="imdbId" label="imdbId" width="40" sortable>{{ props.row.imdbId }}</b-table-column>
@@ -32,7 +33,7 @@
           <span class="tag">U$ {{ props.row.revenue | formatPrice }}</span>
         </b-table-column>
         <b-table-column field="rating" label="Avaliação" centered>
-          <span class="tag">{{ props.row.rating }}</span>
+          <span class="tag" :class="ratingLevel(props.row.rating)">{{ props.row.rating }}</span>
         </b-table-column>
       </template>
 
@@ -44,64 +45,76 @@
 </template>
 
 <script>
-  import { createProvider } from '../vue-apollo'
-  import Movies from '../graphql/Movies.gql'
-  import Movie from '../graphql/Movie.gql'
+import { createProvider } from "../vue-apollo";
+import Movies from "../graphql/Movies.gql";
+import Movie from "../graphql/Movie.gql";
 
-  import FilterSection from './FilterSection.vue'
-  import MovieDetail from './MovieDetail.vue'
+import FilterSection from "./FilterSection.vue";
+import MovieDetail from "./MovieDetail.vue";
 
-  export default {
-    components: { FilterSection, MovieDetail },
-    data () {
-      return {
-        id: 1,
-        movie: {},
-        moviesList: [],
-        activeTab: 0,
-        defaultOpenedDetails: [1],
-        isPaginated: true,
-        currentPage: 1,
-        perPage: 2,
-        title: '',
-        sort: 'title',
-        sortDirection: 'asc'
+export default {
+  components: { FilterSection, MovieDetail },
+  data() {
+    return {
+      id: 1,
+      movie: {},
+      moviesList: [],
+      activeTab: 0,
+      defaultOpenedDetails: [1],
+      isPaginated: true,
+      currentPage: 1,
+      perPage: 2,
+      title: "",
+      sort: "title",
+      sortDirection: "asc",
+      rowsOpen: []
+    };
+  },
+  apollo: {
+    moviesList: {
+      query: Movies,
+      variables() {
+        const { perPage, currentPage, title, sort, sortDirection } = this;
+        return {
+          limit: parseInt(perPage),
+          page: currentPage,
+          title: title || undefined,
+          sort: sort || undefined,
+          sortDirection: sortDirection || undefined
+        };
       }
     },
-    apollo: {
-      moviesList: {
-        query: Movies,
-        variables () {
-          const { perPage, currentPage, title, sort, sortDirection } = this
-          return {
-            limit: parseInt(perPage),
-            page: currentPage,
-            title: title || undefined,
-            sort: sort || undefined,
-            sortDirection: sortDirection || undefined
-          }
-        }
-      },
-      movie: {
-        query: Movie,
-        variables () {
-          return { id: this.id }
-        }
-      }
-    },
-    methods: {
-      applyFilter (filter) {
-        const { perPage, title } = filter
-        this.perPage = perPage
-        this.title = title
-      },
-      sortWith (column, direction) {
-        this.sort = column
-        this.sortDirection = direction
-      },
-      detailsOpen (data) {
-        this.id = data.id
+    movie: {
+      query: Movie,
+      variables() {
+        return { id: this.id };
       }
     }
+  },
+  methods: {
+    ratingLevel(value) {
+      const number = parseFloat(value);
+      if (number < 6) {
+        return "is-danger";
+      } else if (number >= 6 && number < 8) {
+        return "is-warning";
+      } else if (number >= 8) {
+        return "is-success";
+      }
+    },
+    applyFilter(filter) {
+      const { perPage, title } = filter;
+      this.perPage = perPage;
+      this.title = title;
+    },
+    sortWith(column, direction) {
+      this.sort = column;
+      this.sortDirection = direction;
+    },
+    detailsOpen(data) {
+      this.id = data.id;
+      this.rowsOpen = [data.id];
+    }
   }
+};
 </script>

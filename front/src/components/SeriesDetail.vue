@@ -142,12 +142,11 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      series: { type: Object, required: true },
-      props: { required: true }
-    }
+export default {
+  props: {
+    serie: { type: Object, required: true }
   }
+};
 </script>
 
 <style lang="sass" scoped>
