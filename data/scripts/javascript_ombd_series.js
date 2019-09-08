@@ -1,53 +1,53 @@
 // ref: https://www.w3schools.com/xml/xpath_axes.asp
-
+/* eslint-disable */
 var $max = 20, $i, $stringBuilder = "", $imdb_id, $title, $release_date = "", $runtime, $classification = "", $genres, $writers = "", $description = "";
 var $languages = "", $countries = "", $poster, $seasons;
 
 $i = 1;
-	
-$title = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span//text()", 
+
+$title = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span//text()",
 	document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent.trim();
 
 $i = 4;
-$release_date = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span/text()", 
+$release_date = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span/text()",
 	document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent.trim();
 
 $i = 5;
-$runtime = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span//text()", 
+$runtime = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span//text()",
 	document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent.trim();
-	
+
 $i = 6;
-$genres = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span//text()", 
+$genres = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span//text()",
 	document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent.trim().replace(/, /g, "\", \"");
-	
+
 $i = 8;
-$writers = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span//text()", 
+$writers = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span//text()",
 	document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent.trim().replace(/, /g, "\", \"");
 
 $i = 10;
-$description = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span//text()", 
+$description = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span//text()",
 	document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent.trim();
 
 $i = 11;
-$languages = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span//text()", 
+$languages = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span//text()",
 	document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent.trim().replace(/, /g, "\", \"");
 
 $i = 12;
-$countries = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span//text()", 
+$countries = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span//text()",
 	document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent.trim().replace(/, /g, "\", \"");
 
 $i = 14;
-$poster = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span/a//text()", 
+$poster = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span/a//text()",
 	document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent.trim().replace(/, /g, "\", \"");
 
 $i = 22;
-$imdb_id = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span//text()", 
+$imdb_id = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span//text()",
 	document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent.trim();
 
-$i = 24;	
-$seasons = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span//text()", 
+$i = 24;
+$seasons = document.evaluate("//html/body/div/div/div/div[1]/div/div/div[2]/table/tbody/tr[" + $i + "]/td[2]/span/span//text()",
 	document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent.trim();
-	
+
 
 $release_date = $release_date.split(" ");
 var $d, $m, $a;
@@ -67,8 +67,8 @@ else if($m == "Nov") $m = "11";
 else if($m == "Dec") $m = "12";
 $a = $release_date[2].replace("\"", "");
 $release_date = $a + "-" + $m + "-" + $d;
-	
-$stringBuilder += 
+
+$stringBuilder +=
 "%{\n"
 	+ "imdb_id: " + $imdb_id + ",\n"
 	+ "title: " + $title + ",\n"
