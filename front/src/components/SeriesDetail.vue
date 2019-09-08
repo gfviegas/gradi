@@ -35,7 +35,7 @@
                 <strong>{{actor.name}}</strong> Estrelando
                 <strong>{{actor.character}}</strong> -
                 <em v-if="actor.protagonist">Protagonista</em>
-                <em v-else>Quadjuvante</em>
+                <em v-else>Coadjuvante</em>
               </li>
             </ul>
           </div>
@@ -77,7 +77,7 @@
           </div>
           <div class="column is-4">
             <h3>Spinoffs:</h3>
-            <ul class="fa-ul">
+            <ul class="fa-ul">    
               <li v-for="spinoff of serie.spinoffs" v-bind:key="spinoff.imdbId">
                 <b-icon pack="fas" icon="film" size="is-small"></b-icon>
                 {{spinoff.imdbId}} - {{spinoff.title}}

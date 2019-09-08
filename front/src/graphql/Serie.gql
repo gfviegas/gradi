@@ -1,4 +1,4 @@
-query series($id: Int) {
+query series($id: String) {
   series: series(id: $id) {
       actors {
         character
@@ -18,7 +18,6 @@ query series($id: Int) {
       runtime
       seasons
       spinoffs {
-          id
           imdbId
           title
       }

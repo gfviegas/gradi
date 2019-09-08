@@ -57,7 +57,7 @@
     components: { FilterSection, SeriesDetail },
     data() {
       return {
-        id: 1,
+        id: "",
         serie: {},
         seriesList: [],
         activeTab: 0,
