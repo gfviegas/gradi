@@ -78,7 +78,7 @@
           <div class="column is-4">
             <h3>Spinoffs:</h3>
             <ul class="fa-ul">
-              <li v-for="spinoff of serie.spinoffs" v-bind:key="spinoff">
+              <li v-for="spinoff of serie.spinoffs" v-bind:key="spinoff.imdbId">
                 <b-icon pack="fas" icon="film" size="is-small"></b-icon>
                 {{spinoff.imdbId}} - {{spinoff.title}}
               </li>
