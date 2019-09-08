@@ -47,7 +47,7 @@ alias Gradi.Writers.Writer
 %Actor{id: 21, name: "Gloria Foster"} |> Repo.insert!
 
 %Actor{id: 22, name: "Mark Hamill"} |> Repo.insert!
-%Actor{id: 23, name: "Harrison FOrd"} |> Repo.insert!
+%Actor{id: 23, name: "Harrison Ford"} |> Repo.insert!
 %Actor{id: 24, name: "Carrie Fisher"} |> Repo.insert!
 %Actor{id: 25, name: "Peter Cushing"} |> Repo.insert!
 %Actor{id: 26, name: "Alec Guinness"} |> Repo.insert!
