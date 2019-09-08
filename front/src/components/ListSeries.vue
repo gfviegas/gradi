@@ -38,7 +38,7 @@
         </template>
 
         <template slot="detail" slot-scope="props">
-          <series-detail :serie="serie" :props="props" />
+          <series-detail :serie="series" :props="props" />
         </template>
       </b-table>
     </section>
@@ -48,6 +48,7 @@
 <script>
   import { createProvider } from "../vue-apollo"
   import Series from "../graphql/Series.gql"
+  import Serie from "../graphql/Serie.gql"
 
   import FilterSection from "./FilterSection.vue"
   import SeriesDetail from "./SeriesDetail.vue"
@@ -86,13 +87,13 @@
             sortDirection: sortDirection || undefined
           }
         }
+      },
+      series: {
+        query: Serie,
+        variables() {
+          return { id: this.id }
+        }
       }
-      // serie: {
-      //   query: Serie,
-      //   variables() {
-      //     return { id: this.id }
-      //   }
-      // }
     },
     methods: {
       ratingLevel(value) {

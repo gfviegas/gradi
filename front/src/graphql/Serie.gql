@@ -1,0 +1,28 @@
+query series($id: Int) {
+  series: series(id: $id) {
+      actors {
+        character
+        name
+        protagonist
+      }
+      countries
+      classification
+      dateReleased
+      description
+      genres
+      id
+      imdbId
+      languages
+      poster
+      rating
+      runtime
+      seasons
+      spinoffs {
+          id
+          imdbId
+          title
+      }
+      title
+      writers
+  }
+}

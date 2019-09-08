@@ -2,35 +2,35 @@
   <article class="media">
     <figure class="media-left">
       <p class="image is-64x64">
-        <img :src="props.row.poster" />
+        <img :src="serie.poster" />
       </p>
     </figure>
     <div class="media-content">
       <div id="details" class="content">
         <div class="columns">
           <div class="column is-8">
-            <h2 class="title">{{ props.row.title }}</h2>
-            <h3 class="subtitle">Data de Lançamento: {{ props.row.dateReleased | formatDate }}</h3>
+            <h2 class="title">{{ serie.title }}</h2>
+            <h3 class="subtitle">Data de Lançamento: {{ serie.dateReleased | formatDate }}</h3>
           </div>
           <div class="column is-4">
             <h3
-              v-if="props.row.revenue"
+              v-if="serie.revenue"
               class="subtitle"
-            >Renda: R$ {{ props.row.revenue | formatPrice }}</h3>
+            >Renda: R$ {{ serie.revenue | formatPrice }}</h3>
             <h3
-              v-if="props.row.runtime"
+              v-if="serie.runtime"
               class="subtitle"
-            >Tempo de duração: {{ props.row.runtime }}</h3>
-            <h3 v-if="props.row.seasons" class="subtitle">{{ props.row.seasons }} Temporadas</h3>
+            >Tempo de duração: {{ serie.runtime }}</h3>
+            <h3 v-if="serie.seasons" class="subtitle">{{ serie.seasons }} Temporadas</h3>
           </div>
         </div>
         <h3>Descrição:</h3>
-        <p>{{ props.row.description }}</p>
+        <p>{{ serie.description }}</p>
         <div class="columns">
           <div class="column is-8">
             <h3>Atores:</h3>
             <ul class="fa-ul">
-              <li v-for="actor of props.row.actors" v-bind:key="actor.name">
+              <li v-for="actor of serie.actors" v-bind:key="actor.name">
                 <b-icon icon="account" size="is-small"></b-icon>
                 <strong>{{actor.name}}</strong> Estrelando
                 <strong>{{actor.character}}</strong> -
@@ -42,12 +42,12 @@
           <div class="column is-4">
             <h3>Línguas:</h3>
             <ul class="fa-ul">
-              <li v-for="language of props.row.languages" v-bind:key="language">
+              <li v-for="language of serie.languages" v-bind:key="language">
                 <b-icon pack="fas" icon="globe" size="is-small"></b-icon>
                 {{language}}
               </li>
             </ul>
-            <section v-if="!props.row.languages">
+            <section v-if="!serie.languages">
               <div class="content has-text-grey has-text-centered">
                 <p>
                   <b-icon pack="fas" icon="sad-tear" size="is-large"></b-icon>
@@ -61,12 +61,12 @@
           <div class="column is-4">
             <h3>Escritores:</h3>
             <ul class="fa-ul">
-              <li v-for="writer of props.row.writers" v-bind:key="writer">
+              <li v-for="writer of serie.writers" v-bind:key="writer">
                 <b-icon pack="fas" icon="user-edit" size="is-small"></b-icon>
                 {{writer}}
               </li>
             </ul>
-            <section v-if="!props.row.writers">
+            <section v-if="!serie.writers">
               <div class="content has-text-grey has-text-centered">
                 <p>
                   <b-icon pack="fas" icon="sad-tear" size="is-large"></b-icon>
@@ -76,31 +76,31 @@
             </section>
           </div>
           <div class="column is-4">
-            <h3>Diretores:</h3>
+            <h3>Spinoffs:</h3>
             <ul class="fa-ul">
-              <li v-for="director of props.row.directors" v-bind:key="director">
-                <b-icon pack="fas" icon="user-tie" size="is-small"></b-icon>
-                {{director}}
+              <li v-for="spinoff of serie.spinoffs" v-bind:key="spinoff">
+                <b-icon pack="fas" icon="film" size="is-small"></b-icon>
+                {{spinoff.imdbId}} - {{spinoff.title}}
               </li>
             </ul>
-            <section v-if="!props.row.directors">
+            <section v-if="!serie.spinoffs">
               <div class="content has-text-grey has-text-centered">
                 <p>
                   <b-icon pack="fas" icon="sad-tear" size="is-large"></b-icon>
                 </p>
-                <p>Nenhum Diretor Reconhecido.</p>
+                <p>Nenhum Spinoff nessa série.</p>
               </div>
             </section>
           </div>
           <div class="column is-4">
             <h3>Gêneros:</h3>
             <ul class="fa-ul">
-              <li v-for="genre of props.row.genres" v-bind:key="genre">
+              <li v-for="genre of serie.genres" v-bind:key="genre">
                 <b-icon pack="fas" icon="genderless" size="is-small"></b-icon>
                 {{genre}}
               </li>
             </ul>
-            <section v-if="!props.row.genres">
+            <section v-if="!serie.genres">
               <div class="content has-text-grey has-text-centered">
                 <p>
                   <b-icon pack="fas" icon="sad-tear" size="is-large"></b-icon>
@@ -112,30 +112,23 @@
         </div>
         <div class="columns">
           <div class="column">
-            <h3 class="subtitle">Empresas Produtoras:</h3>
+            <h3>Países:</h3>
+            <ul class="fa-ul">
+              <li v-for="country of serie.countries" v-bind:key="country">
+                <b-icon pack="fas" icon="flag" size="is-small"></b-icon>
+                {{country}}
+              </li>
+            </ul>
+            <section v-if="!serie.countries">
+              <div class="content has-text-grey has-text-centered">
+                <p>
+                  <b-icon pack="fas" icon="sad-tear" size="is-large"></b-icon>
+                </p>
+                <p>Essa série não está disponível em nenhum país.</p>
+              </div>
+            </section>
           </div>
         </div>
-        <div class="columns" v-for="company of props.row.companies" v-bind:key="company.name">
-          <div class="column is-2">
-            <figure class="media-left">
-              <p class="image is-64x64">
-                <img :src="company.logo" />
-              </p>
-            </figure>
-          </div>
-          <div class="column">
-            <h3 class="subtitle">{{company.name}}</h3>
-            <h4>Origem: {{company.country}}</h4>
-          </div>
-        </div>
-        <section v-if="!props.row.companies">
-          <div class="content has-text-grey has-text-centered">
-            <p>
-              <b-icon pack="fas" icon="sad-tear" size="is-large"></b-icon>
-            </p>
-            <p>Nenhuma Empresa Reconhecida.</p>
-          </div>
-        </section>
       </div>
     </div>
   </article>
