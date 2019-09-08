@@ -2,7 +2,7 @@
 
 var $max = 20, $i, $j, $stringBuilder = "", $imdb_id, $title, $release_date = "", $runtime, $classification = "", $genres, $writers = "", $directors = "", $description = "";
 var $languages = "", $poster;
-var $movie_id = 16, $genre_id = 13, $director_id = 16, $writer_id = 28, $language_id = 11;
+var $movie_id = 21, $genre_id = 16, $director_id = 23, $writer_id = 53, $language_id = 14;
 var $sb_genres = "", $sb_directors = "", $sb_writers = "", $sb_languages = "";
 
 $i = 1;	

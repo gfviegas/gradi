@@ -197,6 +197,82 @@ alias Gradi.Writers.Writer
 %Actor{id: 159, name: "Sammi Rotibi"} |> Repo.insert!
 %Actor{id: 160, name: "Clay Donahue Fontenot"} |> Repo.insert!
 
+%Actor{id: 161, name: "Owen Wilson"} |> Repo.insert!
+%Actor{id: 162, name: "Paul Newman"} |> Repo.insert!
+%Actor{id: 163, name: "Bonnie Hunt"} |> Repo.insert!
+%Actor{id: 164, name: "Larry the Cable Guy"} |> Repo.insert!
+%Actor{id: 165, name: "Cheech Marin"} |> Repo.insert!
+%Actor{id: 166, name: "Tony Shalhoub"} |> Repo.insert!
+%Actor{id: 167, name: "Guido Quaroni"} |> Repo.insert!
+%Actor{id: 168, name: "Jenifer Lewis"} |> Repo.insert!
+%Actor{id: 169, name: "Paul Dooley"} |> Repo.insert!
+%Actor{id: 170, name: "Michael Wallis"} |> Repo.insert!
+%Actor{id: 171, name: "George Carlin"} |> Repo.insert!
+%Actor{id: 172, name: "Katherine Helmond"} |> Repo.insert!
+%Actor{id: 173, name: "John Ratzenberger"} |> Repo.insert!
+%Actor{id: 174, name: "Joe Ranft"} |> Repo.insert!
+%Actor{id: 175, name: "Michael Keaton"} |> Repo.insert!
+
+%Actor{id: 176, name: "Emily Mortimer"} |> Repo.insert!
+%Actor{id: 177, name: "Eddie Izzard"} |> Repo.insert!
+%Actor{id: 178, name: "John Turturro"} |> Repo.insert!
+%Actor{id: 179, name: "Brent Musburger"} |> Repo.insert!
+%Actor{id: 180, name: "Joe Mantegna"} |> Repo.insert!
+%Actor{id: 181, name: "Thomas Kretschmann"} |> Repo.insert!
+%Actor{id: 182, name: "Peter Jacobson"} |> Repo.insert!
+%Actor{id: 183, name: "Darrell Waltrip"} |> Repo.insert!
+%Actor{id: 184, name: "Franco Nero"} |> Repo.insert!
+%Actor{id: 185, name: "David Hobbs"} |> Repo.insert!
+%Actor{id: 186, name: "Patrick Walker"} |> Repo.insert!
+
+%Actor{id: 187, name: "Owen Wilson"} |> Repo.insert!
+%Actor{id: 188, name: "Cristela Alonzo"} |> Repo.insert!
+%Actor{id: 189, name: "Chris Cooper"} |> Repo.insert!
+%Actor{id: 190, name: "Nathan Fillion"} |> Repo.insert!
+%Actor{id: 191, name: "Larry the Cable Guy"} |> Repo.insert!
+%Actor{id: 192, name: "Armie Hammer"} |> Repo.insert!
+%Actor{id: 193, name: "Ray Magliozzi"} |> Repo.insert!
+%Actor{id: 194, name: "Tony Shalhoub"} |> Repo.insert!
+%Actor{id: 195, name: "Bonnie Hunt"} |> Repo.insert!
+%Actor{id: 196, name: "Lea DeLaria"} |> Repo.insert!
+%Actor{id: 197, name: "Kerry Washington"} |> Repo.insert!
+%Actor{id: 198, name: "Bob Costas"} |> Repo.insert!
+%Actor{id: 199, name: "Margo Martindale"} |> Repo.insert!
+%Actor{id: 200, name: "Darrell Waltrip"} |> Repo.insert!
+%Actor{id: 201, name: "Isiah Whitlock Jr."} |> Repo.insert!
+
+%Actor{id: 202, name: "Kristen Bell"} |> Repo.insert!
+%Actor{id: 203, name: "Idina Menzel"} |> Repo.insert!
+%Actor{id: 204, name: "Jonathan Groff"} |> Repo.insert!
+%Actor{id: 205, name: "Josh Gad"} |> Repo.insert!
+%Actor{id: 206, name: "Santino Fontana"} |> Repo.insert!
+%Actor{id: 207, name: "Alan Tudyk"} |> Repo.insert!
+%Actor{id: 208, name: "Ciarán Hinds"} |> Repo.insert!
+%Actor{id: 209, name: "Chris Williams"} |> Repo.insert!
+%Actor{id: 210, name: "Stephen J. Anderson"} |> Repo.insert!
+%Actor{id: 211, name: "Maia Wilson"} |> Repo.insert!
+%Actor{id: 212, name: "Edie McClurg"} |> Repo.insert!
+%Actor{id: 213, name: "Robert Pine"} |> Repo.insert!
+%Actor{id: 214, name: "Maurice LaMarche"} |> Repo.insert!
+%Actor{id: 215, name: "Livvy Stubenrauch"} |> Repo.insert!
+%Actor{id: 216, name: "Eva Bella"} |> Repo.insert!
+
+%Actor{id: 217, name: "Ben Burtt"} |> Repo.insert!
+%Actor{id: 218, name: "Elissa Knight"} |> Repo.insert!
+%Actor{id: 219, name: "Jeff Garlin"} |> Repo.insert!
+%Actor{id: 220, name: "Fred Willard"} |> Repo.insert!
+%Actor{id: 221, name: "MacInTalk"} |> Repo.insert!
+%Actor{id: 222, name: "John Ratzenberger"} |> Repo.insert!
+%Actor{id: 223, name: "Kathy Najimy"} |> Repo.insert!
+%Actor{id: 224, name: "Sigourney Weaver"} |> Repo.insert!
+%Actor{id: 225, name: "Teddy Newton"} |> Repo.insert!
+%Actor{id: 226, name: "Bob Bergen"} |> Repo.insert!
+%Actor{id: 227, name: "John Cygan"} |> Repo.insert!
+%Actor{id: 228, name: "Pete Docter"} |> Repo.insert!
+%Actor{id: 229, name: "Paul Eiding"} |> Repo.insert!
+%Actor{id: 230, name: "Donald Fullilove"} |> Repo.insert!
+%Actor{id: 231, name: "Teresa Ganzel"} |> Repo.insert!
+
 
 
 # Creating Genres...
@@ -213,6 +289,10 @@ alias Gradi.Writers.Writer
 %Genre{id: 10, name: "Comedy"} |> Repo.insert!
 %Genre{id: 11, name: "Family"} |> Repo.insert!
 %Genre{id: 12, name: "Western"} |> Repo.insert!
+%Genre{id: 13, name: "Animation"} |> Repo.insert!
+%Genre{id: 14, name: "Sport"} |> Repo.insert!
+%Genre{id: 15, name: "Musical"} |> Repo.insert!
+
 
 # Creating Languages...
 ##i##
@@ -226,6 +306,9 @@ alias Gradi.Writers.Writer
 %Language{id: 8, name: "Mandarin"} |> Repo.insert!
 %Language{id: 9, name: "Sindarin"} |> Repo.insert!
 %Language{id: 10, name: "German"} |> Repo.insert!
+%Language{id: 11, name: "Japanese"} |> Repo.insert!
+%Language{id: 12, name: "Yiddish"} |> Repo.insert!
+%Language{id: 13, name: "Norwegian"} |> Repo.insert!
 
 # Creating Directors...
 ##i##
@@ -244,6 +327,13 @@ alias Gradi.Writers.Writer
 %Director{id: 13, name: "Steven Spielberg"} |> Repo.insert!
 %Director{id: 14, name: "Peter Jackson"} |> Repo.insert!
 %Director{id: 15, name: "Quentin Tarantino"} |> Repo.insert!
+%Director{id: 16, name: "John Lasseter"} |> Repo.insert!
+%Director{id: 17, name: "Joe Ranft"} |> Repo.insert!
+%Director{id: 18, name: "Bradford Lewis"} |> Repo.insert!
+%Director{id: 19, name: "Brian Fee"} |> Repo.insert!
+%Director{id: 20, name: "Chris Buck"} |> Repo.insert!
+%Director{id: 21, name: "Jennifer Lee"} |> Repo.insert!
+%Director{id: 22, name: "Andrew Stanton"} |> Repo.insert!
 
 # Creating Writers...
 ##i##
@@ -274,6 +364,37 @@ alias Gradi.Writers.Writer
 %Writer{id: 25, name: "Philippa Boyens"} |> Repo.insert!
 %Writer{id: 26, name: "Peter Jackson"} |> Repo.insert!
 %Writer{id: 27, name: "Quentin Tarantino"} |> Repo.insert!
+
+%Writer{id: 28, name: "John Lasseter"} |> Repo.insert!
+%Writer{id: 29, name: "Joe Ranft"} |> Repo.insert!
+%Writer{id: 30, name: "Jorgen Klubien"} |> Repo.insert!
+%Writer{id: 31, name: "Dan Fogelman"} |> Repo.insert!
+%Writer{id: 32, name: "Kiel Murray"} |> Repo.insert!
+%Writer{id: 33, name: "Phil Lorin"} |> Repo.insert!
+%Writer{id: 34, name: "Steve Purcell"} |> Repo.insert!
+
+%Writer{id: 35, name: "Bradford Lewis"} |> Repo.insert!
+%Writer{id: 36, name: "Ben Queen"} |> Repo.insert!
+
+%Writer{id: 37, name: "Brian Fee"} |> Repo.insert!
+%Writer{id: 38, name: "Ben Queen"} |> Repo.insert!
+%Writer{id: 39, name: "Eyal Podell"} |> Repo.insert!
+%Writer{id: 40, name: "Jonathon E. Stewart"} |> Repo.insert!
+%Writer{id: 41, name: "Kiel Murray"} |> Repo.insert!
+%Writer{id: 42, name: "Bob Peterson"} |> Repo.insert!
+%Writer{id: 43, name: "Mike Rich"} |> Repo.insert!
+%Writer{id: 44, name: "Scott Morse"} |> Repo.insert!
+
+%Writer{id: 45, name: "Jennifer Lee"} |> Repo.insert!
+%Writer{id: 46, name: "Hans Christian Andersen"} |> Repo.insert!
+%Writer{id: 47, name: "Chris Buck"} |> Repo.insert!
+%Writer{id: 48, name: "Jennifer Lee"} |> Repo.insert!
+%Writer{id: 49, name: "Shane Morris"} |> Repo.insert!
+
+%Writer{id: 50, name: "Andrew Stanton"} |> Repo.insert!
+%Writer{id: 51, name: "Pete Docter "} |> Repo.insert!
+%Writer{id: 52, name: "Jim Reardon"} |> Repo.insert!
+
 
 # Creating Companies...
 ##i##
@@ -306,6 +427,11 @@ alias Gradi.Writers.Writer
 
 %Company{id: 19, name: "A Band Apart Films", country: "United States", logo: "https://upload.wikimedia.org/wikipedia/en/4/4c/A_Band_Apart_logo.png"} |> Repo.insert!
 %Company{id: 20, name: "Columbia Pictures", country: "United States", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Columbia_Pictures_Logo.svg/1920px-Columbia_Pictures_Logo.svg.png"} |> Repo.insert!
+
+%Company{id: 21, name: "Walt Disney Pictures", country: "United States", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/20/Walt_Disney_Pictures_Logo_2011.svg/1280px-Walt_Disney_Pictures_Logo_2011.svg.png"} |> Repo.insert!
+%Company{id: 22, name: "Pixar Animation Studios", country: "United States", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Pixaranimationstudios.jpg/800px-Pixaranimationstudios.jpg"} |> Repo.insert!
+
+%Company{id: 23, name: "Walt Disney Animation Studios", country: "United States", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Walt_Disney_Animation_Studios_logo.svg/800px-Walt_Disney_Animation_Studios_logo.svg.png"} |> Repo.insert!
 
 # Creating Movies...
 ##i##
@@ -472,6 +598,61 @@ alias Gradi.Writers.Writer
   release_date: ~D[2012-12-25],
   revenue: 425368238.0,
   poster: "https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_SX300.jpg",
+} |> Repo.insert!
+
+%Movie{
+  id: 16,
+  imdb_id: "tt0317219",
+  title: "Cars",
+  classification: 0,
+  description: "A hot-shot race-car named Lightning McQueen gets waylaid in Radiator Springs, where he finds the true meaning of friendship and family.",
+  release_date: ~D[2006-06-09],
+  revenue: 461983149.0,
+  poster: "https://m.media-amazon.com/images/M/MV5BMTg5NzY0MzA2MV5BMl5BanBnXkFtZTYwNDc3NTc2._V1_SX300.jpg",
+} |> Repo.insert!
+
+%Movie{
+  id: 17,
+  imdb_id: "tt1216475",
+  title: "Cars 2",
+  classification: 0,
+  description: "Star race car Lightning McQueen and his pal Mater head overseas to compete in the World Grand Prix race. But the road to the championship becomes rocky as Mater gets caught up in an intriguing adventure of his own: international espionage.",
+  release_date: ~D[2011-06-24],
+  revenue: 559852396.0,
+  poster: "https://m.media-amazon.com/images/M/MV5BMTUzNTc3MTU3M15BMl5BanBnXkFtZTcwMzIxNTc3NA@@._V1_SX300.jpg",
+} |> Repo.insert!
+
+%Movie{
+  id: 18,
+  imdb_id: "tt3606752",
+  title: "Cars 3",
+  classification: 0,
+  description: "Lightning McQueen sets out to prove to a new generation of racers that he's still the best race car in the world.",
+  release_date: ~D[2017-06-16],
+  revenue: 383930656.0,
+  poster: "https://m.media-amazon.com/images/M/MV5BMTc0NzU2OTYyN15BMl5BanBnXkFtZTgwMTkwOTg2MTI@._V1_SX300.jpg",
+} |> Repo.insert!
+
+%Movie{
+  id: 19,
+  imdb_id: "tt2294629",
+  title: "Frozen",
+  classification: 0,
+  description: "When the newly-crowned Queen Elsa accidentally uses her power to turn things into ice to curse her home in infinite winter, her sister Anna teams up with a mountain man, his playful reindeer, and a snowman to change the weather condition.",
+  release_date: ~D[2013-11-27],
+  revenue: 1274219009.0,
+  poster: "https://m.media-amazon.com/images/M/MV5BMTQ1MjQwMTE5OF5BMl5BanBnXkFtZTgwNjk3MTcyMDE@._V1_SX300.jpg",
+} |> Repo.insert!
+
+%Movie{
+  id: 20,
+  imdb_id: "tt0910970",
+  title: "WALL·E",
+  classification: 0,
+  description: "In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.",
+  release_date: ~D[2008-06-27],
+  revenue: 521311860.0,
+  poster: "https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_SX300.jpg",
 } |> Repo.insert!
 
 # Creating Characters...
@@ -676,7 +857,86 @@ alias Gradi.Writers.Writer
 %Character{protagonist: false, character: "D'Artagnan", movie_id: 15, actor_id: 158} |> Repo.insert!
 %Character{protagonist: false, character: "Rodney", movie_id: 15, actor_id: 159} |> Repo.insert!
 %Character{protagonist: false, character: "Big Fred's Opponent", movie_id: 15, actor_id: 160} |> Repo.insert!
-
+# Cars
+%Character{protagonist: true, character: "Lightning McQueen", movie_id: 16, actor_id: 161} |> Repo.insert!
+%Character{protagonist: false, character: "Doc Hudson", movie_id: 16, actor_id: 162} |> Repo.insert!
+%Character{protagonist: false, character: "Sally Carrera", movie_id: 16, actor_id: 163} |> Repo.insert!
+%Character{protagonist: false, character: "Mater", movie_id: 16, actor_id: 164} |> Repo.insert!
+%Character{protagonist: false, character: "Ramone", movie_id: 16, actor_id: 165} |> Repo.insert!
+%Character{protagonist: false, character: "Luigi", movie_id: 16, actor_id: 166} |> Repo.insert!
+%Character{protagonist: false, character: "Guido", movie_id: 16, actor_id: 167} |> Repo.insert!
+%Character{protagonist: false, character: "Flo", movie_id: 16, actor_id: 168} |> Repo.insert!
+%Character{protagonist: false, character: "Sarge", movie_id: 16, actor_id: 169} |> Repo.insert!
+%Character{protagonist: false, character: "Sheriff", movie_id: 16, actor_id: 170} |> Repo.insert!
+%Character{protagonist: false, character: "Fillmore", movie_id: 16, actor_id: 171} |> Repo.insert!
+%Character{protagonist: false, character: "Lizzie", movie_id: 16, actor_id: 172} |> Repo.insert!
+%Character{protagonist: false, character: "Mack", movie_id: 16, actor_id: 173} |> Repo.insert!
+%Character{protagonist: false, character: "Red", movie_id: 16, actor_id: 174} |> Repo.insert!
+%Character{protagonist: false, character: "Chick Hicks", movie_id: 16, actor_id: 175} |> Repo.insert!
+# Cars 2
+%Character{protagonist: true, character: "Lightning McQueen", movie_id: 17, actor_id: 161} |> Repo.insert!
+%Character{protagonist: false, character: "Mater", movie_id: 17, actor_id: 164} |> Repo.insert!
+%Character{protagonist: false, character: "Finn McMissile", movie_id: 17, actor_id: 75} |> Repo.insert!
+%Character{protagonist: false, character: "Holley Shiftwell", movie_id: 17, actor_id: 176} |> Repo.insert!
+%Character{protagonist: false, character: "Sir Miles Axlerod", movie_id: 17, actor_id: 177} |> Repo.insert!
+%Character{protagonist: false, character: "Francesco Bernoulli", movie_id: 17, actor_id: 178} |> Repo.insert!
+%Character{protagonist: false, character: "Brent Mustangburger ", movie_id: 17, actor_id: 179} |> Repo.insert!
+%Character{protagonist: false, character: "Grem", movie_id: 17, actor_id: 180} |> Repo.insert!
+%Character{protagonist: false, character: "Professor Z", movie_id: 17, actor_id: 181} |> Repo.insert!
+%Character{protagonist: false, character: "Acer", movie_id: 17, actor_id: 182} |> Repo.insert!
+%Character{protagonist: false, character: "Sally", movie_id: 17, actor_id: 163} |> Repo.insert!
+%Character{protagonist: false, character: "Darrell Cartrip ", movie_id: 17, actor_id: 183} |> Repo.insert!
+%Character{protagonist: false, character: "Uncle Topolino", movie_id: 17, actor_id: 184} |> Repo.insert!
+%Character{protagonist: false, character: "David Hobbscap ", movie_id: 17, actor_id: 185} |> Repo.insert!
+%Character{protagonist: false, character: "Mel Dorado ", movie_id: 17, actor_id: 186} |> Repo.insert!
+# Cars 3
+%Character{protagonist: true, character: "Lightning McQueen", movie_id: 18, actor_id: 187} |> Repo.insert!
+%Character{protagonist: false, character: "Cruz Ramirez", movie_id: 18, actor_id: 188} |> Repo.insert!
+%Character{protagonist: false, character: "Smokey", movie_id: 18, actor_id: 189} |> Repo.insert!
+%Character{protagonist: false, character: "Sterling", movie_id: 18, actor_id: 190} |> Repo.insert!
+%Character{protagonist: false, character: "Mater", movie_id: 18, actor_id: 191} |> Repo.insert!
+%Character{protagonist: false, character: "Jackson Storm", movie_id: 18, actor_id: 192} |> Repo.insert!
+%Character{protagonist: false, character: "Dusty", movie_id: 18, actor_id: 193} |> Repo.insert!
+%Character{protagonist: false, character: "Luigi", movie_id: 18, actor_id: 194} |> Repo.insert!
+%Character{protagonist: false, character: "Sally", movie_id: 18, actor_id: 195} |> Repo.insert!
+%Character{protagonist: false, character: "Miss Fritter", movie_id: 18, actor_id: 196} |> Repo.insert!
+%Character{protagonist: false, character: "Natalie Certain", movie_id: 18, actor_id: 197} |> Repo.insert!
+%Character{protagonist: false, character: "Bob Cutlass", movie_id: 18, actor_id: 198} |> Repo.insert!
+%Character{protagonist: false, character: "Louise Nash", movie_id: 18, actor_id: 199} |> Repo.insert!
+%Character{protagonist: false, character: "Darrell Cartrip", movie_id: 18, actor_id: 200} |> Repo.insert!
+%Character{protagonist: false, character: "River Scott", movie_id: 18, actor_id: 201} |> Repo.insert!
+# Frozen
+%Character{protagonist: true, character: "Anna", movie_id: 19, actor_id: 202} |> Repo.insert!
+%Character{protagonist: true, character: "Elsa", movie_id: 19, actor_id: 203} |> Repo.insert!
+%Character{protagonist: false, character: "Kristoff", movie_id: 19, actor_id: 204} |> Repo.insert!
+%Character{protagonist: false, character: "Olaf", movie_id: 19, actor_id: 205} |> Repo.insert!
+%Character{protagonist: false, character: "Hans", movie_id: 19, actor_id: 206} |> Repo.insert!
+%Character{protagonist: false, character: "Duke", movie_id: 19, actor_id: 207} |> Repo.insert!
+%Character{protagonist: false, character: "Pabbie", movie_id: 19, actor_id: 208} |> Repo.insert!
+%Character{protagonist: false, character: "Oaken", movie_id: 19, actor_id: 209} |> Repo.insert!
+%Character{protagonist: false, character: "Kai", movie_id: 19, actor_id: 210} |> Repo.insert!
+%Character{protagonist: false, character: "Bulda", movie_id: 19, actor_id: 211} |> Repo.insert!
+%Character{protagonist: false, character: "Gerda ", movie_id: 19, actor_id: 212} |> Repo.insert!
+%Character{protagonist: false, character: "Bishop ", movie_id: 19, actor_id: 213} |> Repo.insert!
+%Character{protagonist: false, character: "King", movie_id: 19, actor_id: 214} |> Repo.insert!
+%Character{protagonist: false, character: "Young Anna", movie_id: 19, actor_id: 215} |> Repo.insert!
+%Character{protagonist: false, character: "Young Elsa", movie_id: 19, actor_id: 216} |> Repo.insert!
+# WALL-E
+%Character{protagonist: true, character: "WALL·E", movie_id: 20, actor_id: 217} |> Repo.insert!
+%Character{protagonist: false, character: "EVE", movie_id: 20, actor_id: 218} |> Repo.insert!
+%Character{protagonist: false, character: "Captain", movie_id: 20, actor_id: 219} |> Repo.insert!
+%Character{protagonist: false, character: "Shelby Forthright", movie_id: 20, actor_id: 220} |> Repo.insert!
+%Character{protagonist: false, character: "AUTO", movie_id: 20, actor_id: 221} |> Repo.insert!
+%Character{protagonist: false, character: "John", movie_id: 20, actor_id: 222} |> Repo.insert!
+%Character{protagonist: false, character: "Mary", movie_id: 20, actor_id: 223} |> Repo.insert!
+%Character{protagonist: false, character: "Ship's Computer", movie_id: 20, actor_id: 224} |> Repo.insert!
+%Character{protagonist: false, character: "Steward Bots", movie_id: 20, actor_id: 225} |> Repo.insert!
+%Character{protagonist: false, character: "Forthright's Advisor ", movie_id: 20, actor_id: 226} |> Repo.insert!
+%Character{protagonist: false, character: "Axiom Passenger #3 ", movie_id: 20, actor_id: 227} |> Repo.insert!
+%Character{protagonist: false, character: "Lifeguard Bot ", movie_id: 20, actor_id: 228} |> Repo.insert!
+%Character{protagonist: false, character: "Axiom Passenger #12 ", movie_id: 20, actor_id: 229} |> Repo.insert!
+%Character{protagonist: false, character: "Axiom Passenger #7 ", movie_id: 20, actor_id: 230} |> Repo.insert!
+%Character{protagonist: false, character: "(voice)", movie_id: 20, actor_id: 231} |> Repo.insert!
 
 # Creating M2M Associations
 ##i##
@@ -695,11 +955,11 @@ Repo.insert_all("movies_genres", [%{movie_id: 12, genre_id: 2}, %{movie_id: 12, 
 Repo.insert_all("movies_genres", [%{movie_id: 13, genre_id: 2}, %{movie_id: 13, genre_id: 11}])
 Repo.insert_all("movies_genres", [%{movie_id: 14, genre_id: 3}, %{movie_id: 14, genre_id: 5}, %{movie_id: 14, genre_id: 6}])
 Repo.insert_all("movies_genres", [%{movie_id: 15, genre_id: 3}, %{movie_id: 15, genre_id: 12}])
-#Repo.insert_all("movies_genres", [%{movie_id: 16, genre_id: }])
-#Repo.insert_all("movies_genres", [%{movie_id: 17, genre_id: }])
-#Repo.insert_all("movies_genres", [%{movie_id: 18, genre_id: }])
-#Repo.insert_all("movies_genres", [%{movie_id: 19, genre_id: }])
-#Repo.insert_all("movies_genres", [%{movie_id: 20, genre_id: }])
+Repo.insert_all("movies_genres", [%{movie_id: 16, genre_id: 11}, %{movie_id: 16, genre_id: 13}, %{movie_id: 16, genre_id: 14}])
+Repo.insert_all("movies_genres", [%{movie_id: 17, genre_id: 5}, %{movie_id: 17, genre_id: 10}, %{movie_id: 17, genre_id: 11}, %{movie_id: 17, genre_id: 13}, %{movie_id: 17, genre_id: 14}])
+Repo.insert_all("movies_genres", [%{movie_id: 18, genre_id: 5}, %{movie_id: 18, genre_id: 10}, %{movie_id: 18, genre_id: 11}, %{movie_id: 18, genre_id: 13}, %{movie_id: 18, genre_id: 14}])
+Repo.insert_all("movies_genres", [%{movie_id: 19, genre_id: 5}, %{movie_id: 19, genre_id: 6}, %{movie_id: 19, genre_id: 10}, %{movie_id: 19, genre_id: 11}, %{movie_id: 19, genre_id: 13}, %{movie_id: 19, genre_id: 15}])
+Repo.insert_all("movies_genres", [%{movie_id: 20, genre_id: 2}, %{movie_id: 20, genre_id: 5}, %{movie_id: 20, genre_id: 11}, %{movie_id: 20, genre_id: 13}])
 #Repo.insert_all("movies_genres", [%{movie_id: 21, genre_id: }])
 #Repo.insert_all("movies_genres", [%{movie_id: 22, genre_id: }])
 #Repo.insert_all("movies_genres", [%{movie_id: 23, genre_id: }])
@@ -728,11 +988,11 @@ Repo.insert_all("movies_languages", [%{movie_id: 12, language_id: 1}])
 Repo.insert_all("movies_languages", [%{movie_id: 13, language_id: 1}])
 Repo.insert_all("movies_languages", [%{movie_id: 14, language_id: 1}, %{movie_id: 14, language_id: 9}])
 Repo.insert_all("movies_languages", [%{movie_id: 15, language_id: 1}, %{movie_id: 15, language_id: 4}, %{movie_id: 15, language_id: 6}, %{movie_id: 15, language_id: 10}])
-#Repo.insert_all("movies_languages", [%{movie_id: 16, language_id: }])
-#Repo.insert_all("movies_languages", [%{movie_id: 17, language_id: }])
-#Repo.insert_all("movies_languages", [%{movie_id: 18, language_id: }])
-#Repo.insert_all("movies_languages", [%{movie_id: 19, language_id: }])
-#Repo.insert_all("movies_languages", [%{movie_id: 20, language_id: }])
+Repo.insert_all("movies_languages", [%{movie_id: 16, language_id: 1}, %{movie_id: 16, language_id: 6}, %{movie_id: 16, language_id: 11}, %{movie_id: 16, language_id: 12}])
+Repo.insert_all("movies_languages", [%{movie_id: 17, language_id: 1}, %{movie_id: 17, language_id: 4}, %{movie_id: 17, language_id: 6}, %{movie_id: 17, language_id: 11}])
+Repo.insert_all("movies_languages", [%{movie_id: 18, language_id: 1}])
+Repo.insert_all("movies_languages", [%{movie_id: 19, language_id: 1}, %{movie_id: 19, language_id: 13}])
+Repo.insert_all("movies_languages", [%{movie_id: 20, language_id: 1}])
 #Repo.insert_all("movies_languages", [%{movie_id: 21, language_id: }])
 #Repo.insert_all("movies_languages", [%{movie_id: 22, language_id: }])
 #Repo.insert_all("movies_languages", [%{movie_id: 23, language_id: }])
@@ -761,11 +1021,11 @@ Repo.insert_all("movies_directors", [%{movie_id: 12, director_id: 12}])
 Repo.insert_all("movies_directors", [%{movie_id: 13, director_id: 13}])
 Repo.insert_all("movies_directors", [%{movie_id: 14, director_id: 14}])
 Repo.insert_all("movies_directors", [%{movie_id: 15, director_id: 15}])
-#Repo.insert_all("movies_directors", [%{movie_id: 16, director_id: }])
-#Repo.insert_all("movies_directors", [%{movie_id: 17, director_id: }])
-#Repo.insert_all("movies_directors", [%{movie_id: 18, director_id: }])
-#Repo.insert_all("movies_directors", [%{movie_id: 19, director_id: }])
-#Repo.insert_all("movies_directors", [%{movie_id: 20, director_id: }])
+Repo.insert_all("movies_directors", [%{movie_id: 16, director_id: 16}, %{movie_id: 16, director_id: 17}])
+Repo.insert_all("movies_directors", [%{movie_id: 17, director_id: 16}, %{movie_id: 17, director_id: 18}])
+Repo.insert_all("movies_directors", [%{movie_id: 18, director_id: 19}])
+Repo.insert_all("movies_directors", [%{movie_id: 19, director_id: 20}, %{movie_id: 19, director_id: 21}])
+Repo.insert_all("movies_directors", [%{movie_id: 20, director_id: 22}])
 #Repo.insert_all("movies_directors", [%{movie_id: 21, director_id: }])
 #Repo.insert_all("movies_directors", [%{movie_id: 22, director_id: }])
 #Repo.insert_all("movies_directors", [%{movie_id: 23, director_id: }])
@@ -794,11 +1054,11 @@ Repo.insert_all("movies_writers", [%{movie_id: 12, writer_id: 20}, %{movie_id: 1
 Repo.insert_all("movies_writers", [%{movie_id: 13, writer_id: 22}])
 Repo.insert_all("movies_writers", [%{movie_id: 14, writer_id: 23}, %{movie_id: 14, writer_id: 24}, %{movie_id: 14, writer_id: 25}, %{movie_id: 14, writer_id: 26}])
 Repo.insert_all("movies_writers", [%{movie_id: 15, writer_id: 27}])
-#Repo.insert_all("movies_writers", [%{movie_id: 16, writer_id: }])
-#Repo.insert_all("movies_writers", [%{movie_id: 17, writer_id: }])
-#Repo.insert_all("movies_writers", [%{movie_id: 18, writer_id: }])
-#Repo.insert_all("movies_writers", [%{movie_id: 19, writer_id: }])
-#Repo.insert_all("movies_writers", [%{movie_id: 20, writer_id: }])
+Repo.insert_all("movies_writers", [%{movie_id: 16, writer_id: 28}, %{movie_id: 16, writer_id: 29}, %{movie_id: 16, writer_id: 30}, %{movie_id: 16, writer_id: 31}, %{movie_id: 16, writer_id: 32}, %{movie_id: 16, writer_id: 33}, %{movie_id: 16, writer_id: 34}])
+Repo.insert_all("movies_writers", [%{movie_id: 17, writer_id: 28}, %{movie_id: 17, writer_id: 31}, %{movie_id: 17, writer_id: 35}, %{movie_id: 17, writer_id: 36}])
+Repo.insert_all("movies_writers", [%{movie_id: 18, writer_id: 37}, %{movie_id: 18, writer_id: 38}, %{movie_id: 18, writer_id: 39}, %{movie_id: 18, writer_id: 40}, %{movie_id: 18, writer_id: 41}, %{movie_id: 18, writer_id: 42}, %{movie_id: 18, writer_id: 43}, %{movie_id: 18, writer_id: 44}])
+Repo.insert_all("movies_writers", [%{movie_id: 19, writer_id: 45}, %{movie_id: 19, writer_id: 46}, %{movie_id: 19, writer_id: 47}, %{movie_id: 19, writer_id: 48}, %{movie_id: 19, writer_id: 49}])
+Repo.insert_all("movies_writers", [%{movie_id: 20, writer_id: 50}, %{movie_id: 20, writer_id: 51}, %{movie_id: 20, writer_id: 52}])
 #Repo.insert_all("movies_writers", [%{movie_id: 21, writer_id: }])
 #Repo.insert_all("movies_writers", [%{movie_id: 22, writer_id: }])
 #Repo.insert_all("movies_writers", [%{movie_id: 23, writer_id: }])
@@ -827,11 +1087,11 @@ Repo.insert_all("movies_companies", [%{movie_id: 12, company_id: 15}, %{movie_id
 Repo.insert_all("movies_companies", [%{movie_id: 13, company_id: 15}, %{movie_id: 13, company_id: 16}])
 Repo.insert_all("movies_companies", [%{movie_id: 14, company_id: 17}, %{movie_id: 14, company_id: 18}])
 Repo.insert_all("movies_companies", [%{movie_id: 15, company_id: 19}, %{movie_id: 15, company_id: 20}])
-#Repo.insert_all("movies_companies", [%{movie_id: 16, company_id: }])
-#Repo.insert_all("movies_companies", [%{movie_id: 17, company_id: }])
-#Repo.insert_all("movies_companies", [%{movie_id: 18, company_id: }])
-#Repo.insert_all("movies_companies", [%{movie_id: 19, company_id: }])
-#Repo.insert_all("movies_companies", [%{movie_id: 20, company_id: }])
+Repo.insert_all("movies_companies", [%{movie_id: 16, company_id: 21}, %{movie_id: 16, company_id: 22}])
+Repo.insert_all("movies_companies", [%{movie_id: 17, company_id: 21}, %{movie_id: 17, company_id: 22}])
+Repo.insert_all("movies_companies", [%{movie_id: 18, company_id: 21}, %{movie_id: 18, company_id: 22}])
+Repo.insert_all("movies_companies", [%{movie_id: 19, company_id: 21}, %{movie_id: 19, company_id: 23}])
+Repo.insert_all("movies_companies", [%{movie_id: 20, company_id: 21}, %{movie_id: 20, company_id: 22}])
 #Repo.insert_all("movies_companies", [%{movie_id: 21, company_id: }])
 #Repo.insert_all("movies_companies", [%{movie_id: 22, company_id: }])
 #Repo.insert_all("movies_companies", [%{movie_id: 23, company_id: }])
@@ -842,5 +1102,3 @@ Repo.insert_all("movies_companies", [%{movie_id: 15, company_id: 19}, %{movie_id
 #Repo.insert_all("movies_companies", [%{movie_id: 28, company_id: }])
 #Repo.insert_all("movies_companies", [%{movie_id: 29, company_id: }])
 #Repo.insert_all("movies_companies", [%{movie_id: 30, company_id: }])
-
-

@@ -1,7 +1,7 @@
 // ref: https://www.w3schools.com/xml/xpath_axes.asp
 
 var $max = 15, $i, $stringBuilder = "", $s1, $s2;
-var $actor_id = 147, $movie_id = 14, $actors = new Array(), $chars = new Array();
+var $actor_id = 217, $movie_id = 20, $actors = new Array(), $chars = new Array();
 for($i = 1; $i <= $max; $i++){
 	$s1 = document.evaluate("//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[" + ($i+1) + "]/td[2]/a//text()", 
 		document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent.trim();
