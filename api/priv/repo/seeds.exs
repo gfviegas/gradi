@@ -429,7 +429,7 @@ alias Gradi.Writers.Writer
 %Company{id: 20, name: "Columbia Pictures", country: "United States", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Columbia_Pictures_Logo.svg/1920px-Columbia_Pictures_Logo.svg.png"} |> Repo.insert!
 
 %Company{id: 21, name: "Walt Disney Pictures", country: "United States", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/20/Walt_Disney_Pictures_Logo_2011.svg/1280px-Walt_Disney_Pictures_Logo_2011.svg.png"} |> Repo.insert!
-%Company{id: 22, name: "Pixar Animation Studios", country: "United States", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Pixaranimationstudios.jpg/800px-Pixaranimationstudios.jpg"} |> Repo.insert!
+%Company{id: 22, name: "Pixar Animation Studios", country: "United States", logo: "https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2013/09/pixar.jpg"} |> Repo.insert!
 
 %Company{id: 23, name: "Walt Disney Animation Studios", country: "United States", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Walt_Disney_Animation_Studios_logo.svg/800px-Walt_Disney_Animation_Studios_logo.svg.png"} |> Repo.insert!
 
