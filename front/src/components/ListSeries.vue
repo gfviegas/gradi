@@ -28,7 +28,7 @@
 
           <b-table-column field="title" label="Título" sortable>{{ props.row.title }}</b-table-column>
 
-          <b-table-column field="dateReleased" label="Date" sortable centered>
+          <b-table-column field="dateReleased" label="Data de Lançamento" sortable centered>
             <span class="tag is-success">{{ props.row.dateReleased | formatDate }}</span>
           </b-table-column>
 
