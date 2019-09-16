@@ -5,6 +5,8 @@ TP de GRADI
 - Docker
 - Docker-Compose
 
+## Configurando pacotes da api
+``` docker-compose run api mix deps.get```
 
 ## Configurando o banco relacional
 ``` docker-compose run api mix ecto.reset```
