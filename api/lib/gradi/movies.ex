@@ -4,9 +4,10 @@ defmodule Gradi.Movies do
   """
 
   import Ecto.Query, warn: false
-  alias Gradi.Repo
 
+  alias Gradi.Repo
   alias Gradi.Movies.Movie
+  alias Gradi.Movies.Character
 
   defp base_query, do: from m in Movie, preload: [{:characters, :actor}, :languages, :directors, :genres, :writers, :companies]
 
@@ -103,6 +104,72 @@ defmodule Gradi.Movies do
   # def get_movie!(id), do: Repo.get!(Movie, id)
   def get_movie!(id), do: Repo.get!(Movie, id) |> Repo.preload([{:characters, :actor}, :languages, :directors, :genres, :writers, :companies])
 
+  @doc """
+  Creates a movie.
+
+  ## Examples
+
+      iex> create_movie(%{field: value})
+      {:ok, %Movie{}}
+
+      iex> create_movie(%{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def create_movie(attrs \\ %{}) do
+    case %Movie{} |> Movie.changeset(attrs) |> Repo.insert() do
+      {:ok, movie} -> {:ok, movie |> Repo.preload([{:characters, :actor}, :languages, :directors, :genres, :writers, :companies]) }
+      {status, response} -> { status, response }
+    end
+  end
+
+  @doc """
+  Updates a movie.
+
+  ## Examples
+
+      iex> update_movie(movie, %{field: new_value})
+      {:ok, %Movie{}}
+
+      iex> update_movie(movie, %{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def update_movie(%Movie{} = movie, attrs) do
+    movie
+    |> Movie.changeset(attrs)
+    |> Repo.update()
+  end
+
+  @doc """
+  Deletes a Movie.
+
+  ## Examples
+
+      iex> delete_movie(movie)
+      {:ok, %Movie{}}
+
+      iex> delete_movie(movie)
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def delete_movie(%Movie{} = movie) do
+    Repo.delete(movie)
+  end
+
+  @doc """
+  Returns an `%Ecto.Changeset{}` for tracking movie changes.
+
+  ## Examples
+
+      iex> change_movie(movie)
+      %Ecto.Changeset{source: %Movie{}}
+
+  """
+  def change_movie(%Movie{} = movie) do
+    Movie.changeset(movie, %{})
+  end
+
 
   @doc """
   Returns the list of movies_characters.
@@ -115,6 +182,71 @@ defmodule Gradi.Movies do
   """
   def list_movies_characters do
     Repo.all(Character)
+  end
+
+  @doc """
+  Creates a character.
+
+  ## Examples
+
+      iex> create_character(%{field: value})
+      {:ok, %Actor{}}
+
+      iex> create_character(%{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def create_character(attrs \\ %{}) do
+    %Character{}
+    |> Character.changeset(attrs)
+    |> Repo.insert()
+  end
+
+  @doc """
+  Updates a character.
+
+  ## Examples
+
+      iex> update_character(character, %{field: new_value})
+      {:ok, %Character{}}
+
+      iex> update_character(character, %{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def update_character(%Character{} = character, attrs) do
+    character
+    |> Character.changeset(attrs)
+    |> Repo.update()
+  end
+
+  @doc """
+  Deletes a Character.
+
+  ## Examples
+
+      iex> delete_character(character)
+      {:ok, %Character{}}
+
+      iex> delete_character(character)
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def delete_character(%Character{} = character) do
+    Repo.delete(character)
+  end
+
+  @doc """
+  Returns an `%Ecto.Changeset{}` for tracking character changes.
+
+  ## Examples
+
+      iex> change_character(character)
+      %Ecto.Changeset{source: %Character{}}
+
+  """
+  def change_character(%Character{} = character) do
+    Character.changeset(character, %{})
   end
 
   @doc """

@@ -4,7 +4,7 @@ defmodule Gradi.Movies.Character do
 
   schema "movies_characters" do
     field :character, :string
-    field :protagonist, :boolean
+    field :protagonist, :boolean, default: false
     belongs_to :movie, Gradi.Movies.Movie, foreign_key: :movie_id
     belongs_to :actor, Gradi.Actors.Actor, foreign_key: :actor_id
   end
@@ -12,7 +12,7 @@ defmodule Gradi.Movies.Character do
   @doc false
   def changeset(character, attrs) do
     character
-    |> cast(attrs, [])
-    |> validate_required([])
+    |> cast(attrs, [:character, :protagonist])
+    |> validate_required([:character])
   end
 end

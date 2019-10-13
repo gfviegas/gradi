@@ -6,9 +6,33 @@ defmodule Gradi.MoviesTest do
   describe "movies" do
     alias Gradi.Movies.Movie
 
-    @valid_attrs %{description: "some description", title: "some title"}
-    @update_attrs %{description: "some updated description", title: "some updated title"}
-    @invalid_attrs %{description: nil, title: nil}
+    @valid_attrs %{
+      imdb_id: "someimdbid",
+      title: "some title",
+      classification: 1,
+      description: "some description",
+      release_date: ~D[2000-01-01],
+      revenue: 123456.93,
+      poster: "some poster",
+    }
+    @update_attrs %{
+      imdb_id: "other_id",
+      title: "some updated title",
+      classification: 2,
+      description: "some updated description",
+      release_date: ~D[2000-12-12],
+      revenue: 9876543.21,
+      poster: "some updated poster",
+    }
+    @invalid_attrs %{
+      imdb_id: nil,
+      title: nil,
+      classification: nil,
+      description: nil,
+      release_date: nil,
+      revenue: nil,
+      poster: nil
+    }
 
     def movie_fixture(attrs \\ %{}) do
       {:ok, movie} =
@@ -19,9 +43,9 @@ defmodule Gradi.MoviesTest do
       movie
     end
 
-    test "list_movies/0 returns all movies" do
+    test "list_movies/0 returns all movies and the count of movies" do
       movie = movie_fixture()
-      assert Movies.list_movies() == [movie]
+      assert Movies.list_movies() == {[movie], 1}
     end
 
     test "get_movie!/1 returns the movie with given id" do
@@ -67,9 +91,9 @@ defmodule Gradi.MoviesTest do
   describe "movies_characters" do
     alias Gradi.Movies.Character
 
-    @valid_attrs %{}
-    @update_attrs %{}
-    @invalid_attrs %{}
+    @valid_attrs %{character: "Gasparzinho", protagonist: true}
+    @update_attrs %{character: "Justin Finch-Fletchley", protagonist: false}
+    @invalid_attrs %{character: nil}
 
     def character_fixture(attrs \\ %{}) do
       {:ok, character} =
