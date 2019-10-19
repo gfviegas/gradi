@@ -9,3 +9,12 @@
 -> Talvez seja interessante criar mais modelos de validação para permitir mais de um tipo de arquivo XML... (por exemplo: Colocar atributo value para todas (ou quase todas) as tags)
 
 ---> Exemplo de limpeza que NÃO está sendo feita: Country (de Company) -> United Stated / US / ...
+
+
+
+LINKS IMPORTANTES (para aprendizado e para a DOC):
+https://www.w3.org/2001/XMLSchema#intro
+https://www.w3.org/TR/xmlschema11-1/#Attribute_Declaration_details
+https://www.w3.org/TR/xmlschema11-2/#built-in-datatypes
+https://www.w3.org/TR/xmlschema11-2/datatypes.html#decimal
+https://www.w3.org/2009/XMLSchema/XMLSchema.xsd
