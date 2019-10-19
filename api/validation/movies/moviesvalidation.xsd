@@ -9,10 +9,14 @@
 			</xs:restriction>
 		</xs:simpleType>
 		
+
 		<xs:complexType name="Character">
-			<xs:attribute name="name" type="xs:string" use="required"/>
-			<xs:attribute name="actor" type="xs:string" use="required"/>
-			<xs:attribute name="protagonist" type="xs:boolean" default="false" use="optional"/>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="actor" type="xs:string" use="required"/>
+					<xs:attribute name="protagonist" type="xs:boolean" default="false" use="optional"/>
+				</xs:extension>
+			</xs:simpleContent>
 		</xs:complexType>
 		
 		<!-- https://en.wikipedia.org/wiki/List_of_genres -->
@@ -49,6 +53,46 @@
 			</xs:restriction>
 		</xs:simpleType>
 		
+		<xs:complexType name="Writer">
+			<xs:simpleContent>
+				<xs:extension base="xs:string" />
+			</xs:simpleContent>
+		</xs:complexType>
+		
+		<xs:complexType name="Director">
+			<xs:simpleContent>
+				<xs:extension base="xs:string" />
+			</xs:simpleContent>
+		</xs:complexType>
+		
+		<!-- TODO: Tratar Language como enumeração mesmo? -->
+		<xs:simpleType name="Language">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="English"/>
+				<xs:enumeration value="French"/>
+				<xs:enumeration value="German"/>
+				<xs:enumeration value="Italian"/>
+				<xs:enumeration value="Japanese"/>
+				<xs:enumeration value="Latin"/>
+				<xs:enumeration value="Mandarin"/>
+				<xs:enumeration value="Norwegian"/>
+				<xs:enumeration value="Portuguese"/>
+				<xs:enumeration value="Spanish"/>				
+				<xs:enumeration value="Swedish"/>
+				<xs:enumeration value="Sindarin"/>
+				<xs:enumeration value="Yiddish"/>				
+			</xs:restriction>
+		</xs:simpleType>
+		
+		<xs:complexType name="Company">
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="country" type="xs:string" use="required"/>
+					<xs:attribute name="logo" type="xs:string" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+		
 		<xs:complexType name="Movie">
 			<xs:sequence>
 				<xs:element name="imdbid" type="xs:string" />
@@ -62,6 +106,34 @@
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="genre" type="Genre" minOccurs="1" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="writers">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="writer" type="Writer" minOccurs="1" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="directors">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="director" type="Director" minOccurs="1" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="languages">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="language" type="Language" minOccurs="1" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="companies">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="company" type="Company" minOccurs="1" maxOccurs="unbounded" />
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>

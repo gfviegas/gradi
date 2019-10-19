@@ -17,11 +17,29 @@
 			<genre>Sci-fi</genre>
 			<!-- ... -->
 		</genres>
+		<writers>
+			<writer>George Lucas</writer>
+			<!-- ... -->
+		</writers>
+		<directors>
+			<director>George Lucas</director>
+			<!-- ... -->
+		</directors>
+		<languages>
+			<language>English</language>
+			<!-- ... -->
+		</languages>
+		<companies>
+			<company country="United States" logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Lucasfilm_logo.svg/800px-Lucasfilm_logo.svg.png">
+				Lucasfilm
+			</company>
+			<!-- ... -->
+		</companies>
 		<characters>
-			<character name="Luke Skywalker" actor="Mark Hamill" protagonist="true" />
-			<character name="Han Solo" actor="Harrison Ford" protagonist="true" />
-			<character name="C-3PO" actor="Anthony Daniels"/> <!-- Valor default de protagonist é false -->
-			<character name="R2-D2" actor="Kenny Baker"/>
+			<character actor="Mark Hamill" protagonist="true">Luke Skywalker</character>
+			<character actor="Harrison Ford" protagonist="true">Han Solo</character>
+			<character actor="Anthony Daniels">C-3PO</character> <!-- Valor default de protagonist é false -->
+			<character actor="Kenny Baker">R2-D2</character>
 			<!-- ... -->
 		</characters>		
 	</movie>
