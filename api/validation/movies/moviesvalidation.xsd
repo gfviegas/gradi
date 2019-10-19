@@ -5,7 +5,7 @@
 		<xs:simpleType name="DecimalBanco">
 			<xs:restriction base="xs:decimal">
 				<!-- Valor positivo, com até duas casas decimais obrigatórias -->
-				<xs:pattern value="[\+]?[0-9]+.[0-9]?[0-9]" />
+				<xs:pattern value="[0-9]+.[0-9]?[0-9]" />
 			</xs:restriction>
 		</xs:simpleType>
 		
