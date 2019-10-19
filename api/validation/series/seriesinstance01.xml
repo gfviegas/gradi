@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<series 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="seriesvalidation.xsd">
+	<serie>
+		<imdbid>tt0903747</imdbid>
+		<title>Breaking Bad</title>
+		<release_date>2008-01-20</release_date>
+		<runtime>49 min</runtime>
+		<classification>14A</classification>
+		<genres>
+			<genre>Crime</genre>
+			<genre>Drama</genre>
+			<genre>Thriller</genre>
+			<!-- ... -->
+		</genres>
+		<writers>
+			<writer>Vince Gilligan</writer>
+			<!-- ... -->
+		</writers>
+		<!-- TODO: Permitir characters ao invés de actors, também? -> Para movies, é characters... -->
+		<actors>
+			<actor character="Walter White" protagonist="true">Bryan Cranston</actor>
+			<actor character="Jesse Pinkman" protagonist="true">Aaron Paul</actor>
+			<actor character="Saul Goodman">Bob Odenkirk</actor>
+			<actor character="Gustavo 'Gus' Fring">Giancarlo Esposito</actor>
+			<!-- ... -->
+		</actors>
+		<description>A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.</description>
+		<languages>
+			<language>English</language>
+			<language>Spanish</language>
+			<!-- ... -->
+		</languages>
+		<countries>
+			<country>USA</country>
+			<!-- ... -->
+		</countries>
+		<poster>https://m.media-amazon.com/images/M/MV5BMjhiMzgxZTctNDc1Ni00OTIxLTlhMTYtZTA3ZWFkODRkNmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg</poster>
+		<seasons>5</seasons>
+		<spinoffs>
+			<spinoff imdbid="tt3032476">Better Call Saul</spinoff>
+			<!-- ... -->
+		</spinoffs>
+	</serie>
+	<!-- ... -->
+</series>
