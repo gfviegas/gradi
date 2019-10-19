@@ -85,7 +85,7 @@
 		</xs:complexType>
 		
 		<xs:complexType name="Serie">
-			<xs:sequence>
+			<xs:all>
 				<xs:element name="imdbid" type="xs:string" />
 				<xs:element name="title" type="xs:string" />
 				<xs:element name="release_date" type="xs:date" />
@@ -129,14 +129,14 @@
 				</xs:element>
 				<xs:element name="poster" type="xs:string" />
 				<xs:element name="seasons" type="xs:integer" />
-				<xs:element name="spinoffs">
+				<xs:element name="spinoffs" minOccurs="0" maxOccurs="1">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="spinoff" type="Spinoff" minOccurs="1" maxOccurs="unbounded" />
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-			</xs:sequence>
+			</xs:all>
 		</xs:complexType>
 	<!-- Fim da criação de tipos (classes) -->
 

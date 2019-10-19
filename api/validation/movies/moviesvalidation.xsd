@@ -94,7 +94,7 @@
 		</xs:complexType>
 		
 		<xs:complexType name="Movie">
-			<xs:sequence>
+			<xs:all>
 				<xs:element name="imdbid" type="xs:string" />
 				<xs:element name="title" type="xs:string" />
 				<xs:element name="classification" type="xs:integer" />
@@ -144,7 +144,7 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>				
-			</xs:sequence>
+			</xs:all>
 		</xs:complexType>
 	<!-- Fim da criação de tipos (classes) -->
 	
