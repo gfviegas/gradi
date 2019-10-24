@@ -8,6 +8,11 @@ defmodule GradiValidation.XMLSchemaTest do
         valid: "test/resources/movies.xml",
         invalid: "test/resources/movies_invalid.xml",
         missing: "test/resources/movies_missing_tags.xml"
+      },
+      series: %{
+        valid: "test/resources/series.xml",
+        invalid: "test/resources/series_invalid.xml",
+        missing: "test/resources/series_missing_tags.xml"
       }
     }
 
@@ -33,6 +38,29 @@ defmodule GradiValidation.XMLSchemaTest do
 
     test "missing tags are identified", files do
       assert {:error, err} = XMLSchema.validate(files[:movies][:missing], :movie)
+      assert [{_, :xmerl_xsd, {:missing_mandatory_elements_in_all, _}}] = err
+    end
+  end
+
+  describe "series" do
+    test "valid file is accepted and default values are filled", files do
+      assert {:ok, new_resource} = XMLSchema.validate(files[:series][:valid], :series)
+      assert elem(new_resource, 0) == :xmlElement
+
+      refute [] == :xmerl_xpath.string('/series/serie/actors/actor[@character="Saul Goodman"]/@protagonist', new_resource)
+      assert {:xmlObj, _, 'false'} = :xmerl_xpath.string('string(/series/serie/actors/actor[@character="Saul Goodman"]/@protagonist)', new_resource)
+    end
+
+    test "valid file is not accepted with movies type", files do
+      assert {:error, _} = XMLSchema.validate(files[:series][:valid], :movies)
+    end
+
+    test "invalid file is not accepted", files do
+      assert {:error, _} = XMLSchema.validate(files[:series][:invalid], :series)
+    end
+
+    test "missing tags are identified", files do
+      assert {:error, err} = XMLSchema.validate(files[:series][:missing], :series)
       assert [{_, :xmerl_xsd, {:missing_mandatory_elements_in_all, _}}] = err
     end
   end
