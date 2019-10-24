@@ -12,8 +12,8 @@ defmodule Gradi.MoviesTest do
       classification: 1,
       description: "some description",
       release_date: ~D[2000-01-01],
-      revenue: 123456.93,
-      poster: "some poster",
+      revenue: 123_456.93,
+      poster: "some poster"
     }
     @update_attrs %{
       imdb_id: "other_id",
@@ -21,8 +21,8 @@ defmodule Gradi.MoviesTest do
       classification: 2,
       description: "some updated description",
       release_date: ~D[2000-12-12],
-      revenue: 9876543.21,
-      poster: "some updated poster",
+      revenue: 9_876_543.21,
+      poster: "some updated poster"
     }
     @invalid_attrs %{
       imdb_id: nil,

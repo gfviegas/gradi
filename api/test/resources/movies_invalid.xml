@@ -1,9 +1,7 @@
 <?xml version="1.0"?>
-<movies 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="moviesvalidation.xsd">
-	<movie>
-		<imdbid>tt0076759</imdbid>
+<movies>
+	<moviaaaae>
+		<imdabid>tt0076759</imdabid>
 		<title>Star Wars: Episode IV - A New Hope</title>
 		<classification>14</classification>
 		<description>Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.</description>
@@ -41,7 +39,7 @@
 			<character actor="Anthony Daniels">C-3PO</character> <!-- Valor default de protagonist é false -->
 			<character actor="Kenny Baker">R2-D2</character>
 			<!-- ... -->
-		</characters>		
-	</movie>
+		</characters>
+	</moviaaaae>
 	<!-- ... -->
 </movies>

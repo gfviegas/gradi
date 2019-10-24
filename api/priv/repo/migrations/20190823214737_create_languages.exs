@@ -7,6 +7,5 @@ defmodule Gradi.Repo.Migrations.CreateLanguages do
 
       timestamps()
     end
-
   end
 end

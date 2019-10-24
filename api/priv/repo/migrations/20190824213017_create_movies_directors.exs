@@ -8,6 +8,5 @@ defmodule Gradi.Repo.Migrations.CreateMoviesDirectors do
     end
 
     create unique_index(:movies_directors, [:movie_id, :director_id])
-
   end
 end

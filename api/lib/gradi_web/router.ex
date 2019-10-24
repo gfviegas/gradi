@@ -9,8 +9,7 @@ defmodule GradiWeb.Router do
   #   pipe_through :api
   # end
 
-  forward "/api", Absinthe.Plug,
-    schema: GradiGraphql.Schema
+  forward "/api", Absinthe.Plug, schema: GradiGraphql.Schema
 
   forward "/graphiql", Absinthe.Plug.GraphiQL,
     schema: GradiGraphql.Schema,

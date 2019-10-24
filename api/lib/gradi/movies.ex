@@ -9,18 +9,24 @@ defmodule Gradi.Movies do
   alias Gradi.Movies.Movie
   alias Gradi.Movies.Character
 
-  defp base_query, do: from m in Movie, preload: [{:characters, :actor}, :languages, :directors, :genres, :writers, :companies]
+  defp base_query,
+    do:
+      from(m in Movie,
+        preload: [{:characters, :actor}, :languages, :directors, :genres, :writers, :companies]
+      )
 
   # Busca por titulo
   defp with_search(query, %{title: title}) do
     from(m in query, where: like(m.title, ^"%#{title}%"))
   end
+
   defp with_search(query, _), do: query
 
   # Paginação
   defp with_pagination(query, %{limit: limit, page: page}) do
-    from(m in query, limit: ^limit, offset: ^((page-1) * limit))
+    from(m in query, limit: ^limit, offset: ^((page - 1) * limit))
   end
+
   defp with_pagination(query, _), do: query
 
   # Ordenação
@@ -29,10 +35,11 @@ defmodule Gradi.Movies do
     direction = sort_direction(filter)
     query |> order_by({^direction, ^field_atom})
   end
+
   defp with_sort(query, _), do: query
 
   defp sort_field("dateReleased"), do: :release_date
-  defp sort_field(field), do: Macro.underscore(field) |> String.to_existing_atom
+  defp sort_field(field), do: Macro.underscore(field) |> String.to_existing_atom()
 
   defp sort_direction(%{sort_direction: "asc"}), do: :asc
   defp sort_direction(%{sort_direction: "desc"}), do: :desc
@@ -48,20 +55,24 @@ defmodule Gradi.Movies do
 
   """
   def list_movies, do: {Repo.all(base_query()), count_movies(base_query())}
+
   def list_movies(filter = %{}) do
-    query = base_query()
+    query =
+      base_query()
       |> with_search(filter)
 
-      # A paginação é feita depois para não influenciar na contagem
+    # A paginação é feita depois para não influenciar na contagem
     count = count_movies(query)
 
-    query = query
+    query =
+      query
       |> with_pagination(filter)
       |> with_sort(filter)
 
-    movies = query |> Repo.all
+    movies = query |> Repo.all()
     {movies, count}
   end
+
   # def list_movies(filter = %{}) do
   #   query = base_query
   #
@@ -102,7 +113,17 @@ defmodule Gradi.Movies do
 
   """
   # def get_movie!(id), do: Repo.get!(Movie, id)
-  def get_movie!(id), do: Repo.get!(Movie, id) |> Repo.preload([{:characters, :actor}, :languages, :directors, :genres, :writers, :companies])
+  def get_movie!(id),
+    do:
+      Repo.get!(Movie, id)
+      |> Repo.preload([
+        {:characters, :actor},
+        :languages,
+        :directors,
+        :genres,
+        :writers,
+        :companies
+      ])
 
   @doc """
   Creates a movie.
@@ -118,8 +139,20 @@ defmodule Gradi.Movies do
   """
   def create_movie(attrs \\ %{}) do
     case %Movie{} |> Movie.changeset(attrs) |> Repo.insert() do
-      {:ok, movie} -> {:ok, movie |> Repo.preload([{:characters, :actor}, :languages, :directors, :genres, :writers, :companies]) }
-      {status, response} -> { status, response }
+      {:ok, movie} ->
+        {:ok,
+         movie
+         |> Repo.preload([
+           {:characters, :actor},
+           :languages,
+           :directors,
+           :genres,
+           :writers,
+           :companies
+         ])}
+
+      {status, response} ->
+        {status, response}
     end
   end
 
@@ -169,7 +202,6 @@ defmodule Gradi.Movies do
   def change_movie(%Movie{} = movie) do
     Movie.changeset(movie, %{})
   end
-
 
   @doc """
   Returns the list of movies_characters.

@@ -7,6 +7,5 @@ defmodule Gradi.Repo.Migrations.CreateGenres do
 
       timestamps()
     end
-
   end
 end
