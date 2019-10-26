@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<!-- Criação de tipos (semelhante a classes) -->
+		<xs:simpleType name="DecimalBanco">
+			<xs:restriction base="xs:decimal">
+				<!-- Valor positivo, com até duas casas decimais obrigatórias -->
+				<xs:pattern value="[0-9]+.[0-9]?[0-9]" />
+			</xs:restriction>
+		</xs:simpleType>
+		
+
+		<xs:complexType name="Personagem">
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="ator" type="xs:string" use="required"/>
+					<xs:attribute name="protagonista" type="xs:boolean" default="false" use="optional"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+		
+		<!-- https://en.wikipedia.org/wiki/List_of_genres -->
+		<xs:simpleType name="Gênero">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Ação"/>
+				<xs:enumeration value="Aventura"/>
+				<xs:enumeration value="Animação"/>
+				<xs:enumeration value="Comédia"/>
+				<xs:enumeration value="Crime"/>
+				<xs:enumeration value="Drama"/>
+				<xs:enumeration value="Família"/>
+				<xs:enumeration value="Fantasia"/>
+				<xs:enumeration value="Documentário"/>
+				<xs:enumeration value="Documentário de ficção"/>
+				<xs:enumeration value="Horror"/>
+				<xs:enumeration value="Magical realism"/>
+				<xs:enumeration value="Mistério"/>
+				<xs:enumeration value="Musical"/>
+				<xs:enumeration value="Paranoid fiction"/>
+				<xs:enumeration value="Filosófico"/>
+				<xs:enumeration value="Político"/>
+				<xs:enumeration value="Romance"/>
+				<xs:enumeration value="Saga"/>
+				<xs:enumeration value="Sátira"/>
+				<xs:enumeration value="Ficção Científica"/>
+				<xs:enumeration value="Social"/>
+				<xs:enumeration value="Especulativo"/>
+				<xs:enumeration value="Sport"/>
+				<xs:enumeration value="Thriller"/>											
+				<xs:enumeration value="Urbano"/>
+				<xs:enumeration value="Faroeste"/>
+			</xs:restriction>
+		</xs:simpleType>
+		
+		<xs:complexType name="Escritor">
+			<xs:simpleContent>
+				<xs:extension base="xs:string" />
+			</xs:simpleContent>
+		</xs:complexType>
+		
+		<xs:complexType name="Diretor">
+			<xs:simpleContent>
+				<xs:extension base="xs:string" />
+			</xs:simpleContent>
+		</xs:complexType>
+		
+		<xs:simpleType name="Idioma">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Inglês"/>
+				<xs:enumeration value="Francês"/>
+				<xs:enumeration value="Alemão"/>
+				<xs:enumeration value="Italiano"/>
+				<xs:enumeration value="Japonês"/>
+				<xs:enumeration value="Latin"/>
+				<xs:enumeration value="Mandarin"/>
+				<xs:enumeration value="Norueguês"/>
+				<xs:enumeration value="Português"/>
+				<xs:enumeration value="Espanhol"/>				
+				<xs:enumeration value="Sueco"/>
+				<xs:enumeration value="Sindarin"/>
+				<xs:enumeration value="Yiddish"/>				
+			</xs:restriction>
+		</xs:simpleType>
+		
+		<xs:complexType name="Compania">
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="país" type="xs:string" use="required"/>
+					<xs:attribute name="logo" type="xs:string" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+		
+		<xs:complexType name="Filme">
+			<xs:all>
+				<xs:element name="imdbid" type="xs:string" />
+				<xs:element name="título" type="xs:string" />
+				<xs:element name="classificação" type="xs:integer" />
+				<xs:element name="descrição" type="xs:string" />
+				<xs:element name="data_lançamento" type="xs:date" />
+				<xs:element name="receita" type="DecimalBanco" />
+				<xs:element name="pôster" type="xs:string" />
+				<xs:element name="gêneros">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="gênero" type="Gênero" minOccurs="1" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="escritores">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="escritor" type="Escritor" minOccurs="1" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="diretores">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="diretor" type="Diretor" minOccurs="1" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="idiomas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="idioma" type="Idioma" minOccurs="1" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="companias">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="compania" type="Compania" minOccurs="1" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="personagens">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="personagem" type="Personagem" minOccurs="1" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>				
+			</xs:all>
+		</xs:complexType>
+	<!-- Fim da criação de tipos (classes) -->
+	
+	<xs:element name="filmes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="filme" type="Filme" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

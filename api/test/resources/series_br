@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<séries 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="seriesvalidation_br.xsd">
+	<série>
+		<imdbid>tt0903747</imdbid>
+		<título>Breaking Bad</título>
+		<data_lançamento>2008-01-20</data_lançamento>
+		<duração>49 min</duração>
+		<classificação>14A</classificação>
+		<gêneros>
+			<gênero>Crime</gênero>
+			<gênero>Drama</gênero>
+			<gênero>Thriller</gênero>
+			<!-- ... -->
+		</gêneros>
+		<escritores>
+			<escritor>Vince Gilligan</escritor>
+			<!-- ... -->
+		</escritores>
+		<!-- TODO: Permitir personagems ao invés de atores, também? -> Para movies, é personagems... -->
+		<atores>
+			<ator personagem="Walter White" protagonista="true">Bryan Cranston</ator>
+			<ator personagem="Jesse Pinkman" protagonista="true">Aaron Paul</ator>
+			<ator personagem="Saul Goodman">Bob Odenkirk</ator>
+			<ator personagem="Gustavo 'Gus' Fring">Giancarlo Esposito</ator>
+			<!-- ... -->
+		</atores>
+		<descrição>A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.</descrição>		
+		<idiomas>
+			<idioma>Inglês</idioma>
+			<idioma>Espanhol</idioma>
+			<!-- ... -->
+		</idiomas>
+		<países>
+			<país>USA</país>
+			<!-- ... -->
+		</países>
+		<pôster>https://m.media-amazon.com/images/M/MV5BMjhiMzgxZTctNDc1Ni00OTIxLTlhMTYtZTA3ZWFkODRkNmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg</pôster>
+		<temporadas>5</temporadas>
+		<spinoffs>
+			<spinoff imdbid="tt3032476">Better Call Saul</spinoff>
+			<!-- ... -->
+		</spinoffs>
+	</série>	
+	<série> <!-- Exemplo de série sem spinoff e ordem dos elementos em qualquer posição -->
+		<imdbid>asdasdasd</imdbid>
+		<título>sdfsfsdf</título>
+		<data_lançamento>2008-05-13</data_lançamento>
+		<duração>46 min</duração>
+		<classificação>16A</classificação>
+		<descrição>saeaseaseaseasease.</descrição>		
+		<pôster>dasdasda</pôster>
+		<temporadas>5</temporadas>
+		<gêneros>
+			<gênero>Crime</gênero>
+			<gênero>Drama</gênero>
+			<gênero>Thriller</gênero>
+			<!-- ... -->
+		</gêneros>
+		<escritores>
+			<escritor>dfgdfgdfg</escritor>
+			<!-- ... -->
+		</escritores>
+		<!-- TODO: Permitir personagems ao invés de atores, também? -> Para movies, é personagems... -->
+		<atores>
+			<ator personagem="rrasasr" protagonista="true">dfgdg</ator>
+			<ator personagem="Jasdasd" protagonista="true">Adfgdfgl</ator>
+			<ator personagem="Sgdfgdf">fdsf</ator>
+			<ator personagem="aseaese">Gisdfsf</ator>
+			<!-- ... -->
+		</atores>
+		
+		<idiomas>
+			<idioma>Inglês</idioma>
+			<idioma>Espanhol</idioma>
+			<!-- ... -->
+		</idiomas>
+		<países>
+			<país>USA</país>
+			<!-- ... -->
+		</países>		
+	</série>
+	<!-- ... -->
+</séries>
