@@ -1,10 +1,15 @@
 defmodule GradiValidation.XMLSchema do
   @movies_schema_file "priv/validation/movies_schema.xsd"
+  @movies_br_schema_file "priv/validation/movies_br_schema.xsd"
   @series_schema_file "priv/validation/series_schema.xsd"
+  @series_br_schema_file "priv/validation/series_br_schema.xsd"
+  
 
   # Carrega o schema pra o tipo especifico de recurso
   def load_schema(:movie), do: load_schema @movies_schema_file
+  def load_schema(:moviebr), do: load_schema @movies_br_schema_file
   def load_schema(:series), do: load_schema @series_schema_file
+  def load_schema(:seriesbr), do: load_schema @series_br_schema_file
   def load_schema(schema_file) when is_binary(schema_file) do
     schema_path = Path.join(File.cwd!(), schema_file)
 
