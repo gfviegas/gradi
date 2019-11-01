@@ -17,12 +17,12 @@
       </div>
       <div class="column is-one-half">
         <b-upload @input="uploadMovies" accept=".xml" v-model="moviesFile">
-          <a class="button is-secondary is-large"> Quero adicionar meus filmes </a>
+          <a class="button is-primary is-large"> Quero adicionar meus filmes </a>
         </b-upload>
       </div>
       <div class="column is-one-half">
         <b-upload @input="uploadSeries" accept=".json" v-model="seriesFile">
-          <a class="button is-secondary is-large"> Quero adicionar minhas séries </a>
+          <a class="button is-dark is-large"> Quero adicionar minhas séries </a>
         </b-upload>
       </div>
     </div>
