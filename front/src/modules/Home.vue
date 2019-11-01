@@ -30,6 +30,8 @@
 </template>
 
 <script>
+  import axios from 'axios';
+
   export default {
     data () {
       return {
@@ -38,39 +40,30 @@
       }
     },
     methods: {
-      uploadMovies () {
-        let formData = new FormData();
+      async uploadMovies () {
+              const formData = new FormData()
+              console.log(this.moviesFile)
+              formData.append('movie', this.moviesFile)
 
-        formData.append('movie', moviesFile);
-
-        axios.post('/movies',
-         formData,
-         {
-          headers: {
-            'Content-Type': 'multipart/form-data'
-          }
-        }).then(function() {
-          this.$buefy.toast.open({message: "Filme adicionado", type: "is-success", position: "is-bottom"});
-        }).catch(function() {
-          this.$buefy.toast.open({message: "Filme não adicionado", type: "is-danger", position: "is-bottom"});
-        });
+              try {
+                const response = await axios.post('/movies', formData)
+                this.$buefy.toast.open({message: "Filme adicionado", type: "is-success", position: "is-bottom"})
+              } catch (e) {
+                console.error(e)
+                this.$buefy.toast.open({message: "Filme não adicionado", type: "is-danger", position: "is-bottom"})
+              }
       },
-      uploadSeries () {
-        let formData = new FormData();
+      async uploadSeries () {
+              const formData = new FormData()
+              formData.append('series', this.seriesFile)
 
-        formData.append('series', seriesFile);
-
-        axios.post('/series',
-         formData,
-         {
-          headers: {
-            'Content-Type': 'multipart/form-data'
-          }
-        }).then(function() {
-          this.$buefy.toast.open({message: "Série adicionada", type: "is-success", position: "is-bottom"});
-        }).catch(function() {
-          this.$buefy.toast.open({message: "Série não adicionada", type: "is-danger", position: "is-bottom"});
-        });
+              try {
+                const response = await axios.post('/series', formData)
+                this.$buefy.toast.open({message: "Série adicionada", type: "is-success", position: "is-bottom"})
+              } catch (e) {
+                console.error(e)
+                this.$buefy.toast.open({message: "Série não adicionada", type: "is-danger", position: "is-bottom"})
+              }
       }
     },
     name: 'Home'
