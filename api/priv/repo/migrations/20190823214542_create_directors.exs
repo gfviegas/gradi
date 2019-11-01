@@ -7,6 +7,5 @@ defmodule Gradi.Repo.Migrations.CreateDirectors do
 
       timestamps()
     end
-
   end
 end

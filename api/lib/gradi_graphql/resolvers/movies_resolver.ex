@@ -11,8 +11,8 @@ defmodule GradiGraphql.MoviesResolver do
     {:ok, movies}
   end
 
-  def load_movies(filter = %{}), do: Movies.list_movies filter
-  def load_movies(filter), do: Movies.list_movies
+  def load_movies(filter = %{}), do: Movies.list_movies(filter)
+  def load_movies(filter), do: Movies.list_movies()
 
   def list_movies(_r, filter, _i) do
     {movies, total_count} = load_movies(filter)

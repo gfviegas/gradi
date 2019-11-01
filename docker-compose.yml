@@ -4,8 +4,8 @@ networks:
   gradi:
     driver: bridge
 
-volumes:
-  mysql_data:
+# volumes:
+  # mysql_data:
 
 services:
   mongo:
@@ -33,8 +33,9 @@ services:
       - MYSQL_USER=gradi
       - MYSQL_PASSWORD=gradi
     volumes:
-      - mysql_data:/var/lib/mysql
-      # - ./mysql//docker-entrypoint-initdb.d
+      - ./data/mysql/data:/var/lib/mysql
+      - ./data/mysql/init:/docker-entrypoint-initdb.d/:ro
+      # - ./data/mysql/init:/docker-entrypoint-initdb.d
 
   api:
     restart: always

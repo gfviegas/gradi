@@ -7,6 +7,5 @@ defmodule Gradi.Repo.Migrations.CreateWriters do
 
       timestamps()
     end
-
   end
 end

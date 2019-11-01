@@ -4,7 +4,16 @@ defmodule GradiGraphql.Schema do
   alias GradiGraphql.SeriesResolver
 
   import_types(Absinthe.Type.Custom)
-  import_types(GradiGraphql.Schema.{Movie, Company, MovieCharacter, Property, Series, SeriesActor, SeriesSpinoff})
+
+  import_types(GradiGraphql.Schema.{
+    Movie,
+    Company,
+    MovieCharacter,
+    Property,
+    Series,
+    SeriesActor,
+    SeriesSpinoff
+  })
 
   object :movies_list do
     field :movies, :movie |> list_of
@@ -18,12 +27,12 @@ defmodule GradiGraphql.Schema do
 
   query do
     field :movies_list, :movies_list do
-      arg :title, :string
-      arg :page, :integer
-      arg :limit, :integer
-      arg :sort, :string
-      arg :sort_direction, :string
-      resolve &MoviesResolver.list_movies/3
+      arg(:title, :string)
+      arg(:page, :integer)
+      arg(:limit, :integer)
+      arg(:sort, :string)
+      arg(:sort_direction, :string)
+      resolve(&MoviesResolver.list_movies/3)
     end
 
     field :all_movies, :movie |> list_of do
@@ -31,12 +40,12 @@ defmodule GradiGraphql.Schema do
     end
 
     field :series_list, :series_list do
-      arg :title, :string
-      arg :page, :integer
-      arg :limit, :integer
-      arg :sort, :string
-      arg :sort_direction, :string
-      resolve &SeriesResolver.list_series/3
+      arg(:title, :string)
+      arg(:page, :integer)
+      arg(:limit, :integer)
+      arg(:sort, :string)
+      arg(:sort_direction, :string)
+      resolve(&SeriesResolver.list_series/3)
     end
 
     field :all_series, :series |> list_of do
@@ -44,13 +53,13 @@ defmodule GradiGraphql.Schema do
     end
 
     field :movie, :movie do
-      arg :id, :id
-      resolve &MoviesResolver.get_movie/3
+      arg(:id, :id)
+      resolve(&MoviesResolver.get_movie/3)
     end
 
     field :series, :series do
-      arg :id, :id
-      resolve &SeriesResolver.get_series/3
+      arg(:id, :id)
+      resolve(&SeriesResolver.get_series/3)
     end
   end
 end

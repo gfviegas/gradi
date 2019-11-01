@@ -7,6 +7,5 @@ defmodule Gradi.Repo.Migrations.CreateActors do
 
       timestamps()
     end
-
   end
 end

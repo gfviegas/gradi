@@ -4,22 +4,29 @@ defmodule Gradi.Movies do
   """
 
   import Ecto.Query, warn: false
+
   alias Gradi.Repo
-
   alias Gradi.Movies.Movie
+  alias Gradi.Movies.Character
 
-  defp base_query, do: from m in Movie, preload: [{:characters, :actor}, :languages, :directors, :genres, :writers, :companies]
+  defp base_query,
+    do:
+      from(m in Movie,
+        preload: [{:characters, :actor}, :languages, :directors, :genres, :writers, :companies]
+      )
 
   # Busca por titulo
   defp with_search(query, %{title: title}) do
     from(m in query, where: like(m.title, ^"%#{title}%"))
   end
+
   defp with_search(query, _), do: query
 
   # Paginação
   defp with_pagination(query, %{limit: limit, page: page}) do
-    from(m in query, limit: ^limit, offset: ^((page-1) * limit))
+    from(m in query, limit: ^limit, offset: ^((page - 1) * limit))
   end
+
   defp with_pagination(query, _), do: query
 
   # Ordenação
@@ -28,10 +35,11 @@ defmodule Gradi.Movies do
     direction = sort_direction(filter)
     query |> order_by({^direction, ^field_atom})
   end
+
   defp with_sort(query, _), do: query
 
   defp sort_field("dateReleased"), do: :release_date
-  defp sort_field(field), do: Macro.underscore(field) |> String.to_existing_atom
+  defp sort_field(field), do: Macro.underscore(field) |> String.to_existing_atom()
 
   defp sort_direction(%{sort_direction: "asc"}), do: :asc
   defp sort_direction(%{sort_direction: "desc"}), do: :desc
@@ -47,20 +55,24 @@ defmodule Gradi.Movies do
 
   """
   def list_movies, do: {Repo.all(base_query()), count_movies(base_query())}
+
   def list_movies(filter = %{}) do
-    query = base_query()
+    query =
+      base_query()
       |> with_search(filter)
 
-      # A paginação é feita depois para não influenciar na contagem
+    # A paginação é feita depois para não influenciar na contagem
     count = count_movies(query)
 
-    query = query
+    query =
+      query
       |> with_pagination(filter)
       |> with_sort(filter)
 
-    movies = query |> Repo.all
+    movies = query |> Repo.all()
     {movies, count}
   end
+
   # def list_movies(filter = %{}) do
   #   query = base_query
   #
@@ -101,8 +113,95 @@ defmodule Gradi.Movies do
 
   """
   # def get_movie!(id), do: Repo.get!(Movie, id)
-  def get_movie!(id), do: Repo.get!(Movie, id) |> Repo.preload([{:characters, :actor}, :languages, :directors, :genres, :writers, :companies])
+  def get_movie!(id),
+    do:
+      Repo.get!(Movie, id)
+      |> Repo.preload([
+        {:characters, :actor},
+        :languages,
+        :directors,
+        :genres,
+        :writers,
+        :companies
+      ])
 
+  @doc """
+  Creates a movie.
+
+  ## Examples
+
+      iex> create_movie(%{field: value})
+      {:ok, %Movie{}}
+
+      iex> create_movie(%{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def create_movie(attrs \\ %{}) do
+    case %Movie{} |> Movie.changeset(attrs) |> Repo.insert() do
+      {:ok, movie} ->
+        {:ok,
+         movie
+         |> Repo.preload([
+           {:characters, :actor},
+           :languages,
+           :directors,
+           :genres,
+           :writers,
+           :companies
+         ])}
+
+      {status, response} ->
+        {status, response}
+    end
+  end
+
+  @doc """
+  Updates a movie.
+
+  ## Examples
+
+      iex> update_movie(movie, %{field: new_value})
+      {:ok, %Movie{}}
+
+      iex> update_movie(movie, %{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def update_movie(%Movie{} = movie, attrs) do
+    movie
+    |> Movie.changeset(attrs)
+    |> Repo.update()
+  end
+
+  @doc """
+  Deletes a Movie.
+
+  ## Examples
+
+      iex> delete_movie(movie)
+      {:ok, %Movie{}}
+
+      iex> delete_movie(movie)
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def delete_movie(%Movie{} = movie) do
+    Repo.delete(movie)
+  end
+
+  @doc """
+  Returns an `%Ecto.Changeset{}` for tracking movie changes.
+
+  ## Examples
+
+      iex> change_movie(movie)
+      %Ecto.Changeset{source: %Movie{}}
+
+  """
+  def change_movie(%Movie{} = movie) do
+    Movie.changeset(movie, %{})
+  end
 
   @doc """
   Returns the list of movies_characters.
@@ -115,6 +214,71 @@ defmodule Gradi.Movies do
   """
   def list_movies_characters do
     Repo.all(Character)
+  end
+
+  @doc """
+  Creates a character.
+
+  ## Examples
+
+      iex> create_character(%{field: value})
+      {:ok, %Actor{}}
+
+      iex> create_character(%{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def create_character(attrs \\ %{}) do
+    %Character{}
+    |> Character.changeset(attrs)
+    |> Repo.insert()
+  end
+
+  @doc """
+  Updates a character.
+
+  ## Examples
+
+      iex> update_character(character, %{field: new_value})
+      {:ok, %Character{}}
+
+      iex> update_character(character, %{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def update_character(%Character{} = character, attrs) do
+    character
+    |> Character.changeset(attrs)
+    |> Repo.update()
+  end
+
+  @doc """
+  Deletes a Character.
+
+  ## Examples
+
+      iex> delete_character(character)
+      {:ok, %Character{}}
+
+      iex> delete_character(character)
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def delete_character(%Character{} = character) do
+    Repo.delete(character)
+  end
+
+  @doc """
+  Returns an `%Ecto.Changeset{}` for tracking character changes.
+
+  ## Examples
+
+      iex> change_character(character)
+      %Ecto.Changeset{source: %Character{}}
+
+  """
+  def change_character(%Character{} = character) do
+    Character.changeset(character, %{})
   end
 
   @doc """

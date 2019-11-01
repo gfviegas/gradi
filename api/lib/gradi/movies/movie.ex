@@ -23,8 +23,9 @@ defmodule Gradi.Movies.Movie do
   @doc false
   def changeset(movie, attrs) do
     fields = [:imdb_id, :title, :classification, :description, :release_date, :revenue]
+
     movie
-      |> cast(attrs, fields)
-      |> validate_required(fields)
+    |> cast(attrs, fields)
+    |> validate_required(fields)
   end
 end

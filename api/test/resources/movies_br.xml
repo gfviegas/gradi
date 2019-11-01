@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<filmes 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="moviesvalidation_br.xsd">
+	<filme>
+		<imdbid>tt0076759</imdbid>
+		<título>Star Wars: Episode IV - A New Hope</título>
+		<classificação>14</classificação>
+		<descrição>Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.</descrição>
+		<data_lançamento>1977-05-25</data_lançamento>
+		<receita>775512064.0</receita>
+		<pôster>https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg</pôster>
+		<gêneros>
+			<gênero>Ação</gênero>
+			<gênero>Aventura</gênero>
+			<gênero>Fantasia</gênero>
+			<gênero>Ficção Científica</gênero>
+			<!-- ... -->
+		</gêneros>
+		<escritores>
+			<escritor>George Lucas</escritor>
+			<!-- ... -->
+		</escritores>
+		<diretores>
+			<diretor>George Lucas</diretor>
+			<!-- ... -->
+		</diretores>
+		<idiomas>
+			<idioma>Inglês</idioma>
+			<!-- ... -->
+		</idiomas>
+		<companias>
+			<compania país="United States" logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Lucasfilm_logo.svg/800px-Lucasfilm_logo.svg.png">
+				Lucasfilm
+			</compania>
+			<!-- ... -->
+		</companias>
+		<personagens>
+			<personagem ator="Mark Hamill" protagonista="true">Luke Skywalker</personagem>
+			<personagem ator="Harrison Ford" protagonista="true">Han Solo</personagem>
+			<personagem ator="Anthony Daniels">C-3PO</personagem> <!-- Valor default de protagonist é false -->
+			<personagem ator="Kenny Baker">R2-D2</personagem>
+			<!-- ... -->
+		</personagens>		
+	</filme>
+	<!-- ... -->
+</filmes>

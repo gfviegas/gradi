@@ -7,7 +7,11 @@ defmodule Gradi.CompaniesTest do
     alias Gradi.Companies.Company
 
     @valid_attrs %{country: "some country", logo: "some logo", name: "some name"}
-    @update_attrs %{country: "some updated country", logo: "some updated logo", name: "some updated name"}
+    @update_attrs %{
+      country: "some updated country",
+      logo: "some updated logo",
+      name: "some updated name"
+    }
     @invalid_attrs %{country: nil, logo: nil, name: nil}
 
     def company_fixture(attrs \\ %{}) do

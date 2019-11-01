@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<series>
+	<serie>
+		<imdbid>tt0903747</imdbid>
+		<title>Breaking Bad</title>
+		<release_date>2008-01-20</release_date>
+		<runtime>49 min</runtime>
+		<classification>14A</classification>
+		<genres>
+			<genre>Crime</genre>
+			<genre>Drama</genre>
+			<genre>Thriller</genre>
+			<!-- ... -->
+		</genres>
+		<writers>
+			<writer>Vince Gilligan</writer>
+			<!-- ... -->
+		</writers>
+		<!-- TODO: Permitir characters ao invés de actors, também? -> Para movies, é characters... -->
+		<actors>
+			<actor character="Walter White" protagonist="true">Bryan Cranston</actor>
+			<actor character="Jesse Pinkman" protagonist="true">Aaron Paul</actor>
+			<actor character="Saul Goodman">Bob Odenkirk</actor>
+			<actor character="Gustavo 'Gus' Fring">Giancarlo Esposito</actor>
+			<!-- ... -->
+		</actors>
+		<description>A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.</description>
+		<languages>
+			<language>English</language>
+			<language>Spanish</language>
+			<!-- ... -->
+		</languages>
+		<countries>
+			<country>USA</country>
+			<!-- ... -->
+		</countries>
+		<poster>https://m.media-amazon.com/images/M/MV5BMjhiMzgxZTctNDc1Ni00OTIxLTlhMTYtZTA3ZWFkODRkNmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg</poster>
+		<seasons>5</seasons>
+		<spinoffs>
+			<spinoff imdbid="tt3032476">Better Call Saul</spinoff>
+			<!-- ... -->
+		</spinoffs>
+	</serie>
+	<serie> <!-- Exemplo de série sem spinoff e ordem dos elementos em qualquer posição -->
+		<imdbid>asdasdasd</imdbid>
+		<title>sdfsfsdf</title>
+		<release_date>2008-05-13</release_date>
+		<runtime>46 min</runtime>
+		<classification>16A</classification>
+		<description>saeaseaseaseasease.</description>
+		<poster>dasdasda</poster>
+		<seasons>5</seasons>
+		<genres>
+			<genre>Crime</genre>
+			<genre>Drama</genre>
+			<genre>Thriller</genre>
+			<!-- ... -->
+		</genres>
+		<writers>
+			<writer>dfgdfgdfg</writer>
+			<!-- ... -->
+		</writers>
+		<!-- TODO: Permitir characters ao invés de actors, também? -> Para movies, é characters... -->
+		<actors>
+			<actor character="rrasasr" protagonist="true">dfgdg</actor>
+			<actor character="Jasdasd" protagonist="true">Adfgdfgl</actor>
+			<actor character="Sgdfgdf">fdsf</actor>
+			<actor character="aseaese">Gisdfsf</actor>
+			<!-- ... -->
+		</actors>
+
+		<languages>
+			<language>English</language>
+			<language>Spanish</language>
+			<!-- ... -->
+		</languages>
+		<countries>
+			<country>USA</country>
+			<!-- ... -->
+		</countries>
+	</serie>
+	<!-- ... -->
+</series>
