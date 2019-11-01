@@ -16,10 +16,10 @@
 				<xs:enumeration value="Documentário"/>
 				<xs:enumeration value="Documentário de ficção"/>
 				<xs:enumeration value="Horror"/>
-				<xs:enumeration value="Magical realism"/>
+				<xs:enumeration value="Realismo mágico"/>
 				<xs:enumeration value="Mistério"/>
 				<xs:enumeration value="Musical"/>
-				<xs:enumeration value="Paranoid fiction"/>
+				<xs:enumeration value="Ficção paranóica"/>
 				<xs:enumeration value="Filosófico"/>
 				<xs:enumeration value="Político"/>
 				<xs:enumeration value="Romance"/>
@@ -28,8 +28,8 @@
 				<xs:enumeration value="Ficção Científica"/>
 				<xs:enumeration value="Social"/>
 				<xs:enumeration value="Especulativo"/>
-				<xs:enumeration value="Sport"/>
-				<xs:enumeration value="Thriller"/>											
+				<xs:enumeration value="Esporte"/>
+				<xs:enumeration value="Suspense"/>											
 				<xs:enumeration value="Urbano"/>
 				<xs:enumeration value="Faroeste"/>
 			</xs:restriction>
