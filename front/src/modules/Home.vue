@@ -21,7 +21,7 @@
         </b-upload>
       </div>
       <div class="column is-one-half">
-        <b-upload @input="uploadSeries" accept=".xml" v-model="seriesFile">
+        <b-upload @input="uploadSeries" accept=".json" v-model="seriesFile">
           <a class="button is-secondary is-large"> Quero adicionar minhas séries </a>
         </b-upload>
       </div>
@@ -39,13 +39,38 @@
     },
     methods: {
       uploadMovies () {
-        // TODO: crar um formdata: new FormData(), dar append no arquivo formdata.append()...
-        console.log(this.moviesFile)
+        let formData = new FormData();
+
+        formData.append('movie', moviesFile);
+
+        axios.post('/movies',
+         formData,
+         {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        }).then(function() {
+          this.$buefy.toast.open({message: "Filme adicionado", type: "is-success", position: "is-bottom"});
+        }).catch(function() {
+          this.$buefy.toast.open({message: "Filme não adicionado", type: "is-danger", position: "is-bottom"});
+        });
       },
       uploadSeries () {
-        // TODO: crar um formdata: new FormData(), dar append no arquivo formdata.append()...
-        console.log(this.seriesFile)
-        this.$buefy.toast.open({message: "Batatainha batatao", type: "is-success", position: "is-bottom", duration: 5000})
+        let formData = new FormData();
+
+        formData.append('series', seriesFile);
+
+        axios.post('/series',
+         formData,
+         {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        }).then(function() {
+          this.$buefy.toast.open({message: "Série adicionada", type: "is-success", position: "is-bottom"});
+        }).catch(function() {
+          this.$buefy.toast.open({message: "Série não adicionada", type: "is-danger", position: "is-bottom"});
+        });
       }
     },
     name: 'Home'
