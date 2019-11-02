@@ -1,5 +1,5 @@
 // ref: https://www.w3schools.com/xml/xpath_axes.asp
-
+const fs = require('fs')
 const parse5 = require('parse5')
 const xmlser = require('xmlserializer')
 const xpath = require('xpath')
@@ -13,20 +13,23 @@ module.exports = {
     let stringBuilder = ''
 
     const parsed = parse5.parse(html.toString())
-    const xhtml = xmlser.serializeToString(parsed)
+    const xhtml = xmlser.serializeToString(parsed).trim().replace(/\n/g, '').replace(/ \ /g, ' ').replace('xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"', '')
     const document = new DOM().parseFromString(xhtml)
+    fs.writeFileSync('arquivoteste.xhtml', xhtml)
 
     for (let i = 2; i <= max; i++) {
-      let s1 = xpath.evaluate(`//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[ ${i * mult}]/td[2]/a//text()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue
+      let s1 = xpath.evaluate(`//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[${i * mult}]/td[2]/a//text()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue
+      console.log('S1: ')
+      console.log(s1)
       if (s1 == null) break
       s1 = s1.textContent.trim()
 
-      const multaux = xpath.evaluate(`//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[ ${i * mult}]/td[4]/a[2]//text()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue
+      const multaux = xpath.evaluate(`//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[${i * mult}]/td[4]/a[2]//text()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue
       if (multaux != null) {
         mult = 2
       }
 
-      let s2 = xpath.evaluate(`//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[ ${i * mult}]/td[4]//node()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue.textContent.trim()
+      let s2 = xpath.evaluate(`//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[${i * mult}]/td[4]//node()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue.textContent.trim()
       const s2Index = s2.indexOf('\n')
 
       if (s2Index > 0) {
@@ -34,7 +37,7 @@ module.exports = {
       }
 
       if (s2.length === 0) {
-        s2 = xpath.evaluate(`//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[ ${i * mult}]/td[4]/a[1]//text()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue.textContent.trim()
+        s2 = xpath.evaluate(`//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[${i * mult}]/td[4]/a[1]//text()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue.textContent.trim()
       }
 
       stringBuilder += `<actor character="${s2}"> ${s1} </actor>`
@@ -48,3 +51,11 @@ module.exports = {
     return stringBuilder
   }
 }
+
+// const xhtml = fs.readFileSync('arquivoteste.html', 'UTF-8')
+// const document = new DOM().parseFromString(xhtml)
+//
+// // const select = xpath.useNamespaces({ x: 'http://www.w3.org/1999/xhtml' })
+//
+// const result = xpath.select('//html/body/div[2]/div/div[2]', document)
+// console.log(result)

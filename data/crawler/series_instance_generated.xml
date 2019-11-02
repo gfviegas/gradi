@@ -20,7 +20,25 @@
  </writers>
 
        <actors>
-  </actors>
+ <actor character="Lt. Thompson"> John Saxon </actor>
+<actor character="Marge Thompson"> Ronee Blakley </actor>
+<actor character="Nancy Thompson"> Heather Langenkamp </actor>
+<actor character="Tina Gray"> Amanda Wyss </actor>
+<actor character="Rod Lane"> Jsu Garcia </actor>
+<actor character="Glen Lantz"> Johnny Depp </actor>
+<actor character="Dr. King"> Charles Fleischer </actor>
+<actor character="Sgt. Parker"> Joseph Whipp </actor>
+<actor character="Fred Krueger"> Robert Englund </actor>
+<actor character="Teacher"> Lin Shaye </actor>
+<actor character="Sgt. Garcia"> Joe Unger </actor>
+<actor character="Nurse"> Mimi Craven </actor>
+<actor character="Minister"> Jack Shea </actor>
+<actor character="Mr. Lantz"> Ed Call </actor>
+<actor character="Mrs. Lantz"> Sandy Lipton </actor>
+<actor character="Foreman"> David Andrews </actor>
+<actor character="Coroner    (as Jeffrey Levine)"> Jeff Levine </actor>
+<actor character="Tina's Mom"> Donna Woodrum </actor>
+<actor character="Cop #1"> Shashawnee Hall </actor> </actors>
 
        <description> The monstrous spirit of a slain child murderer seeks revenge by invading the dreams of teenagers whose parents were responsible for his untimely death. </description>
 
