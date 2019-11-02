@@ -1,0 +1,41 @@
+<seriesset>
+	<series>
+	  <imdbid>tt0035027</imdbid>
+	  <title>The Man Who Wouldn't Die</title>
+	  <release_date>1942-05-01</release_date>
+	  <runtime>65 min</runtime>
+	  <classification></classification>
+	  <genres>
+		<genre>Crime</genre>
+		<genre>Mystery</genre>
+	  </genres>
+	  <writers>
+		<writer>Arnaud d'Usseau (screen play)</writer>
+		<writer>Clayton Rawson (novel)</writer>
+		<writer>Brett Halliday (character created by)</writer>
+	  </writers>
+	  <actors>
+	    <actor character="Michael Shayne">Lloyd Nolan</actor>
+		<actor character="Catherine Wolff">Marjorie Weaver</actor>
+		<actor character="Anna Wolff">Helene Reynolds</actor>
+		<actor character="Dr. Haggard">Henry Wilcoxon</actor>
+		<actor character="Roger Blake">Richard Derr</actor>
+		<actor character="Dudley Wolff">Paul Harvey</actor>
+		<actor character="Phillips - the Butler">Billy Bevan</actor>
+		<actor character="Chief of Police Jonathan Meek">Olin Howland</actor>
+		<actor character="Alfred Dunning">Robert Emmett Keane</actor>
+		<actor character="Zorah Bey">LeRoy Mason</actor>
+		<actor character="Coroner Tim Larsen">Jeff Corey</actor>
+		<actor character="Caretaker">Francis Ford</actor>
+	  </actors>
+	  <description>A private detective gets mixed up with a phony spiritualist racket.</description>
+	  <languages>
+		<language>English</language>
+	  </languages>
+	  <countries>
+		<country>USA</country>
+	  </countries>
+	  <poster>https://m.media-amazon.com/images/M/MV5BODJjNjI0N2UtZjIwYi00MzliLWI1NDAtMDJlNjc3NTY2YzVkL2ltYWdlXkEyXkFqcGdeQXVyNTM3MDMyMDQ@._V1_SX300.jpg</poster>
+	  <seasons>1</seasons>
+	</series>
+</seriesset>

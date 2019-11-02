@@ -1,9 +1,7 @@
 !.gitkeep
 !**/.gitkeep
-data/*
 !data/mongo
 !data/mysql
-!data/scripts
 data/mongo/data/*
 data/mysql/data/*
 front/node_modules

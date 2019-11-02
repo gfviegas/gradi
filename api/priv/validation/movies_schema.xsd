@@ -35,7 +35,7 @@
 			<xs:enumeration value="Historical fiction"/>
 			<xs:enumeration value="Horror"/>
 			<xs:enumeration value="Magical realism"/>
-			<xs:enumeration value="Mistery"/>
+			<xs:enumeration value="Mystery"/>
 			<xs:enumeration value="Musical"/>
 			<xs:enumeration value="Paranoid fiction"/>
 			<xs:enumeration value="Philosophical"/>

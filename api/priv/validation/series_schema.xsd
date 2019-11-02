@@ -18,7 +18,7 @@
 			<xs:enumeration value="Historical fiction"/>
 			<xs:enumeration value="Horror"/>
 			<xs:enumeration value="Magical realism"/>
-			<xs:enumeration value="Mistery"/>
+			<xs:enumeration value="Mystery"/>
 			<xs:enumeration value="Musical"/>
 			<xs:enumeration value="Paranoid fiction"/>
 			<xs:enumeration value="Philosophical"/>
@@ -140,10 +140,10 @@
 	</xs:complexType>
 	<!-- Fim da criação de tipos (classes) -->
 
-	<xs:element name="series">
+	<xs:element name="seriesset">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="serie" type="Serie" minOccurs="1" maxOccurs="unbounded" />
+				<xs:element name="series" type="Serie" minOccurs="1" maxOccurs="unbounded" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

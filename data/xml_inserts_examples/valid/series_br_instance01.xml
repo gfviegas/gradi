@@ -1,0 +1,41 @@
+<séries>
+	<série>
+	  <imdbid>tt0035027</imdbid>
+	  <título>A Sepultura Vazia</título>
+	  <data_lançamento>1942-05-01</data_lançamento>
+	  <duração>65 min</duração>
+	  <classificação></classificação>
+	  <gêneros>
+		<gênero>Crime</gênero>
+		<gênero>Mistério</gênero>
+	  </gêneros>
+	  <escritores>
+		<escritor>Arnaud d'Usseau (screen play)</escritor>
+		<escritor>Clayton Rawson (novel)</escritor>
+		<escritor>Brett Halliday (character created by)</escritor>
+	  </escritores>
+	  <atores>
+	    <ator personagem="Michael Shayne">Lloyd Nolan</ator>
+		<ator personagem="Catherine Wolff">Marjorie Weaver</ator>
+		<ator personagem="Anna Wolff">Helene Reynolds</ator>
+		<ator personagem="Dr. Haggard">Henry Wilcoxon</ator>
+		<ator personagem="Roger Blake">Richard Derr</ator>
+		<ator personagem="Dudley Wolff">Paul Harvey</ator>
+		<ator personagem="Phillips - the Butler">Billy Bevan</ator>
+		<ator personagem="Chief of Police Jonathan Meek">Olin Howland</ator>
+		<ator personagem="Alfred Dunning">Robert Emmett Keane</ator>
+		<ator personagem="Zorah Bey">LeRoy Mason</ator>
+		<ator personagem="Coroner Tim Larsen">Jeff Corey</ator>
+		<ator personagem="Caretaker">Francis Ford</ator>
+	  </atores>
+	  <descrição>Um detetive particular se confunde com uma falsa festa espiritualista.</descrição>
+	  <idiomas>
+		<idioma>Inglês</idioma>
+	  </idiomas>
+	  <países>
+		<país>USA</país>
+	  </países>
+	  <pôster>https://m.media-amazon.com/images/M/MV5BODJjNjI0N2UtZjIwYi00MzliLWI1NDAtMDJlNjc3NTY2YzVkL2ltYWdlXkEyXkFqcGdeQXVyNTM3MDMyMDQ@._V1_SX300.jpg</pôster>
+	  <temporadas>1</temporadas>
+	</série>
+</séries>
