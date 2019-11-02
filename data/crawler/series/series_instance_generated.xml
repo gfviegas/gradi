@@ -4,20 +4,21 @@
     <title>A Nightmare on Elm Street</title>
     <release_date>1984-11-16</release_date>
     <runtime>91 min</runtime>
-    <classification></classification>
+    <classification>@CLASSIFICATION</classification>
     <genres>
-      <genre>Horror</genre>
+      <genre> Horror</genre>
     </genres>
     <writers>
-      <writer>Wes Craven</writer>
+      <writer> Wes Craven</writer>
     </writers>
-    <actors> batata  </actors>
+    <actors>
+    </actors>
     <description>The monstrous spirit of a slain child murderer seeks revenge by invading the dreams of teenagers whose parents were responsible for his untimely death.</description>
     <languages>
-      <language>English</language>
+      <language> English</language>
     </languages>
     <countries>
-      <country>USA</country>
+      <country> USA</country>
     </countries>
     <poster>https://m.media-amazon.com/images/M/MV5BNzFjZmM1ODgtMDBkMS00NWFlLTg2YmUtZjc3ZTgxMjE1OTI2L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg</poster>
     <seasons>1</seasons>
