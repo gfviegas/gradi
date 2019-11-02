@@ -65,3 +65,12 @@ services:
       - ./node_modules:/var/www/app/node_modules
     ports:
       - 80:8080
+
+  crawler:
+    image: node:12
+    working_dir: /var/www/app
+    container_name: gradi-crawler
+    command: bash -c 'yarn && yarn start'
+    volumes:
+      - ./data/crawler/:/var/www/app
+      - ./data/crawler/node_modules:/var/www/app/node_modules

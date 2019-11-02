@@ -1,0 +1,20 @@
+{
+  "name": "gradi-crawler",
+  "version": "0.0.1",
+  "description": "Crawler pra McQueen Movies",
+  "main": "index.js",
+  "scripts": {
+    "start": "node series/crawler.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "parse5": "^5.1.0",
+    "xmldom": "^0.1.27",
+    "xmlserializer": "^0.6.1",
+    "xpath": "^0.0.27"
+  }
+}
