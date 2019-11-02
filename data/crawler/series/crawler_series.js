@@ -16,16 +16,6 @@ function craw(callback){
 		}
 		
 		var $body = che.load(body);
-		//var $seriesset = '<seriesset>' + '\n';
-		//var e = '  ';
-		//$body('.lister-list tr').each(function() {
-			//var title = $body(this).find('.titleColumn a').text().trim();
-			//var rating = $body(this).find('.imdbRating strong').text().trim();
-			//$seriesset += e + '<series>\n';
-			//$seriesset += e + e + '<imdbid>' + rating + '</imdbid>\n';		
-			//$seriesset += e + e + '<title>' + title + '</title>\n';
-			//$seriesset += e + '</series>\n';
-		//});
 			
 		$imdbids = [];
 		$body('.lister-item-header').each(function() {
@@ -37,21 +27,9 @@ function craw(callback){
 		});
 		
 		callback($imdbids);
-		/*
-		$seriesset += '</seriesset>';
-		fs.writeFile('series_instance_generated.xml', $seriesset, (err) => {
-			if(err)
-				console.log('Erro em fs.appendFile: ' + err);
-			else
-				console.log('--- FIM ---');
-		});*/
 	});
 }
-/*
-headers: {
-    'User-Agent': 'MY IPHINE 7s'
-  }
-*/
+
 function getActorsFromIMDB(imdbid, callback){
 	req('https://www.imdb.com/title/' + imdbid + '/fullcredits/?ref_=tt_ov_st_sm', function(err, res, body){
 		if(err){
@@ -122,9 +100,5 @@ function testeGetFromOmbd(){
 			});
 	});
 }
-//testeGetFromOmbd();
 
-// Put the User Agent string in lowercase
-//var ua = req.headers;
-// Better to test on mobi than mobile (Firefox, Opera, IE)
-//console.log('-->' + ua);
+//testeGetFromOmbd();
