@@ -21,7 +21,7 @@
         </b-upload>
       </div>
       <div class="column is-one-half">
-        <b-upload @input="uploadSeries" accept=".json" v-model="seriesFile">
+        <b-upload @input="uploadSeries" accept=".xml" v-model="seriesFile">
           <a class="button is-dark is-large"> Quero adicionar minhas séries </a>
         </b-upload>
       </div>
@@ -42,7 +42,6 @@
     methods: {
       async uploadMovies () {
               const formData = new FormData()
-              console.log(this.moviesFile)
               formData.append('movie', this.moviesFile)
 
               try {
