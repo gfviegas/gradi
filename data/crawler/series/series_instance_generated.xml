@@ -12,7 +12,7 @@
       <writer>Wes Craven</writer>
     </writers>
     <actors>
-a  </actors>
+batata  </actors>
     <description>The monstrous spirit of a slain child murderer seeks revenge by invading the dreams of teenagers whose parents were responsible for his untimely death.</description>
     <languages>
       <language>English</language>
@@ -21,37 +21,6 @@ a  </actors>
       <country>USA</country>
     </countries>
     <poster>https://m.media-amazon.com/images/M/MV5BNzFjZmM1ODgtMDBkMS00NWFlLTg2YmUtZjc3ZTgxMjE1OTI2L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg</poster>
-    <seasons>1</seasons>
-  </series>
-  <series>
-    <imdbid>tt6077448</imdbid>
-    <title>Sacred Games</title>
-    <release_date>2018-07-06</release_date>
-    <runtime>50 min</runtime>
-    <classification></classification>
-    <genres>
-      <genre>Action</genre>
-      <genre>Crime</genre>
-      <genre>Drama</genre>
-      <genre>Thriller</genre>
-    </genres>
-    <writers>
-      <writer>Varun Grover</writer>
-    </writers>
-    <actors>
-a  </actors>
-    <description>A link in their pasts leads an honest cop to a fugitive gang boss, whose cryptic warning spurs the officer on a quest to save Mumbai from cataclysm.</description>
-    <languages>
-      <language>Hindi</language>
-      <language>Indian Sign Language</language>
-      <language>Marathi</language>
-      <language>English</language>
-    </languages>
-    <countries>
-      <country>India</country>
-      <country>USA</country>
-    </countries>
-    <poster>https://m.media-amazon.com/images/M/MV5BMjJlMjJlMzYtNmU5Yy00N2MwLWJmMjEtNWUwZWIyMGViZDgyXkEyXkFqcGdeQXVyOTAzMTc2MjA@._V1_SX300.jpg</poster>
     <seasons>1</seasons>
   </series>
 </seriesset>

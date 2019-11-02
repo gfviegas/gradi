@@ -30,14 +30,21 @@ function craw(callback){
 	});
 }
 
-function getActorsFromIMDB(imdbid, callback){
-	req('https://www.imdb.com/title/' + imdbid + '/fullcredits/?ref_=tt_ov_st_sm', function(err, res, body){
-		if(err){
-			console.log('Erro 3: ' + err);
+async function getActorsFromIMDB(imdbid, callback){
+	req('https://www.imdb.com/title/' + imdbid + '/fullcredits/?ref_=tt_ov_st_sm', async function(errr, ress, body){			
+		if(errr){
+			console.log('Erro 3: ' + errr);
 		}
-		var $actors = jas.getActorsFromIMDB(body);
-		callback(err, res, $actors);
+		var $ = che.load(body);
+		var $actors = 'aaabbbccc';
+		
+		////// TODO: PROBLEMA AQUI
+		$actors = jas.getActorsFromIMDB($);
+		///////////////////////////
+					
+		callback(errr, ress, $actors);
 	});
+	
 }
 
 function getFromOmdb(imdbid, callback){
