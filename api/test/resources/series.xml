@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<series>
-	<serie>
+<seriesset>
+	<series>
 		<imdbid>tt0903747</imdbid>
 		<title>Breaking Bad</title>
 		<release_date>2008-01-20</release_date>
@@ -40,8 +40,8 @@
 			<spinoff imdbid="tt3032476">Better Call Saul</spinoff>
 			<!-- ... -->
 		</spinoffs>
-	</serie>
-	<serie> <!-- Exemplo de série sem spinoff e ordem dos elementos em qualquer posição -->
+	</series>
+	<series> <!-- Exemplo de série sem spinoff e ordem dos elementos em qualquer posição -->
 		<imdbid>asdasdasd</imdbid>
 		<title>sdfsfsdf</title>
 		<release_date>2008-05-13</release_date>
@@ -78,6 +78,6 @@
 			<country>USA</country>
 			<!-- ... -->
 		</countries>
-	</serie>
+	</series>
 	<!-- ... -->
-</series>
+</seriesset>

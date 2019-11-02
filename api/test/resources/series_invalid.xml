@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<series>
+<seriesset>
 	<xesque>
 		<dele>tt0903747</dele>
 		<title>Breaking Bad</title>
@@ -41,7 +41,7 @@
 			<!-- ... -->
 		</spinoffs>
 	</xesque>
-	<serie> <!-- Exemplo de série sem spinoff e ordem dos elementos em qualquer posição -->
+	<series> <!-- Exemplo de série sem spinoff e ordem dos elementos em qualquer posição -->
 		<imdbid>asdasdasd</imdbid>
 		<title>sdfsfsdf</title>
 		<release_date>2008-05-13</release_date>
@@ -78,6 +78,6 @@
 			<country>USA</country>
 			<!-- ... -->
 		</countries>
-	</serie>
+	</series>
 	<!-- ... -->
-</series>
+</seriesset>
