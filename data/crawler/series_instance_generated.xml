@@ -1,58 +1,44 @@
 <seriesset>
- <series>
-
-       <imdbid> tt0087800 </imdbid>
-
-       <title> A Nightmare on Elm Street </title>
-
-       <release_date> 1984-11-16 </release_date>
-
-       <runtime> 91 min </runtime>
-
-       <classification> NULO </classification>
-
-       <genres>
- <genre> Horror </genre>
- </genres>
-
-       <writers>
- <writer> Wes Craven </writer>
- </writers>
-
-       <actors>
- <actor character="Lt. Thompson"> John Saxon </actor>
-<actor character="Marge Thompson"> Ronee Blakley </actor>
-<actor character="Nancy Thompson"> Heather Langenkamp </actor>
-<actor character="Tina Gray"> Amanda Wyss </actor>
-<actor character="Rod Lane"> Jsu Garcia </actor>
-<actor character="Glen Lantz"> Johnny Depp </actor>
-<actor character="Dr. King"> Charles Fleischer </actor>
-<actor character="Sgt. Parker"> Joseph Whipp </actor>
-<actor character="Fred Krueger"> Robert Englund </actor>
-<actor character="Teacher"> Lin Shaye </actor>
-<actor character="Sgt. Garcia"> Joe Unger </actor>
-<actor character="Nurse"> Mimi Craven </actor>
-<actor character="Minister"> Jack Shea </actor>
-<actor character="Mr. Lantz"> Ed Call </actor>
-<actor character="Mrs. Lantz"> Sandy Lipton </actor>
-<actor character="Foreman"> David Andrews </actor>
-<actor character="Coroner    (as Jeffrey Levine)"> Jeff Levine </actor>
-<actor character="Tina's Mom"> Donna Woodrum </actor>
-<actor character="Cop #1"> Shashawnee Hall </actor> </actors>
-
-       <description> The monstrous spirit of a slain child murderer seeks revenge by invading the dreams of teenagers whose parents were responsible for his untimely death. </description>
-
-       <languages>
- <language> English </language>
- </languages>
-
-       <countries>
- <country> USA </country>
- </countries>
-
-       <poster> https://m.media-amazon.com/images/M/MV5BNzFjZmM1ODgtMDBkMS00NWFlLTg2YmUtZjc3ZTgxMjE1OTI2L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg</poster>
-
-       <seasons> 1 </seasons>
-
-       </series>
+  <series>
+    <imdbid>tt0087800</imdbid>
+    <title>A Nightmare on Elm Street</title>
+    <release_date>1984-11-16</release_date>
+    <runtime>91 min</runtime>
+    <classification>@CLASSIFICATION</classification>
+    <genres>
+      <genre>Horror</genre>
+    </genres>
+    <writers>
+      <writer>Wes Craven</writer>
+    </writers>
+    <actors>
+<actor character="Lt. Thompson">John Saxon</actor>
+<actor character="Marge Thompson">Ronee Blakley</actor>
+<actor character="Nancy Thompson">Heather Langenkamp</actor>
+<actor character="Tina Gray">Amanda Wyss</actor>
+<actor character="Rod Lane">Jsu Garcia</actor>
+<actor character="Glen Lantz">Johnny Depp</actor>
+<actor character="Dr. King">Charles Fleischer</actor>
+<actor character="Sgt. Parker">Joseph Whipp</actor>
+<actor character="Fred Krueger">Robert Englund</actor>
+<actor character="Teacher">Lin Shaye</actor>
+<actor character="Sgt. Garcia">Joe Unger</actor>
+<actor character="Nurse">Mimi Craven</actor>
+<actor character="Minister">Jack Shea</actor>
+<actor character="Mr. Lantz">Ed Call</actor>
+<actor character="Mrs. Lantz">Sandy Lipton</actor>
+<actor character="Foreman">David Andrews</actor>
+<actor character="Coroner    (as Jeffrey Levine)">Jeff Levine</actor>
+<actor character="Tina's Mom">Donna Woodrum</actor>
+<actor character="Cop #1">Shashawnee Hall</actor>    </actors>
+    <description>The monstrous spirit of a slain child murderer seeks revenge by invading the dreams of teenagers whose parents were responsible for his untimely death.</description>
+    <languages>
+      <language>English</language>
+    </languages>
+    <countries>
+      <country>USA</country>
+    </countries>
+    <poster>https://m.media-amazon.com/images/M/MV5BNzFjZmM1ODgtMDBkMS00NWFlLTg2YmUtZjc3ZTgxMjE1OTI2L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg</poster>
+    <seasons>1</seasons>
+  </series>
 </seriesset>

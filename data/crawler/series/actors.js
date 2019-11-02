@@ -19,8 +19,6 @@ module.exports = {
 
     for (let i = 2; i <= max; i++) {
       let s1 = xpath.evaluate(`//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[${i * mult}]/td[2]/a//text()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue
-      console.log('S1: ')
-      console.log(s1)
       if (s1 == null) break
       s1 = s1.textContent.trim()
 
@@ -51,11 +49,3 @@ module.exports = {
     return stringBuilder
   }
 }
-
-// const xhtml = fs.readFileSync('arquivoteste.html', 'UTF-8')
-// const document = new DOM().parseFromString(xhtml)
-//
-// // const select = xpath.useNamespaces({ x: 'http://www.w3.org/1999/xhtml' })
-//
-// const result = xpath.select('//html/body/div[2]/div/div[2]', document)
-// console.log(result)
