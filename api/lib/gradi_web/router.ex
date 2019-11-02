@@ -17,8 +17,8 @@ defmodule GradiWeb.Router do
     interface: :simple,
     context: %{pubsub: GradiWeb.Endpoint}
 
-  # post "/movies", UserController, :create
-  #
-  # post "/series", UserController, :create
+  post "/movies", MoviesController, :movies
+
+  post "/series", SeriesController, :series
 
 end
