@@ -15,7 +15,6 @@ module.exports = {
     const parsed = parse5.parse(html.toString())
     const xhtml = xmlser.serializeToString(parsed).trim().replace(/\n/g, '').replace(/ \ /g, ' ').replace('xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"', '')
     const document = new DOM().parseFromString(xhtml)
-    fs.writeFileSync('arquivoteste.xhtml', xhtml)
 
     for (let i = 2; i <= max; i++) {
       let s1 = xpath.evaluate(`//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[${i * mult}]/td[2]/a//text()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue
@@ -38,7 +37,7 @@ module.exports = {
         s2 = xpath.evaluate(`//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[${i * mult}]/td[4]/a[1]//text()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue.textContent.trim()
       }
 
-      stringBuilder += `<actor character="${s2}">${s1}</actor>`
+      stringBuilder += `      <actor character="${s2}">${s1}</actor>`
       if (i !== max) {
         stringBuilder += '\n'
       }
@@ -47,5 +46,17 @@ module.exports = {
     console.log(`String do actors: ${stringBuilder}`)
 
     return stringBuilder
+  },
+  async getClassificationFromIMDB (html) {
+
+    const parsed = parse5.parse(html.toString())
+    const xhtml = xmlser.serializeToString(parsed).trim().replace(/\n/g, '').replace(/ \ /g, ' ').replace('xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"', '')
+    const document = new DOM().parseFromString(xhtml)
+
+    let s1 = xpath.evaluate(`//html/body/div[2]/div/div[2]/div[5]/div[1]/div/div/div[1]/div[2]/div/div[2]/div[2]/div[2]//text()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue
+    if (s1 == null)
+		return 'L'
+	else
+		return s1.textContent.trim()
   }
 }
