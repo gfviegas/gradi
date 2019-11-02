@@ -14,11 +14,11 @@ module.exports = {
 		$title = $jo.Title;
 		$release_date = $jo.Released;
 		$runtime = $jo.Runtime;
-		$genres = "    <genre>" + $jo.Genre.replace(/, /g, "</genre>\n    <genre>") + "</genre>\n";
-		$writers = "    <writer>" + $jo.Writer.replace(/, /g, "</writer>\n    <writer>") + "</writer>\n";
+		$genres = "      <genre>" + $jo.Genre.replace(/, /g, "</genre>\n      <genre>") + "</genre>\n";
+		$writers = "      <writer>" + $jo.Writer.replace(/, /g, "</writer>\n      <writer>") + "</writer>\n";
 		$description = $jo.Plot;
-		$languages = "    <language>" + $jo.Language.replace(/, /g, "</language>\n    <language>") + "</language>\n";
-		$countries = "    <country>" + $jo.Country.replace(/, /g, "</country>\n    <country>") + "</country>\n";
+		$languages = "      <language>" + $jo.Language.replace(/, /g, "</language>\n      <language>") + "</language>\n";
+		$countries = "      <country>" + $jo.Country.replace(/, /g, "</country>\n      <country>") + "</country>\n";
 		$poster = $jo.Poster;
 		$imdb_id = $jo.imdbID;
 		$seasons = $jo.totalSeasons;
@@ -53,12 +53,12 @@ module.exports = {
 			+ "    <release_date>" + $release_date + "</release_date>\n"
 			+ "    <runtime>" + $runtime + "</runtime>\n"
 			+ "    <classification>" + $classification + "</classification>\n"
-			+ "    <genres>\n" + $genres + "  </genres>\n"
-			+ "    <writers>\n" + $writers + "  </writers>\n"
+			+ "    <genres>\n" + $genres + "    </genres>\n"
+			+ "    <writers>\n" + $writers + "    </writers>\n"
 			+ "    <actors>\n@ACTORS  </actors>\n"
 			+ "    <description>" + $description + "</description>\n"
-			+ "    <languages>\n" + $languages + "  </languages>\n"
-			+ "    <countries>\n" + $countries + "  </countries>\n"
+			+ "    <languages>\n" + $languages + "    </languages>\n"
+			+ "    <countries>\n" + $countries + "    </countries>\n"
 			+ "    <poster>" + $poster + "</poster>\n"
 			+ "    <seasons>" + ($seasons != null ? $seasons : 1) + "</seasons>\n"
 		+

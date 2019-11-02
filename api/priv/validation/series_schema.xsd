@@ -4,7 +4,7 @@
 	<!-- Criação de tipos (semelhante a classes) -->
 	<!-- https://en.wikipedia.org/wiki/List_of_genres -->
 	<!-- TODO: Tratar Genre como enumeração mesmo? -->
-	<xs:simpleType name="Genre">
+	<!--<xs:simpleType name="Genre">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="Action"/>
 			<xs:enumeration value="Adventure"/>
@@ -33,8 +33,13 @@
 			<xs:enumeration value="Thriller"/>
 			<xs:enumeration value="Urban"/>
 			<xs:enumeration value="Western"/>
-		</xs:restriction>
-	</xs:simpleType>
+		</xs:restriction>		
+	</xs:simpleType>-->
+	<xs:complexType name="Genre">
+		<xs:simpleContent>
+			<xs:extension base="xs:string" />
+		</xs:simpleContent>
+	</xs:complexType>
 
 	<xs:complexType name="Writer">
 		<xs:simpleContent>
@@ -52,7 +57,7 @@
 	</xs:complexType>
 
 	<!-- TODO: Tratar Language como enumeração mesmo? -->
-	<xs:simpleType name="Language">
+	<!--<xs:simpleType name="Language">		
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="English"/>
 			<xs:enumeration value="French"/>
@@ -67,8 +72,13 @@
 			<xs:enumeration value="Swedish"/>
 			<xs:enumeration value="Sindarin"/>
 			<xs:enumeration value="Yiddish"/>
-		</xs:restriction>
-	</xs:simpleType>
+		</xs:restriction>		
+	</xs:simpleType>-->	
+	<xs:complexType name="Language">
+		<xs:simpleContent>
+			<xs:extension base="xs:string" />
+		</xs:simpleContent>
+	</xs:complexType>
 
 	<xs:complexType name="Country">
 		<xs:simpleContent>

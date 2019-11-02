@@ -2,7 +2,9 @@ var req = require('request');
 var che = require('cheerio');
 var fs = require('fs');
 eval(fs.readFileSync('javascript_ombd_series.js'));
+eval(fs.readFileSync('javascript_actors_series.js'));
 var jos = require('./javascript_ombd_series');
+var jas = require('./javascript_actors_series');
 
 function craw(callback){
 	console.log('--- INICIANDO ---');	
@@ -50,29 +52,37 @@ headers: {
     'User-Agent': 'MY IPHINE 7s'
   }
 */
-function getFromOmdb(imdbid, callback){
-	req('http://www.omdbapi.com/?i=' + imdbid + '&apikey=6f5f8dc6', function(err, res, body){
+function getActorsFromIMDB(imdbid, callback){
+	req('https://www.imdb.com/title/' + imdbid + '/fullcredits/?ref_=tt_ov_st_sm', function(err, res, body){
 		if(err){
-			console.log('Erro 2: ' + err);
+			console.log('Erro 3: ' + err);
 		}
-		callback(err, res, jos.getFromOmdb(body));		
+		var $actors = jas.getActorsFromIMDB(body);
+		callback(err, res, $actors);
 	});
 }
 
-function testeGetFromOmbd(){
-	var s = getFromOmdb('tt0903747', function(errr, ress, series){
-		if(!errr)
-			fs.writeFile('test.txt', series, (err) => {
-				if(err)
-					console.log('Erro em fs.appendFile: ' + err);
-				else
-					console.log('--- FIM ---');
+function getFromOmdb(imdbid, callback){
+	req('http://www.omdbapi.com/?i=' + imdbid + '&apikey=6f5f8dc6', async function(err, res, body){
+		if(err){
+			console.log('Erro 2: ' + err);
+		}
+		var $series = jos.getFromOmdb(body);
+		var $actors = await new Promise((resolve, reject) => {
+			getActorsFromIMDB(imdbid, function(errr, ress, actors){
+				if(errr) 
+					reject(errr);
+				resolve(actors);
 			});
+		});
+		$series = $series.replace('@ACTORS', $actors);
+		
+		callback(err, res, $series);	
 	});
 }
 
 craw(async function($imdbids) {
-	$i = 2;
+	$i = 1;
 	$seriesset = [];
 	$seriessetstring = '<seriesset>' + '\n';
 	$imdbids.forEach((imdbid) => {
@@ -100,6 +110,18 @@ craw(async function($imdbids) {
 			console.log('--- FIM ---');
 	});
 });
+
+function testeGetFromOmbd(){
+	var s = getFromOmdb('tt0903747', function(errr, ress, series){
+		if(!errr)
+			fs.writeFile('test.txt', series, (err) => {
+				if(err)
+					console.log('Erro em fs.appendFile: ' + err);
+				else
+					console.log('--- FIM ---');
+			});
+	});
+}
 //testeGetFromOmbd();
 
 // Put the User Agent string in lowercase
