@@ -37,7 +37,7 @@ module.exports = {
         s2 = xpath.evaluate(`//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[ ${i * mult}]/td[4]/a[1]//text()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue.textContent.trim()
       }
 
-      stringBuilder += `<actor character="${s2}"> ${s1} </actor>`
+      stringBuilder += `<actor character="${s2}">${s1}</actor>`
       if (i !== max) {
         stringBuilder += '\n'
       }

@@ -27,10 +27,10 @@ module.exports = {
     let releaseDate = jo.Released.split(' ')
     const title = jo.Title
     const runtime = jo.Runtime
-    const genres = `<genre> ${jo.Genre.replace(/, /g, '</genre>\n<genre>')} </genre>\n`
-    const writers = `<writer> ${jo.Writer.replace(/, /g, '</writer>\n      <writer>')} </writer>\n`
-    const languages = `<language> ${jo.Language.replace(/, /g, '</language>\n      <language>')} </language>\n`
-    const countries = `<country> ${jo.Country.replace(/, /g, '</country>\n      <country>')} </country>\n`
+    const genres = `      <genre> ${jo.Genre.replace(/, /g, '</genre>\n      <genre>')}</genre>\n`
+    const writers = `      <writer> ${jo.Writer.replace(/, /g, '</writer>\n      <writer>')}</writer>\n`
+    const languages = `      <language> ${jo.Language.replace(/, /g, '</language>\n      <language>')}</language>\n`
+    const countries = `      <country> ${jo.Country.replace(/, /g, '</country>\n      <country>')}</country>\n`
     const description = jo.Plot
     const poster = jo.Poster
     const imdbId = jo.imdbID
@@ -45,20 +45,20 @@ module.exports = {
       releaseDate = 'N/A'
     }
 
-    return ` <series>\n
-       <imdbid> ${imdbId} </imdbid>\n
-       <title> ${title} </title>\n
-       <release_date> ${releaseDate} </release_date>\n
-       <runtime> ${runtime} </runtime>\n
-       <classification> NULO </classification>\n
-       <genres>\n ${genres} </genres>\n
-       <writers>\n ${writers} </writers>\n
-       <actors>\n @ACTORS </actors>\n
-       <description> ${description} </description>\n
-       <languages>\n ${languages} </languages>\n
-       <countries>\n ${countries} </countries>\n
-       <poster> ${poster}</poster>\n
-       <seasons> ${seasons || 1} </seasons>\n
-       </series>`
+    return `  <series>
+    <imdbid>${imdbId}</imdbid>
+    <title>${title}</title>
+    <release_date>${releaseDate}</release_date>
+    <runtime>${runtime}</runtime>
+    <classification>@CLASSIFICATION</classification>
+    <genres>\n${genres}    </genres>
+    <writers>\n${writers}    </writers>
+    <actors>\n@ACTORS    </actors>
+    <description>${description}</description>
+    <languages>\n${languages}    </languages>
+    <countries>\n${countries}    </countries>
+    <poster>${poster}</poster>
+    <seasons>${seasons || 1}</seasons>
+  </series>`
   }
 }
