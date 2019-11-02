@@ -46,7 +46,7 @@
               formData.append('movie', this.moviesFile)
 
               try {
-                const response = await axios.post('/movies', formData)
+                const response = await axios.post('http://localhost:4000/movies', formData)
                 this.$buefy.toast.open({message: "Filme adicionado", type: "is-success", position: "is-bottom"})
               } catch (e) {
                 console.error(e)
@@ -58,7 +58,7 @@
               formData.append('series', this.seriesFile)
 
               try {
-                const response = await axios.post('/series', formData)
+                const response = await axios.post('http://localhost:4000/series', formData)
                 this.$buefy.toast.open({message: "Série adicionada", type: "is-success", position: "is-bottom"})
               } catch (e) {
                 console.error(e)
