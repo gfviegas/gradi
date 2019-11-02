@@ -5,11 +5,14 @@ const OMDBService = require('./omdb')
 const ActorsService = require('./actors')
 
 const IMDB_IDS_ENDPOINT = 'https://www.imdb.com/search/keyword/?keywords=series&ref_=fn_al_kw_1'
+const quantidade = 2
+let imdb_ids_page = 1
 
 const crawl = async () => {
   console.log('--- INICIANDO ---')
   try {
-    const response = await axios.get(IMDB_IDS_ENDPOINT)
+	  console.log(`${IMDB_IDS_ENDPOINT}&page=${imdb_ids_page}`);
+    const response = await axios.get(`${IMDB_IDS_ENDPOINT}&page=${imdb_ids_page}`)
 
     const $ = che.load(response.data)
     const imdbids = await $('.lister-item-header').map((i, element) => {
@@ -68,6 +71,7 @@ const getFromOmdb = async (imdbid) => {
     const actors = await getActorsFromIMDB(imdbid)
     console.log(actors)
 	const classification = await getClassificationFromIMDB(imdbid);
+	console.log(`Classification: ${classification}`)
 
     series = series.replace('@ACTORS', actors)
 	series = series.replace('@CLASSIFICATION', classification)
@@ -82,8 +86,7 @@ const getFromOmdb = async (imdbid) => {
   try {
     const imdbids = await crawl()
     if (!imdbids) throw new Error('no_ids_found')
-
-    const quantidade = 5
+    
     let seriessetstring = '<seriesset>\n'
 
     const seriesset = await Promise.all(imdbids.slice(0, quantidade).map(async (imdbid) => {
