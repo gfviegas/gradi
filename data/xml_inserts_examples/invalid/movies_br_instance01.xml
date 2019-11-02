@@ -1,0 +1,45 @@
+<filmes>
+	<filme>
+		<imdbid>tt7286456</imdbid>
+		<título>Joker</título>
+		<classificação>16</classificação>
+		<descrição>In Gotham City, mentally-troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: "The Joker".</descrição>
+		<data_lançamento>2019-10-04</data_lançamento>
+		<receita>863626992.0</receita>
+		<pôster>https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg</pôster>
+		<gêneros>
+			<gênero>Crime</gênero>
+			<gênero>Drama</gênero>
+			<gênero>Thriller</gênero>
+		</gêneros>
+		<diretores>
+			<diretor>Todd Phillips</diretor>
+		</diretores>
+		<escritores>
+			<escritor>Todd Phillips</escritor>
+			<escritor>Scott Silver</escritor>
+			<escritor>Bob Kane</escritor>
+			<escritor>Bill Finger</escritor>
+			<escritor>Jerry Robinson</escritor>
+		</escritores>
+		<idiomas>
+			<idioma>English</idioma>
+		</idiomas>
+		<companias>
+			<compania país="United States" logo="https://upload.wikimedia.org/wikipedia/en/c/c8/Village_roadshow_pictures_logo.jpg">Village Roadshow Pictures</compania>
+			<compania país="United States" logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/DC_Comics_logo.svg/320px-DC_Comics_logo.svg.png">DC Films</compania>
+		</companias>
+		<personagens>
+			<personagem ator="Joaquin Phoenix " protagonista="true">Arthur Fleck</personagem>
+			<personagem ator="Robert De Niro">Murray Franklin</personagem>
+			<personagem ator="Zazie Beetz">Sophie Dumond</personagem>
+			<personagem ator="Frances Conroy">Penny Fleck</personagem>
+			<personagem ator="Brett Cullen">Thomas Wayne</personagem>
+			<personagem ator="Shea Whigham">Detective Burke</personagem>
+			<personagem ator="Bill Camp">Detective Garrity</personagem>
+			<personagem ator="Glenn Fleshler">Randall</personagem>
+			<personagem ator="Leigh Gill">Gary</personagem>
+			<personagem ator="Josh Pais">Hoyt Vaughn</personagem>
+		</personagens>		
+	</filme>
+</filmes>
