@@ -4,7 +4,6 @@ defmodule GradiValidation.XMLSchema do
   @series_schema_file "priv/validation/series_schema.xsd"
   @series_br_schema_file "priv/validation/series_br_schema.xsd"
   
-
   # Carrega o schema pra o tipo especifico de recurso
   def load_schema(:movie), do: load_schema @movies_schema_file
   def load_schema(:moviebr), do: load_schema @movies_br_schema_file

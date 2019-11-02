@@ -21,7 +21,7 @@
         </b-upload>
       </div>
       <div class="column is-one-half">
-        <b-upload @input="uploadSeries" accept=".json" v-model="seriesFile">
+        <b-upload @input="uploadSeries" accept=".xml" v-model="seriesFile">
           <a class="button is-dark is-large"> Quero adicionar minhas séries </a>
         </b-upload>
       </div>
@@ -42,11 +42,10 @@
     methods: {
       async uploadMovies () {
               const formData = new FormData()
-              console.log(this.moviesFile)
               formData.append('movie', this.moviesFile)
 
               try {
-                const response = await axios.post('/movies', formData)
+                const response = await axios.post('http://localhost:4000/movies', formData)
                 this.$buefy.toast.open({message: "Filme adicionado", type: "is-success", position: "is-bottom"})
               } catch (e) {
                 console.error(e)
@@ -58,7 +57,7 @@
               formData.append('series', this.seriesFile)
 
               try {
-                const response = await axios.post('/series', formData)
+                const response = await axios.post('http://localhost:4000/series', formData)
                 this.$buefy.toast.open({message: "Série adicionada", type: "is-success", position: "is-bottom"})
               } catch (e) {
                 console.error(e)
