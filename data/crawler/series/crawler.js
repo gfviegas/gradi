@@ -43,6 +43,21 @@ const getActorsFromIMDB = async (imdbid, callback) => {
   }
 }
 
+const getClassificationFromIMDB = async (imdbid, callback) => {
+  const url = `https://www.imdb.com/title/${imdbid}`
+
+  try {
+    const response = await axios.get(url)
+    const $ = che.load(response.data)
+    $('script').remove()
+
+    return ActorsService.getClassificationFromIMDB($.html())
+  } catch (e) {
+    console.error(e)
+    return null
+  }
+}
+
 const getFromOmdb = async (imdbid) => {
   const url = `http://www.omdbapi.com/?i=${imdbid}&apikey=6f5f8dc6`
   try {
@@ -52,8 +67,10 @@ const getFromOmdb = async (imdbid) => {
     let series = OMDBService.getFromOmdb(response.data)
     const actors = await getActorsFromIMDB(imdbid)
     console.log(actors)
+	const classification = await getClassificationFromIMDB(imdbid);
 
     series = series.replace('@ACTORS', actors)
+	series = series.replace('@CLASSIFICATION', classification)
     return series
   } catch (e) {
     console.error(e)
@@ -66,7 +83,7 @@ const getFromOmdb = async (imdbid) => {
     const imdbids = await crawl()
     if (!imdbids) throw new Error('no_ids_found')
 
-    const quantidade = 1
+    const quantidade = 5
     let seriessetstring = '<seriesset>\n'
 
     const seriesset = await Promise.all(imdbids.slice(0, quantidade).map(async (imdbid) => {
