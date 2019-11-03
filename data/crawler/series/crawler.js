@@ -1,4 +1,5 @@
 const axios = require('axios')
+const FormData = require('form-data')
 const che = require('cheerio')
 const fs = require('fs')
 const OMDBService = require('./omdb')
@@ -11,7 +12,7 @@ let imdb_ids_page = 1
 const crawl = async () => {
   console.log('--- INICIANDO ---')
   try {
-	console.log(`${IMDB_IDS_ENDPOINT}&page=${imdb_ids_page}`);
+    console.log(`${IMDB_IDS_ENDPOINT}&page=${imdb_ids_page}`)
     const response = await axios.get(`${IMDB_IDS_ENDPOINT}&page=${imdb_ids_page}`)
 
     const $ = che.load(response.data)
@@ -70,11 +71,11 @@ const getFromOmdb = async (imdbid) => {
     let series = OMDBService.getFromOmdb(response.data)
     const actors = await getActorsFromIMDB(imdbid)
     console.log(actors)
-	const classification = await getClassificationFromIMDB(imdbid);
-	console.log(`Classification: ${classification}`)
+    const classification = await getClassificationFromIMDB(imdbid)
+    console.log(`Classification: ${classification}`)
 
     series = series.replace('@ACTORS', actors)
-	series = series.replace('@CLASSIFICATION', classification)
+    series = series.replace('@CLASSIFICATION', classification)
     return series
   } catch (e) {
     console.error(e)
@@ -84,9 +85,10 @@ const getFromOmdb = async (imdbid) => {
 
 (async () => {
   try {
+    const outputFilePath = 'series_instance_generated.xml'
     const imdbids = await crawl()
     if (!imdbids) throw new Error('no_ids_found')
-    
+
     let seriessetstring = '<seriesset>\n'
 
     const seriesset = await Promise.all(imdbids.slice(0, quantidade).map(async (imdbid) => {
@@ -98,10 +100,20 @@ const getFromOmdb = async (imdbid) => {
     })
 
     seriessetstring += '</seriesset>'
-    fs.writeFileSync('series_instance_generated.xml', seriessetstring)
-	axios.post('http://localhost:4000/crawler', { seriessetstring })
-	     . then (function (response) { console.log(response) })
-		 . catch(function (error) { console.log(`Error: ${error}`) })
+    fs.writeFileSync(outputFilePath, seriessetstring)
+
+    const formData = new FormData()
+    formData.append('crawler', fs.createReadStream(outputFilePath))
+
+    const requestConfig = {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      },
+      data: formData
+    }
+
+    const response = await axios.post('http://api:4000/crawler', formData, { headers: formData.getHeaders() })
+    console.log(`Request HTTP com resposta de status ${response.status}`)
     console.log('--- FIM ---')
   } catch (e) {
     console.error(`Erro Inesperado: ${e}`)

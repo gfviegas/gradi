@@ -4,7 +4,7 @@
   "description": "Crawler pra McQueen Movies",
   "main": "index.js",
   "scripts": {
-    "start": "node series/crawler.js",
+    "start": "yarn && node series/crawler.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "cheerio": "^1.0.0-rc.3",
+    "form-data": "^2.5.1",
     "parse5": "^5.1.0",
     "xmldom": "^0.1.27",
     "xmlserializer": "^0.6.1",

@@ -47,7 +47,8 @@ defmodule Gradi.MixProject do
       {:mongodb, ">= 0.0.0"},
       {:httpoison, "~> 1.5"},
       {:poison, "~> 4.0"},
-      {:corsica, "~> 1.0"}
+      {:corsica, "~> 1.0"},
+      {:sweet_xml, "~> 0.6.6"}
     ]
   end
 

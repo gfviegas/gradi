@@ -29,11 +29,11 @@ defmodule Gradi.Series do
     IO.inspect(splitedTerms)
 
     #gera a regex de busca do mongo para cada termo
-    searchTerms = 
-      Enum.map(splitedTerms, 
+    searchTerms =
+      Enum.map(splitedTerms,
         fn term -> %BSON.Regex{pattern: "#{term}", options: "i"} end
       )
-      
+
     #busca com or por termos possíveis
     Map.merge(query, %{
       "$or" => [
@@ -114,6 +114,14 @@ defmodule Gradi.Series do
 
   def get_serie!(id = %BSON.ObjectId{}) do
     Mongo.find_one(:mongo, "series", %{_id: id}) |> format_map
+  end
+
+  def insert_series(series) when is_list(series) do
+    results = Enum.map series, &insert_series/1
+    case Enum.all?(results, fn r -> {:ok, _} = r end) do
+      true -> {:ok, results |> length}
+      true -> {:error, :error}
+    end
   end
 
   def insert_series(coll) do
