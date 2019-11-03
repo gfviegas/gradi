@@ -11,5 +11,5 @@ defmodule GradiWeb.SeriesController do
       {:error, _} -> conn |> send_resp(409, "Erro")
     end
   end
-
+  
 end

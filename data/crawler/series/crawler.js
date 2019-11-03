@@ -11,7 +11,7 @@ let imdb_ids_page = 1
 const crawl = async () => {
   console.log('--- INICIANDO ---')
   try {
-	  console.log(`${IMDB_IDS_ENDPOINT}&page=${imdb_ids_page}`);
+	console.log(`${IMDB_IDS_ENDPOINT}&page=${imdb_ids_page}`);
     const response = await axios.get(`${IMDB_IDS_ENDPOINT}&page=${imdb_ids_page}`)
 
     const $ = che.load(response.data)
@@ -99,6 +99,9 @@ const getFromOmdb = async (imdbid) => {
 
     seriessetstring += '</seriesset>'
     fs.writeFileSync('series_instance_generated.xml', seriessetstring)
+	axios.post('http://localhost:4000/crawler', { seriessetstring })
+	     . then (function (response) { console.log(response) })
+		 . catch(function (error) { console.log(`Error: ${error}`) })
     console.log('--- FIM ---')
   } catch (e) {
     console.error(`Erro Inesperado: ${e}`)

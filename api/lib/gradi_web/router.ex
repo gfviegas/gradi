@@ -21,6 +21,8 @@ defmodule GradiWeb.Router do
     post "/movies", MoviesController, :movies
 
     post "/series", SeriesController, :series
+
+    post "/crawler", CrawlerController, :crawler
   end
 
 
