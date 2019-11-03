@@ -11,13 +11,46 @@ defmodule Gradi.Movies do
 
   defp base_query,
     do:
-      from(m in Movie,
+      from(
+        m in Movie,
+        join: mc in Character, on: mc.movie_id == m.id,
+        distinct: true,
         preload: [{:characters, :actor}, :languages, :directors, :genres, :writers, :companies]
       )
 
+
   # Busca por titulo
   defp with_search(query, %{title: title}) do
-    from(m in query, where: like(m.title, ^"%#{title}%"))
+    title = " " <> title <> " "
+
+    tokenized_words = [
+      " i ", " me ", " my ", " myself ", " we ", " our ", " ours ", " ourselves ", " you ", " your ", " yours ", " yourself ", " yourselves ", " he ", " him ", " his ", " himself ", " she ", " her ", " hers ", " herself ", " it ", " its ", " itself ", " they ", " them ", " their ", " theirs ", " themselves ", " what ", " which ", " who ", " whom ", " this ", " that ", " these ", " those ", " am ", " is ", " are ", " was ", " were ", " be ", " been ", " being ", " have ", " has ", " had ", " having ", " do ", " does ", " did ", " doing ", " a ", " an ", " the ", " and ", " but ", " if ", " or ", " because ", " as ", " until ", " while ", " of ", " at ", " by ", " for ", " with ", " about ", " against ", " between ", " into ", " through ", " during ", " before ", " after ", " above ", " below ", " to ", " from ", " up ", " down ", " in ", " out ", " on ", " off ", " over ", " under ", " again ", " further ", " then ", " once ", " here ", " there ", " when ", " where ", " why ", " how ", " all ", " any ", " both ", " each ", " few ", " more ", " most ", " other ", " some ", " such ", " no ", " nor ", " not ", " only ", " own ", " same ", " so ", " than ", " too ", " very ", " s ", " t ", " can ", " will ", " just ", " don ", " should ", " now "
+    ];
+
+    # remove as stopwords
+    dictionary = String.replace(
+      String.downcase(title), tokenized_words, "|"
+    )
+    dictionary = String.trim(dictionary)
+    splitedTerms = String.split(dictionary, "|")
+
+    #gera a regex de busca do mongo para cada termo
+    searchTerms = 
+      Enum.map(splitedTerms, 
+        fn term -> [
+          title: "%#{term}%",
+          description: "%#{term}%",
+          #character: "%#{term}%"
+        ] end
+      )
+
+    searchTerms = List.flatten(searchTerms)
+
+    IO.inspect(searchTerms)
+
+    Enum.reduce(searchTerms, query, fn {key, value}, q ->
+      from m in q, or_where: like(field(m, ^key), ^value)
+    end)
   end
 
   defp with_search(query, _), do: query
