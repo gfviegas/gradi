@@ -53,9 +53,11 @@ module.exports = {
     const xhtml = xmlser.serializeToString(parsed).trim().replace(/\n/g, '').replace(/ \ /g, ' ').replace('xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"', '')
     const document = new DOM().parseFromString(xhtml)
 
-    let s1 = xpath.evaluate(`//html/body/div[2]/div/div[2]/div[5]/div[1]/div/div/div[1]/div[2]/div/div[2]/div[2]/div[2]//text()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue
+    let s1 = xpath.evaluate(`//html/body/div[2]/div/div[2]/div[5]/div[1]/div/div/div[1]/div[2]/div/div[2]/div[2]/div[2]//text()`, document, null, XPATH_FIRST_ORDERED_TYPE, null)
+	if(s1 != null)
+		s1 = s1.singleNodeValue
     if (s1 == null)
-		return 'L'
+		return '---'
 	else
 		return s1.textContent.trim()
   }
