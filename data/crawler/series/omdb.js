@@ -53,7 +53,7 @@ module.exports = {
     <classification>@CLASSIFICATION</classification>
     <genres>\n${genres}    </genres>
     <writers>\n${writers}    </writers>
-    <actors>\n@ACTORS    </actors>
+    <actors>\n@ACTORS\n    </actors>
     <description>${description}</description>
     <languages>\n${languages}    </languages>
     <countries>\n${countries}    </countries>

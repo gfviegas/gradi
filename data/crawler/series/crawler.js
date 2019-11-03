@@ -99,6 +99,7 @@ const getFromOmdb = async (imdbid) => {
 
     seriessetstring += '</seriesset>'
     fs.writeFileSync('series_instance_generated.xml', seriessetstring)
+	axios.post('http://localhost:4000/crawler', { seriessetstring })
     console.log('--- FIM ---')
   } catch (e) {
     console.error(`Erro Inesperado: ${e}`)
