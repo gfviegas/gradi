@@ -5,22 +5,22 @@
     <h1 class="title is-2"> Seja bem vindo ao nosso gerenciador de filmes e séries </h1>
 
     <div class="columns is-multiline">
-      <div class="column is-one-half">
+      <div class="column is-half">
         <router-link to="/filmes">
           <b-button type="is-primary" size="is-large"> Quero encontrar meu filme </b-button>
         </router-link>
       </div>
-      <div class="column is-one-half">
+      <div class="column is-half">
         <router-link to="/series">
-          <b-button type="is-dark" size="is-large"> Quero encontrar minha série </b-button>
+          <b-button type="is-primary" size="is-large"> Quero encontrar minha série </b-button>
         </router-link>
       </div>
-      <div class="column is-one-half">
+      <div class="column is-half">
         <b-upload @input="uploadMovies" accept=".xml" v-model="moviesFile">
-          <a class="button is-primary is-large"> Quero adicionar meus filmes </a>
+          <a class="button is-dark is-large"> Quero adicionar meus filmes </a>
         </b-upload>
       </div>
-      <div class="column is-one-half">
+      <div class="column is-half">
         <b-upload @input="uploadSeries" accept=".xml" v-model="seriesFile">
           <a class="button is-dark is-large"> Quero adicionar minhas séries </a>
         </b-upload>
@@ -80,7 +80,7 @@
       justify-content: space-evenly
     .columns
       display: flex
-      flex-direction: column
+      //flex-direction: column
       justify-content: center
       align-content: center
       padding-bottom: 2rem
