@@ -85,4 +85,9 @@ defmodule Gradi.Series do
   def get_serie!(id = %BSON.ObjectId{}) do
     Mongo.find_one(:mongo, "series", %{_id: id}) |> format_map
   end
+
+  def insert_series(coll) do
+    # coll = nova série que deve ser inserida
+    Mongo.insert_one(:mongo, "series", coll)
+  end
 end
