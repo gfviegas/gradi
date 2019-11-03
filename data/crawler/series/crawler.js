@@ -6,7 +6,7 @@ const ActorsService = require('./actors')
 
 const IMDB_IDS_ENDPOINT = 'https://www.imdb.com/search/keyword/?keywords=series&ref_=fn_al_kw_1'
 const quantidade = 2
-let imdb_ids_page = 1
+let imdb_ids_page = 2
 
 const crawl = async () => {
   console.log('--- INICIANDO ---')
@@ -100,6 +100,8 @@ const getFromOmdb = async (imdbid) => {
     seriessetstring += '</seriesset>'
     fs.writeFileSync('series_instance_generated.xml', seriessetstring)
 	axios.post('http://localhost:4000/crawler', { seriessetstring })
+	     . then (function (response) { console.log(response) })
+		 . catch(function (error) { console.log(`Error: ${error}`) })
     console.log('--- FIM ---')
   } catch (e) {
     console.error(`Erro Inesperado: ${e}`)

@@ -34,7 +34,11 @@ module.exports = {
       }
 
       if (s2.length === 0) {
-        s2 = xpath.evaluate(`//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[${i * mult}]/td[4]/a[1]//text()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue.textContent.trim()
+        s2 = xpath.evaluate(`//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[${i * mult}]/td[4]/a[1]//text()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue
+		if(s2 != null)
+			s2 = s2.textContent.trim()
+		else
+			s2 = '---'
       }
 
       stringBuilder += `      <actor character="${s2}">${s1}</actor>`
