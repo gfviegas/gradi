@@ -6,12 +6,12 @@ const ActorsService = require('./actors')
 
 const IMDB_IDS_ENDPOINT = 'https://www.imdb.com/search/keyword/?keywords=series&ref_=fn_al_kw_1'
 const quantidade = 2
-let imdb_ids_page = 2
+let imdb_ids_page = 1
 
 const crawl = async () => {
   console.log('--- INICIANDO ---')
   try {
-	  console.log(`${IMDB_IDS_ENDPOINT}&page=${imdb_ids_page}`);
+	console.log(`${IMDB_IDS_ENDPOINT}&page=${imdb_ids_page}`);
     const response = await axios.get(`${IMDB_IDS_ENDPOINT}&page=${imdb_ids_page}`)
 
     const $ = che.load(response.data)
