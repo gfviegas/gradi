@@ -1,75 +1,704 @@
 <seriesset>
   <series>
-    <imdbid>tt2604704</imdbid>
-    <title>Rape Zombie: Lust of the Dead 2</title>
-    <release_date>2014-02-11</release_date>
-    <runtime>67 min</runtime>
-    <classification>---</classification>
+    <imdbid>tt0087800</imdbid>
+    <title>A Nightmare on Elm Street</title>
+    <release_date>1984-11-16</release_date>
+    <runtime>91 min</runtime>
+    <classification>null</classification>
     <genres>
       <genre>Horror</genre>
     </genres>
     <writers>
-      <writer>Yûko Momochi (screenplay)</writer>
-      <writer>Naoyuki Tomomatsu (screenplay)</writer>
+      <writer>Wes Craven</writer>
     </writers>
     <actors>
-      <actor character="---">Yui Aikawa</actor>
-      <actor character="---">Maki Aoyama</actor>
-      <actor character="---">Asami</actor>
-      <actor character="---">Hiroshi Fujita</actor>
-      <actor character="---">Fuzuki</actor>
-      <actor character="---">Yutaka Ikejima</actor>
-      <actor character="(as Rina Kichise)">Iona</actor>
-      <actor character="---">Hiroyuki Kaneko</actor>
-      <actor character="---">Saya Kobayashi</actor>
-      <actor character="(as Ren Miyamura)">Ayumi Kuroki</actor>
-      <actor character="---">Riri Kôda</actor>
-      <actor character="---">Riko Matsui</actor>
-      <actor character="---">Takeshi Nakazawa</actor>
-      <actor character="---">Ami Onizuka</actor>
-      <actor character="(as Arisu Ozawa)">Alice Ozawa</actor>
-      <actor character="---">Moe Sakura</actor>
-      <actor character="---">Tomoaki Sandan</actor>
-      <actor character="---">Yôko Satomi</actor>
-      <actor character="---">Yûya Takayama</actor>
+      <actor character="Lt. Thompson">John Saxon</actor>
+      <actor character="Marge Thompson">Ronee Blakley</actor>
+      <actor character="Nancy Thompson">Heather Langenkamp</actor>
+      <actor character="Tina Gray">Amanda Wyss</actor>
+      <actor character="Rod Lane">Jsu Garcia</actor>
+      <actor character="Glen Lantz">Johnny Depp</actor>
+      <actor character="Dr. King">Charles Fleischer</actor>
+      <actor character="Sgt. Parker">Joseph Whipp</actor>
+      <actor character="Fred Krueger">Robert Englund</actor>
+      <actor character="Teacher">Lin Shaye</actor>
+      <actor character="Sgt. Garcia">Joe Unger</actor>
+      <actor character="Nurse">Mimi Craven</actor>
+      <actor character="Minister">Jack Shea</actor>
+      <actor character="Mr. Lantz">Ed Call</actor>
+      <actor character="Mrs. Lantz">Sandy Lipton</actor>
+      <actor character="Foreman">David Andrews</actor>
+      <actor character="Coroner    (as Jeffrey Levine)">Jeff Levine</actor>
+      <actor character="Tina's Mom">Donna Woodrum</actor>
+      <actor character="Cop #1">Shashawnee Hall</actor>
     </actors>
-    <description>After a nuclear attack, a strange virus has turned 90% of the male population of the world into lust-filled zombies. However, in Akihabara, Japan, some males have been found who are ...</description>
+    <description>The monstrous spirit of a slain child murderer seeks revenge by invading the dreams of teenagers whose parents were responsible for his untimely death.</description>
     <languages>
-      <language>Japanese</language>
+      <language>English</language>
     </languages>
     <countries>
-      <country>Japan</country>
+      <country>USA</country>
     </countries>
-    <poster>https://m.media-amazon.com/images/M/MV5BMTQ3NDcxMTk5NF5BMl5BanBnXkFtZTgwMzkzODY0MjE@._V1_SX300.jpg</poster>
+    <poster>https://m.media-amazon.com/images/M/MV5BNzFjZmM1ODgtMDBkMS00NWFlLTg2YmUtZjc3ZTgxMjE1OTI2L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg</poster>
     <seasons>1</seasons>
   </series>
   <series>
-    <imdbid>tt0226259</imdbid>
-    <title>Onna kyôshi: Seito no me no maede</title>
-    <release_date>1982-04-09</release_date>
-    <runtime>69 min</runtime>
-    <classification>---</classification>
+    <imdbid>tt6077448</imdbid>
+    <title>Sacred Games</title>
+    <release_date>2018-07-06</release_date>
+    <runtime>50 min</runtime>
+    <classification>null</classification>
     <genres>
+      <genre>Action</genre>
+      <genre>Crime</genre>
       <genre>Drama</genre>
-      <genre>Mystery</genre>
+      <genre>Thriller</genre>
     </genres>
     <writers>
-      <writer>Masayasu Daikuhara</writer>
+      <writer>Varun Grover</writer>
     </writers>
     <actors>
-      <actor character="Kumi /       Girl Friend of Takuya">Rushia Santô</actor>
-      <actor character="Akiyama /       Teacher">Toshiyuki Kitami</actor>
-      <actor character="Syôko /       Teacher">Kyôko Sagami</actor>
-
+      <actor character="Ganesh Gaitonde">Saif Ali Khan</actor>
+      <actor character="Parulkar">Neeraj Kabi</actor>
+      <actor character="Majid     / ...">Aamir Bashir</actor>
+      <actor character="Kanta Bai">Shalini Vatsa</actor>
+      <actor character="Zoya Mirza">Elnaaz Norouzi</actor>
+      <actor character="Malcolm">Luke Kenny</actor>
+      <actor character="Anjali Mathur">Radhika Apte</actor>
+      <actor character="Constable Katekar">Jitendra Joshi</actor>
+      <actor character="Bunty">Jatin Sarna</actor>
+      <actor character="Jojo Mascarenas     / ...">Surveen Chawla</actor>
+      <actor character="Erico">Paul Ogola</actor>
+      <actor character="Kukoo">Kubbra Sait</actor>
+      <actor character="Subhadra">Rajshri Deshpande</actor>
+      <actor character="Isa     / ...">Saurabh Sachdeva</actor>
+      <actor character="Mathu">Vikram Kochhar</actor>
+      <actor character="Khanna Guru Ji">Pankaj Tripathi</actor>
+      <actor character="Markand     / ...">Sameer Kochhar</actor>
+      <actor character="Trivedi">Chittaranjan Tripathy</actor>
+      <actor character="Constable Kamble">Suhas Sirsat</actor>
     </actors>
-    <description>Reiko, a young and beautiful teacher, takes a teaching job at an old, run-down high school. The male students in her class are mesmerized by her beauty and become infatuated with her. One ...</description>
+    <description>A link in their pasts leads an honest cop to a fugitive gang boss, whose cryptic warning spurs the officer on a quest to save Mumbai from cataclysm.</description>
     <languages>
-      <language>Japanese</language>
+      <language>Hindi</language>
+      <language>Indian Sign Language</language>
+      <language>Marathi</language>
+      <language>English</language>
     </languages>
     <countries>
-      <country>Japan</country>
+      <country>India</country>
+      <country>USA</country>
     </countries>
-    <poster>https://m.media-amazon.com/images/M/MV5BMWRjZTU0MTktNjgwNC00MGJjLWEzZTItOTI2NGZjMDVkZjY5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjkyMDI4NTQ@._V1_SX300.jpg</poster>
+    <poster>https://m.media-amazon.com/images/M/MV5BMjJlMjJlMzYtNmU5Yy00N2MwLWJmMjEtNWUwZWIyMGViZDgyXkEyXkFqcGdeQXVyOTAzMTc2MjA@._V1_SX300.jpg</poster>
+    <seasons>1</seasons>
+  </series>
+  <series>
+    <imdbid>tt3829266</imdbid>
+    <title>The Predator</title>
+    <release_date>2018-09-14</release_date>
+    <runtime>107 min</runtime>
+    <classification>18</classification>
+    <genres>
+      <genre>Action</genre>
+      <genre>Adventure</genre>
+      <genre>Sci-Fi</genre>
+      <genre>Thriller</genre>
+    </genres>
+    <writers>
+      <writer>Fred Dekker</writer>
+      <writer>Shane Black</writer>
+      <writer>Jim Thomas (based on characters created by)</writer>
+      <writer>John Thomas (based on characters created by)</writer>
+    </writers>
+    <actors>
+      <actor character="Quinn McKenna">Boyd Holbrook</actor>
+      <actor character="Nebraska Williams">Trevante Rhodes</actor>
+      <actor character="Rory McKenna">Jacob Tremblay</actor>
+      <actor character="Coyle">Keegan-Michael Key</actor>
+      <actor character="Casey Brackett">Olivia Munn</actor>
+      <actor character="Traeger">Sterling K. Brown</actor>
+      <actor character="Baxley">Thomas Jane</actor>
+      <actor character="Lynch">Alfie Allen</actor>
+      <actor character="Nettles">Augusto Aguilera</actor>
+      <actor character="Keyes">Jake Busey</actor>
+      <actor character="Emily">Yvonne Strahovski</actor>
+      <actor character="Predator">Brian A. Prince</actor>
+      <actor character="Dupree">Mike Dopud</actor>
+      <actor character="Sapir">Niall Matter</actor>
+      <actor character="Cantina Bartender">Javier Lacroix</actor>
+      <actor character="EJ">Gabriel LaBelle</actor>
+      <actor character="Derek">Nikolas Dukic</actor>
+      <actor character="Agent Church">RJ Fetherstonhaugh</actor>
+      <actor character="Helicopter Pilot    (as James Salisbury)">James S. Salisbury</actor>
+    </actors>
+    <description>When a young boy accidentally triggers the universe's most lethal hunters' return to Earth, only a ragtag crew of ex-soldiers and a disgruntled scientist can prevent the end of the human race.</description>
+    <languages>
+      <language>English</language>
+      <language>Spanish</language>
+    </languages>
+    <countries>
+      <country>Canada</country>
+      <country>USA</country>
+    </countries>
+    <poster>https://m.media-amazon.com/images/M/MV5BMjM5MDk2NDIxMF5BMl5BanBnXkFtZTgwNjU5NDk3NTM@._V1_SX300.jpg</poster>
+    <seasons>1</seasons>
+  </series>
+  <series>
+    <imdbid>tt5164214</imdbid>
+    <title>Ocean's Eight</title>
+    <release_date>2018-06-08</release_date>
+    <runtime>110 min</runtime>
+    <classification>14</classification>
+    <genres>
+      <genre>Action</genre>
+      <genre>Comedy</genre>
+      <genre>Crime</genre>
+      <genre>Thriller</genre>
+    </genres>
+    <writers>
+      <writer>Gary Ross (screenplay by)</writer>
+      <writer>Olivia Milch (screenplay by)</writer>
+      <writer>Gary Ross (story by)</writer>
+      <writer>George Clayton Johnson (based upon characters created by)</writer>
+      <writer>Jack Golden Russell (based upon characters created by)</writer>
+    </writers>
+    <actors>
+      <actor character="Debbie Ocean">Sandra Bullock</actor>
+      <actor character="Parole Board Officer">Griffin Dunne</actor>
+      <actor character="Prison Guard">Deidre Goodwin</actor>
+      <actor character="Bergdorf Salesperson">Daniella Rabbani</actor>
+      <actor character="Mr. Randall">Brian J. Carter</actor>
+      <actor character="Mrs. Randall">Gemma Forbes</actor>
+      <actor character="Plaza Hotel Front Desk Clerk">Katherine Hozier-Adams</actor>
+      <actor character="Plaza Hotel Doorman">Freddy J. Davila</actor>
+      <actor character="Plaza Hotel Maid">Francesca Calo</actor>
+      <actor character="Lou">Cate Blanchett</actor>
+      <actor character="April">Midori Francis</actor>
+      <actor character="Reuben">Elliott Gould</actor>
+      <actor character="Claude Becker">Richard Armitage</actor>
+      <actor character="Cara">Charlotte Kirk</actor>
+      <actor character="Daphne Kluger">Anne Hathaway</actor>
+      <actor character="Chairwoman">Linda Atkinson</actor>
+      <actor character="Press Conference Reporter">Sas Goldberg</actor>
+      <actor character="Omaha Banker">Steven Hauck</actor>
+      <actor character="Omaha Banker">David Gibson</actor>
+    </actors>
+    <description>Debbie Ocean gathers an all-female crew to attempt an impossible heist at New York City's yearly Met Gala.</description>
+    <languages>
+      <language>English</language>
+      <language>Hindi</language>
+      <language>French</language>
+      <language>German</language>
+      <language>Mandarin</language>
+    </languages>
+    <countries>
+      <country>USA</country>
+    </countries>
+    <poster>https://m.media-amazon.com/images/M/MV5BMjAyNDEyMzc4Ml5BMl5BanBnXkFtZTgwMjEzNjM0NTM@._V1_SX300.jpg</poster>
+    <seasons>1</seasons>
+  </series>
+  <series>
+    <imdbid>tt0089686</imdbid>
+    <title>A Nightmare on Elm Street 2: Freddy's Revenge</title>
+    <release_date>1985-11-01</release_date>
+    <runtime>87 min</runtime>
+    <classification>null</classification>
+    <genres>
+      <genre>Horror</genre>
+    </genres>
+    <writers>
+      <writer>David Chaskin</writer>
+      <writer>Wes Craven (characters)</writer>
+    </writers>
+    <actors>
+      <actor character="Jesse Walsh">Mark Patton</actor>
+      <actor character="Lisa Webber">Kim Myers</actor>
+      <actor character="Ron Grady">Robert Rusler</actor>
+      <actor character="Mr. Walsh">Clu Gulager</actor>
+      <actor character="Mrs. Walsh">Hope Lange</actor>
+      <actor character="Coach Schneider">Marshall Bell</actor>
+      <actor character="Mrs. Webber">Melinda O. Fee</actor>
+      <actor character="Mr. Webber">Tom McFadden</actor>
+      <actor character="Kerry">Sydney Walsh</actor>
+      <actor character="Freddy Krueger">Robert Englund</actor>
+      <actor character="Biology Teacher">Edward Blackoff</actor>
+      <actor character="Angela Walsh">Christie Clark</actor>
+      <actor character="Mr. Grady">Lyman Ward</actor>
+      <actor character="Mrs. Grady">Donna Bruce</actor>
+      <actor character="Teacher">Hart Sprager</actor>
+      <actor character="Girl on Bus">Allison Barron</actor>
+      <actor character="Girl on Bus">JoAnn Willette</actor>
+      <actor character="Policeman">Steve Eastin</actor>
+      <actor character="Do-Gooder">Brian Wimmer</actor>
+    </actors>
+    <description>A teenage boy is haunted in his dreams by deceased child murderer Freddy Krueger, who is out to possess him in order to continue his reign of terror in the real world.</description>
+    <languages>
+      <language>English</language>
+    </languages>
+    <countries>
+      <country>USA</country>
+    </countries>
+    <poster>https://m.media-amazon.com/images/M/MV5BZjBmNWNiN2ItYzM0ZC00MWQyLWFmZjctMmZkNTVhMjE1ZjFhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg</poster>
+    <seasons>1</seasons>
+  </series>
+  <series>
+    <imdbid>tt0063350</imdbid>
+    <title>Night of the Living Dead</title>
+    <release_date>1968-10-04</release_date>
+    <runtime>96 min</runtime>
+    <classification>null</classification>
+    <genres>
+      <genre>Horror</genre>
+    </genres>
+    <writers>
+      <writer>John A. Russo (screenplay)</writer>
+      <writer>George A. Romero (screenplay)</writer>
+    </writers>
+    <actors>
+      <actor character="Ben">Duane Jones</actor>
+      <actor character="Barbra">Judith O'Dea</actor>
+      <actor character="Harry Cooper">Karl Hardman</actor>
+      <actor character="Helen Cooper">Marilyn Eastman</actor>
+      <actor character="Tom">Keith Wayne</actor>
+      <actor character="Judy">Judith Ridley</actor>
+      <actor character="Washington Scientist">Kyra Schon</actor>
+      <actor character="Zombie">Jack Givens</actor>
+      <actor character="Zombie">Paula Richards</actor>
+      <actor character="Zombie">Herbert Summer</actor>
+      <actor character="Zombie">William Burchinal</actor>
+      <actor character="Zombie">Al Croft</actor>
+      <actor character="Zombie">Dave James</actor>
+      <actor character="Zombie">William Mogush</actor>
+      <actor character="Zombie">Joann Michaels</actor>
+      <actor character="Zombie">Ella Mae Smith</actor>
+
+    </actors>
+    <description>A ragtag group of Pennsylvanians barricade themselves in an old farmhouse to remain safe from a bloodthirsty, flesh-eating breed of monsters who are ravaging the East Coast of the United States.</description>
+    <languages>
+      <language>English</language>
+    </languages>
+    <countries>
+      <country>USA</country>
+    </countries>
+    <poster>https://m.media-amazon.com/images/M/MV5BMjRjZjE3OGUtYzIyYy00NGRkLTliYTUtYmI1ZjQ3YmZjYTZiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg</poster>
+    <seasons>1</seasons>
+  </series>
+  <series>
+    <imdbid>tt0093773</imdbid>
+    <title>Predator</title>
+    <release_date>1987-06-12</release_date>
+    <runtime>107 min</runtime>
+    <classification>null</classification>
+    <genres>
+      <genre>Action</genre>
+      <genre>Adventure</genre>
+      <genre>Sci-Fi</genre>
+      <genre>Thriller</genre>
+    </genres>
+    <writers>
+      <writer>Jim Thomas</writer>
+      <writer>John Thomas</writer>
+    </writers>
+    <actors>
+      <actor character="Dutch">Arnold Schwarzenegger</actor>
+      <actor character="Dillon">Carl Weathers</actor>
+      <actor character="Anna">Elpidia Carrillo</actor>
+      <actor character="Mac">Bill Duke</actor>
+      <actor character="Blain">Jesse Ventura</actor>
+      <actor character="Billy">Sonny Landham</actor>
+      <actor character="Poncho">Richard Chaves</actor>
+      <actor character="General Phillips">R.G. Armstrong</actor>
+      <actor character="Hawkins">Shane Black</actor>
+      <actor character="---">Kevin Peter Hall</actor>
+
+    </actors>
+    <description>A team of commandos on a mission in a Central American jungle find themselves hunted by an extraterrestrial warrior.</description>
+    <languages>
+      <language>English</language>
+      <language>Spanish</language>
+      <language>Russian</language>
+    </languages>
+    <countries>
+      <country>USA</country>
+      <country>Mexico</country>
+    </countries>
+    <poster>https://m.media-amazon.com/images/M/MV5BY2QwYmFmZTEtNzY2Mi00ZWMyLWEwY2YtMGIyNGZjMWExOWEyXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg</poster>
+    <seasons>1</seasons>
+  </series>
+  <series>
+    <imdbid>tt0095742</imdbid>
+    <title>A Nightmare on Elm Street 4: The Dream Master</title>
+    <release_date>1988-08-19</release_date>
+    <runtime>93 min</runtime>
+    <classification>null</classification>
+    <genres>
+      <genre>Horror</genre>
+    </genres>
+    <writers>
+      <writer>Wes Craven (character)</writer>
+      <writer>William Kotzwinkle (story)</writer>
+      <writer>Brian Helgeland (story)</writer>
+      <writer>Brian Helgeland (screenplay)</writer>
+      <writer>Jim Wheat (screenplay)</writer>
+      <writer>Ken Wheat (screenplay)</writer>
+    </writers>
+    <actors>
+      <actor character="Coach">John Beckman</actor>
+      <actor character="Friend">Kisha Brackel</actor>
+      <actor character="Elaine">Brooke Bundy</actor>
+      <actor character="Friend in Mourning">Wanda Bursey</actor>
+      <actor character="Pin Up Girl">Hope Marie Carlton</actor>
+      <actor character="Little Girl">Kristen Clayton</actor>
+      <actor character="Jock">Duane Davis</actor>
+      <actor character="Joey">Rodney Eastman</actor>
+      <actor character="Freddy Krueger">Robert Englund</actor>
+      <actor character="Doctor">Richard Garrison</actor>
+      <actor character="Dan">Danny Hassel</actor>
+      <actor character="Rick">Andras Jones</actor>
+      <actor character="Kristen">Tuesday Knight</actor>
+      <actor character="Paramedic">Jeff Levine</actor>
+      <actor character="Nurse">Joanna Lipari</actor>
+      <actor character="Physics Teacher">Joie Magidow</actor>
+      <actor character="Joey's Mom">Jacquelyn Masche</actor>
+      <actor character="Johnson">Nicholas Mele</actor>
+      <actor character="Lecturer    (as L.E. Moko)">Robert Shaye</actor>
+    </actors>
+    <description>Freddy Krueger returns once again to terrorize the dreams of the remaining Dream Warriors, as well as those of a young woman who may be able to defeat him for good.</description>
+    <languages>
+      <language>English</language>
+    </languages>
+    <countries>
+      <country>USA</country>
+    </countries>
+    <poster>https://m.media-amazon.com/images/M/MV5BN2IwODlmN2ItOGU5NC00ZTBhLWJhZjItMTdkOTI1NTU4YzdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg</poster>
+    <seasons>1</seasons>
+  </series>
+  <series>
+    <imdbid>tt0082198</imdbid>
+    <title>Conan the Barbarian</title>
+    <release_date>1982-05-14</release_date>
+    <runtime>129 min</runtime>
+    <classification>null</classification>
+    <genres>
+      <genre>Action</genre>
+      <genre>Adventure</genre>
+      <genre>Fantasy</genre>
+    </genres>
+    <writers>
+      <writer>Robert E. Howard (based on the character created by)</writer>
+      <writer>John Milius</writer>
+      <writer>Oliver Stone</writer>
+    </writers>
+    <actors>
+      <actor character="Conan">Arnold Schwarzenegger</actor>
+      <actor character="Thulsa Doom">James Earl Jones</actor>
+      <actor character="King Osric">Max von Sydow</actor>
+      <actor character="Valeria">Sandahl Bergman</actor>
+      <actor character="Rexor">Ben Davidson</actor>
+      <actor character="The Witch">Cassandra Gava</actor>
+      <actor character="Subotai">Gerry Lopez</actor>
+      <actor character="Conan's Mother">Mako</actor>
+      <actor character="Priest">Jack Taylor</actor>
+      <actor character="Sword Master">Kiyoshi Yamasaki</actor>
+      <actor character="Orgy Slave Girl    (uncredited)">Pilar Alcón</actor>
+      <actor character="Black Lotus Street Peddler">Ron Cobb</actor>
+      <actor character="Osric's Guard">Donald Gibb</actor>
+      <actor character="Beautiful Woman Jumping to her Death    (uncredited)">Corrie Jansen</actor>
+      <actor character="High Priestess    (uncredited)">Celia Milius</actor>
+      <actor character="Subotai    (voice) (uncredited)">Sab Shimono</actor>
+
+    </actors>
+    <description>A young boy, Conan, becomes a slave after his parents are killed and tribe destroyed by a savage warlord and sorcerer, Thulsa Doom. When he grows up he becomes a fearless, invincible fighter. Set free, he plots revenge against Thulsa Doom.</description>
+    <languages>
+      <language>English</language>
+    </languages>
+    <countries>
+      <country>USA</country>
+      <country>Spain</country>
+      <country>Mexico</country>
+    </countries>
+    <poster>https://m.media-amazon.com/images/M/MV5BMWIxMzQxZjAtMGFkNC00NzYwLWFiMGEtNzZhZjE5MmFiMmMyL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg</poster>
+    <seasons>1</seasons>
+  </series>
+  <series>
+    <imdbid>tt1515091</imdbid>
+    <title>Sherlock Holmes: A Game of Shadows</title>
+    <release_date>2011-12-16</release_date>
+    <runtime>129 min</runtime>
+    <classification>14</classification>
+    <genres>
+      <genre>Action</genre>
+      <genre>Adventure</genre>
+      <genre>Crime</genre>
+      <genre>Mystery</genre>
+      <genre>Thriller</genre>
+    </genres>
+    <writers>
+      <writer>Michele Mulroney</writer>
+      <writer>Kieran Mulroney</writer>
+      <writer>Arthur Conan Doyle (characters)</writer>
+    </writers>
+    <actors>
+      <actor character="Sherlock Holmes">Robert Downey Jr.</actor>
+      <actor character="Dr. John Watson">Jude Law</actor>
+      <actor character="Madam Simza Heron">Noomi Rapace</actor>
+      <actor character="Irene Adler">Rachel McAdams</actor>
+      <actor character="Professor James Moriarty">Jared Harris</actor>
+      <actor character="Mycroft Holmes">Stephen Fry</actor>
+      <actor character="Colonel Sebastian Moran">Paul Anderson</actor>
+      <actor character="Mary Watson">Kelly Reilly</actor>
+      <actor character="Mrs. Hudson">Geraldine James</actor>
+      <actor character="Inspector Lestrade">Eddie Marsan</actor>
+      <actor character="Constable Clark">William Houston</actor>
+      <actor character="Doctor Hoffmanstahl">Wolf Kahler</actor>
+      <actor character="Auctioneer">Iain Mitchell</actor>
+      <actor character="Carruthers">Jack Laskey</actor>
+      <actor character="Shush Club Maitre D'">Patricia Slater</actor>
+      <actor character="Shush Club Maitre D'    (as Karima Adebibe)">Karima McAdams</actor>
+      <actor character="Businessman">Richard Cunningham</actor>
+      <actor character="Hashisheen">Marcus Shakesheff</actor>
+      <actor character="Cock Fight Referee">Mark Sheals</actor>
+    </actors>
+    <description>Detective Sherlock Holmes is on the trail of criminal mastermind Professor Moriarty, who is carrying out a string of random crimes across Europe.</description>
+    <languages>
+      <language>English</language>
+      <language>French</language>
+      <language>Italian</language>
+      <language>German</language>
+      <language>Romany</language>
+    </languages>
+    <countries>
+      <country>USA</country>
+      <country>UK</country>
+    </countries>
+    <poster>https://m.media-amazon.com/images/M/MV5BMTQwMzQ5Njk1MF5BMl5BanBnXkFtZTcwNjIxNzIxNw@@._V1_SX300.jpg</poster>
+    <seasons>1</seasons>
+  </series>
+  <series>
+    <imdbid>tt1261945</imdbid>
+    <title>Sex and the City 2</title>
+    <release_date>2010-05-27</release_date>
+    <runtime>146 min</runtime>
+    <classification>---</classification>
+    <genres>
+      <genre>Comedy</genre>
+      <genre>Drama</genre>
+      <genre>Romance</genre>
+    </genres>
+    <writers>
+      <writer>Michael Patrick King</writer>
+      <writer>Candace Bushnell (characters from the book by)</writer>
+      <writer>Darren Star (television series creator)</writer>
+    </writers>
+    <actors>
+      <actor character="Carrie Bradshaw">Sarah Jessica Parker</actor>
+      <actor character="Charlotte York">Kristin Davis</actor>
+      <actor character="Miranda Hobbes">Cynthia Nixon</actor>
+      <actor character="Samantha Jones">Kim Cattrall</actor>
+      <actor character="Bergdorf Salesgirl">Minglie Chen</actor>
+      <actor character="Mr. Big">Chris Noth</actor>
+      <actor character="Steve">David Eigenberg</actor>
+      <actor character="Harry">Evan Handler</actor>
+      <actor character="Lily">Alexandra Fong</actor>
+      <actor character="Lily">Parker Fong</actor>
+      <actor character="Anthony">Mario Cantone</actor>
+      <actor character="Stanford">Willie Garson</actor>
+      <actor character="Nicky">Noah Mills</actor>
+      <actor character="Liza Minnelli">Liza Minnelli</actor>
+      <actor character="Band Leader">Billy Stritch</actor>
+      <actor character="Liza Dancer">Nadine Isenegger</actor>
+      <actor character="Liza Dancer">Natalie Lomonte</actor>
+      <actor character="Handsome Man at Wedding">Michael T. Weiss</actor>
+      <actor character="Ellen">Kelli O'Hara</actor>
+    </actors>
+    <description>While wrestling with the pressures of life, love, and work in Manhattan, Carrie, Miranda, and Charlotte join Samantha for a trip to Abu Dhabi (United Arab Emirates), where Samantha's ex is filming a new movie.</description>
+    <languages>
+      <language>English</language>
+      <language>Arabic</language>
+    </languages>
+    <countries>
+      <country>USA</country>
+    </countries>
+    <poster>https://m.media-amazon.com/images/M/MV5BMTM3OTUyNTI3MF5BMl5BanBnXkFtZTcwODcyMzM0Mw@@._V1_SX300.jpg</poster>
+    <seasons>1</seasons>
+  </series>
+  <series>
+    <imdbid>tt1628033</imdbid>
+    <title>Top Gear</title>
+    <release_date>2002-10-20</release_date>
+    <runtime>60 min</runtime>
+    <classification>---</classification>
+    <genres>
+      <genre>Talk-Show</genre>
+    </genres>
+    <writers>
+      <writer>N/A</writer>
+    </writers>
+    <actors>
+      <actor character="Himself - Presenter">Richard Hammond</actor>
+      <actor character="Himself - Presenter">James May</actor>
+      <actor character="The Stig">Ben Collins</actor>
+      <actor character="Himself     / ...">The Stig</actor>
+      <actor character="Himself - Presenter">Matt LeBlanc</actor>
+      <actor character="Himself - Presenter">Chris Harris</actor>
+      <actor character="Himself - Presenter">Rory Reid</actor>
+      <actor character="The Stig">Perry McCarthy</actor>
+      <actor character="Herself">Sabine Schmitz</actor>
+      <actor character="Himself - Presenter">Jason Dawe</actor>
+      <actor character="Himself - Host     / ...">Andy Wilman</actor>
+      <actor character="Himself - Presenter">Chris Evans</actor>
+      <actor character="Narrator">Josh Cohen</actor>
+      <actor character="Himself     / ...">Tom Chilton</actor>
+      <actor character="Himself">Eddie Jordan</actor>
+      <actor character="Herself">Top Gear Dog</actor>
+      <actor character="Himself     / ...">Jay Kay</actor>
+      <actor character="Himself - Presenter">Andrew Flintoff</actor>
+      <actor character="Himself - Presenter">Paddy McGuinness</actor>
+    </actors>
+    <description>The hosts talk about everything car-related. From new cars to how they're fueled, this show has it all.</description>
+    <languages>
+      <language>English</language>
+    </languages>
+    <countries>
+      <country>UK</country>
+    </countries>
+    <poster>https://m.media-amazon.com/images/M/MV5BYzkwZDgwZmQtOWE4Yy00ZjgyLTgxZTYtZTRiMTg5MWY4NTFiXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg</poster>
+    <seasons>27</seasons>
+  </series>
+  <series>
+    <imdbid>tt1397514</imdbid>
+    <title>Journey 2: The Mysterious Island</title>
+    <release_date>2012-02-10</release_date>
+    <runtime>94 min</runtime>
+    <classification>Livre</classification>
+    <genres>
+      <genre>Action</genre>
+      <genre>Adventure</genre>
+      <genre>Comedy</genre>
+      <genre>Family</genre>
+      <genre>Fantasy</genre>
+      <genre>Sci-Fi</genre>
+    </genres>
+    <writers>
+      <writer>Brian Gunn (screenplay)</writer>
+      <writer>Mark Gunn (screenplay)</writer>
+      <writer>Richard Outten (story)</writer>
+      <writer>Brian Gunn (story)</writer>
+      <writer>Mark Gunn (story)</writer>
+      <writer>Jules Verne (novel)</writer>
+    </writers>
+    <actors>
+      <actor character="Hank">Dwayne Johnson</actor>
+      <actor character="Alexander">Michael Caine</actor>
+      <actor character="Sean">Josh Hutcherson</actor>
+      <actor character="Gabato">Luis Guzmán</actor>
+      <actor character="Kailani">Vanessa Hudgens</actor>
+      <actor character="Liz">Kristin Davis</actor>
+      <actor character="Jessica">Anna Colwell</actor>
+      <actor character="Cop">Stephen Caudill</actor>
+      <actor character="Tour Guide">Branscombe Richmond</actor>
+      <actor character="Hockey Player">Walter Bankson</actor>
+
+    </actors>
+    <description>Sean Anderson partners with his mom's husband on a mission to find his grandfather, who is thought to be missing on a mythical island.</description>
+    <languages>
+      <language>English</language>
+    </languages>
+    <countries>
+      <country>USA</country>
+    </countries>
+    <poster>https://m.media-amazon.com/images/M/MV5BMjA5MTE1MjQyNV5BMl5BanBnXkFtZTcwODI4NDMwNw@@._V1_SX300.jpg</poster>
+    <seasons>1</seasons>
+  </series>
+  <series>
+    <imdbid>tt1530509</imdbid>
+    <title>The Human Centipede II (Full Sequence)</title>
+    <release_date>2011-11-01</release_date>
+    <runtime>91 min</runtime>
+    <classification>null</classification>
+    <genres>
+      <genre>Horror</genre>
+    </genres>
+    <writers>
+      <writer>Tom Six</writer>
+    </writers>
+    <actors>
+      <actor character="Martin">Laurence R. Harvey</actor>
+      <actor character="Miss Yennie - Centipede #1">Ashlynn Yennie</actor>
+      <actor character="Candy - Centipede #2">Maddi Black</actor>
+      <actor character="Karrie - Centipede #3">Kandace Caine</actor>
+      <actor character="Paul - Centipede #4">Dominic Borrelli</actor>
+      <actor character="Ian - Centipede #5">Lucas Hansen</actor>
+      <actor character="Dick - Centipede #6">Lee Nicholas Harris</actor>
+      <actor character="Greg - Centipede #7">Dan Burman</actor>
+      <actor character="Tim - Centipede #8">Daniel Jude Gennis</actor>
+      <actor character="Valerie - Centipede #9">Georgia Goodrick</actor>
+      <actor character="Kim - Centipede #10">Emma Lock</actor>
+      <actor character="Rachel">Katherine Templar</actor>
+      <actor character="Alan">Peter Blankenstein</actor>
+      <actor character="Mrs. Lomax">Vivien Bridson</actor>
+      <actor character="Dr. Sebring">Bill Hutchens</actor>
+      <actor character="Jake">Peter Charlton</actor>
+      <actor character="Baby">Daniel De'sioye</actor>
+
+    </actors>
+    <description>Inspired by the fictional Dr. Heiter, disturbed loner Martin dreams of creating a 12-person centipede and sets out to realize his sick fantasy.</description>
+    <languages>
+      <language>English</language>
+    </languages>
+    <countries>
+      <country>USA</country>
+    </countries>
+    <poster>https://m.media-amazon.com/images/M/MV5BMjkwMDI0NjA5OV5BMl5BanBnXkFtZTcwODAxODI4Ng@@._V1_SX300.jpg</poster>
+    <seasons>1</seasons>
+  </series>
+  <series>
+    <imdbid>tt0057076</imdbid>
+    <title>From Russia with Love</title>
+    <release_date>1964-05-27</release_date>
+    <runtime>115 min</runtime>
+    <classification>null</classification>
+    <genres>
+      <genre>Action</genre>
+      <genre>Adventure</genre>
+      <genre>Thriller</genre>
+    </genres>
+    <writers>
+      <writer>Richard Maibaum (screenplay)</writer>
+      <writer>Johanna Harwood (adaptation)</writer>
+    </writers>
+    <actors>
+      <actor character="James Bond">Sean Connery</actor>
+      <actor character="Tatiana Romanova">Daniela Bianchi</actor>
+      <actor character="Ali Kerim Bey">Pedro Armendáriz</actor>
+      <actor character="Rosa Klebb">Lotte Lenya</actor>
+      <actor character="Donald 'Red' Grant">Robert Shaw</actor>
+      <actor character="'M'">Bernard Lee</actor>
+      <actor character="Sylvia Trench">Eunice Gayson</actor>
+      <actor character="Morzeny">Walter Gotell</actor>
+      <actor character="Vavra    (as Francis de Wolff)">Francis De Wolff</actor>
+      <actor character="Train Conductor">George Pastell</actor>
+      <actor character="Kerim's Mistress">Nadja Regin</actor>
+      <actor character="Miss Moneypenny">Lois Maxwell</actor>
+      <actor character="Vida">Aliza Gur</actor>
+      <actor character="Zora">Martine Beswick</actor>
+      <actor character="Kronsteen">Vladek Sheybal</actor>
+      <actor character="Ernst Stavros Blofeld">Anthony Dawson</actor>
+      <actor character="Belly Dancer">Lisa Guiraut</actor>
+      <actor character="Bulgarian Agent">Hasan Ceylan</actor>
+      <actor character="Krilencu">Fred Haggerty</actor>
+    </actors>
+    <description>James Bond willingly falls into an assassination plot involving a naive Russian beauty in order to retrieve a Soviet encryption device that was stolen by S.P.E.C.T.R.E.</description>
+    <languages>
+      <language>English</language>
+      <language>Russian</language>
+      <language>Turkish</language>
+      <language>Romany</language>
+    </languages>
+    <countries>
+      <country>UK</country>
+    </countries>
+    <poster>https://m.media-amazon.com/images/M/MV5BZjBiNGNlNmItZTk2Zi00YjRlLTk1NzEtNDI2YTNmN2EwNDhlXkEyXkFqcGdeQXVyNDY2MTk1ODk@._V1_SX300.jpg</poster>
     <seasons>1</seasons>
   </series>
 </seriesset>

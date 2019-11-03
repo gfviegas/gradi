@@ -26,20 +26,24 @@ module.exports = {
         mult = 2
       }
 
-      let s2 = xpath.evaluate(`//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[${i * mult}]/td[4]//node()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue.textContent.trim()
-      const s2Index = s2.indexOf('\n')
+      let s2 = xpath.evaluate(`//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[${i * mult}]/td[4]//node()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue	  
+	  if(s2 != null){
+		  s2 = s2.textContent.trim()
+		  const s2Index = s2.indexOf('\n')
 
-      if (s2Index > 0) {
-        s2 = s2.replace(s2.substring(s2Index), '')
-      }
-
-      if (s2.length === 0) {
-        s2 = xpath.evaluate(`//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[${i * mult}]/td[4]/a[1]//text()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue
-		if(s2 != null)
-			s2 = s2.textContent.trim()
-		else
-			s2 = '---'
-      }
+		  if (s2Index > 0) {
+			s2 = s2.replace(s2.substring(s2Index), '')
+		  }
+		  if (s2.length === 0) {
+			s2 = xpath.evaluate(`//html/body/div[2]/div/div[2]/descendant::*/tbody/tr[${i * mult}]/td[4]/a[1]//text()`, document, null, XPATH_FIRST_ORDERED_TYPE, null).singleNodeValue
+			if(s2 != null)
+				s2 = s2.textContent.trim()
+			else
+				s2 = '---'
+		  }
+	  }	else{
+		  s2 = '---'
+	  }
 
       stringBuilder += `      <actor character="${s2}">${s1}</actor>`
       if (i !== max) {
