@@ -40,7 +40,6 @@ defmodule Gradi.Series do
         %{ title: %{ "$in" => searchTerms } },
         %{ "actors.name": %{ "$in" => searchTerms } },
         %{ "actors.character": %{ "$in" => searchTerms } },
-        %{ "actors.character": %{ "$in" => searchTerms } },
         %{ genres: %{ "$in" => searchTerms } },
         %{ languages: %{ "$in" => searchTerms } },
         %{ description: %{ "$in" => searchTerms } }
