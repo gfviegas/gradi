@@ -25,8 +25,8 @@
               </b-field>
             </div>
             <div class="column is-half">
-              <b-field label="Busca por Título">
-                <b-input v-model="filter.title" placeholder="Matrix..." type="text" />
+              <b-field label="Digite sua busca">
+                <b-input v-model="filter.title" placeholder="Chris Rock in Everybody Hates Chris..." type="text" />
               </b-field>
             </div>
           </div>
