@@ -3,7 +3,10 @@ defmodule GradiValidation.XMLSchema do
   @movies_br_schema_file "priv/validation/movies_br_schema.xsd"
   @series_schema_file "priv/validation/series_schema.xsd"
   @series_br_schema_file "priv/validation/series_br_schema.xsd"
-  
+
+  def schemas(:movie), do: [:movie, :moviebr]
+  def schemas(:series), do: [:series, :seriesbr]
+
   # Carrega o schema pra o tipo especifico de recurso
   def load_schema(:movie), do: load_schema @movies_schema_file
   def load_schema(:moviebr), do: load_schema @movies_br_schema_file
@@ -37,6 +40,11 @@ defmodule GradiValidation.XMLSchema do
   end
   # Através de um arquivo XML de fato
   def validate(file, type) when is_tuple(file) do
+    validations = schemas(type) |> Enum.map(fn t -> evaluate_validation(file, t) end)
+    Enum.find validations, {:error, validations}, fn {r, _} -> r == :ok end
+  end
+
+  defp evaluate_validation(file, type) do
     with {:ok, schema} <- load_schema(type) do
       case :xmerl_xsd.validate(file, schema) do
         {:error, err} -> {:error, err}

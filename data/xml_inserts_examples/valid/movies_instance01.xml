@@ -1,0 +1,45 @@
+<movies>
+	<movie>
+		<imdbid>tt7286456</imdbid>
+		<title>Joker</title>
+		<classification>16</classification>
+		<description>In Gotham City, mentally-troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: "The Joker".</description>
+		<release_date>2019-10-04</release_date>
+		<revenue>863626992.0</revenue>
+		<poster>https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg</poster>
+		<genres>
+			<genre>Crime</genre>
+			<genre>Drama</genre>
+			<genre>Thriller</genre>
+		</genres>
+		<directors>
+			<director>Todd Phillips</director>
+		</directors>
+		<writers>
+			<writer>Todd Phillips</writer>
+			<writer>Scott Silver</writer>
+			<writer>Bob Kane</writer>
+			<writer>Bill Finger</writer>
+			<writer>Jerry Robinson</writer>
+		</writers>
+		<languages>
+			<language>English</language>
+		</languages>
+		<companies>
+			<company country="United States" logo="https://upload.wikimedia.org/wikipedia/en/c/c8/Village_roadshow_pictures_logo.jpg">Village Roadshow Pictures</company>
+			<company country="United States" logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/DC_Comics_logo.svg/320px-DC_Comics_logo.svg.png">DC Films</company>
+		</companies>
+		<characters>
+			<character actor="Joaquin Phoenix " protagonist="true">Arthur Fleck</character>
+			<character actor="Robert De Niro">Murray Franklin</character>
+			<character actor="Zazie Beetz">Sophie Dumond</character>
+			<character actor="Frances Conroy">Penny Fleck</character>
+			<character actor="Brett Cullen">Thomas Wayne</character>
+			<character actor="Shea Whigham">Detective Burke</character>
+			<character actor="Bill Camp">Detective Garrity</character>
+			<character actor="Glenn Fleshler">Randall</character>
+			<character actor="Leigh Gill">Gary</character>
+			<character actor="Josh Pais">Hoyt Vaughn</character>
+		</characters>		
+	</movie>
+</movies>
