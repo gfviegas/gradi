@@ -106,7 +106,7 @@ defmodule Gradi.Actors do
     new_actor = %Actor{name: name}
 
     case Repo.get_by(Actor, name: name) do
-      nil  -> new_actor |> Repo.insert
+      nil -> new_actor |> Repo.insert()
       post -> {:ok, :already_inserted}
     end
   end

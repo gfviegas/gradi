@@ -12,11 +12,12 @@ defmodule GradiWeb.XMLMapper do
   end
 
   defp transform_to_date(arg) do
-    transform_by(arg, fn x -> Date.from_iso8601! x end)
+    transform_by(arg, fn x -> Date.from_iso8601!(x) end)
   end
 
   def map_series(doc) do
-    doc |> xmap(
+    doc
+    |> xmap(
       series: [
         ~x"//seriesset/series"l,
         imdb_id: ~x"./imdbid/text()"S,
@@ -42,7 +43,8 @@ defmodule GradiWeb.XMLMapper do
   end
 
   def map_movies(doc) do
-    doc |> xmap(
+    doc
+    |> xmap(
       movies: [
         ~x"//movies/movie"l,
         imdb_id: ~x"./imdbid/text()"S,
@@ -80,6 +82,4 @@ defmodule GradiWeb.XMLMapper do
       ]
     )
   end
-
-
 end

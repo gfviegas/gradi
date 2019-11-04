@@ -8,10 +8,11 @@ defmodule GradiValidation.XMLSchema do
   def schemas(:series), do: [:series, :seriesbr]
 
   # Carrega o schema pra o tipo especifico de recurso
-  def load_schema(:movie), do: load_schema @movies_schema_file
-  def load_schema(:moviebr), do: load_schema @movies_br_schema_file
-  def load_schema(:series), do: load_schema @series_schema_file
-  def load_schema(:seriesbr), do: load_schema @series_br_schema_file
+  def load_schema(:movie), do: load_schema(@movies_schema_file)
+  def load_schema(:moviebr), do: load_schema(@movies_br_schema_file)
+  def load_schema(:series), do: load_schema(@series_schema_file)
+  def load_schema(:seriesbr), do: load_schema(@series_br_schema_file)
+
   def load_schema(schema_file) when is_binary(schema_file) do
     schema_path = Path.join(File.cwd!(), schema_file)
 
@@ -20,6 +21,7 @@ defmodule GradiValidation.XMLSchema do
       {:ok, s} -> {:ok, s}
     end
   end
+
   def load_schema(_), do: {:error, :invalid_type}
 
   # Carrega e interpreta o arquivo XML
@@ -35,13 +37,14 @@ defmodule GradiValidation.XMLSchema do
   def validate(file_path, type) when is_binary(file_path) do
     case load_file(file_path) do
       {:error, err} -> {:error, err}
-      {:ok, file} -> validate file, type
+      {:ok, file} -> validate(file, type)
     end
   end
+
   # Através de um arquivo XML de fato
   def validate(file, type) when is_tuple(file) do
     validations = schemas(type) |> Enum.map(fn t -> evaluate_validation(file, t) end)
-    Enum.find validations, {:error, validations}, fn {r, _} -> r == :ok end
+    Enum.find(validations, {:error, validations}, fn {r, _} -> r == :ok end)
   end
 
   defp evaluate_validation(file, type) do

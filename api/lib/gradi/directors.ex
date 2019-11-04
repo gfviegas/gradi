@@ -106,7 +106,7 @@ defmodule Gradi.Directors do
     %{name: name} = director
 
     case Repo.get_by(Director, name: name) do
-      nil  -> %Director{} |> Map.merge(director) |> Repo.insert
+      nil -> %Director{} |> Map.merge(director) |> Repo.insert()
       post -> {:ok, :already_inserted}
     end
   end

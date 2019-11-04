@@ -106,7 +106,7 @@ defmodule Gradi.Languages do
     %{name: name} = language
 
     case Repo.get_by(Language, name: name) do
-      nil  -> %Language{name: name} |> Repo.insert
+      nil -> %Language{name: name} |> Repo.insert()
       post -> {:ok, :already_inserted}
     end
   end

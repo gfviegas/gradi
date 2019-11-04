@@ -24,8 +24,17 @@ defmodule GradiValidation.XMLSchemaTest do
       assert {:ok, new_resource} = XMLSchema.validate(files[:movies][:valid], :movie)
       assert elem(new_resource, 0) == :xmlElement
 
-      refute [] == :xmerl_xpath.string('/movies/movie/characters/character[@actor="Anthony Daniels"]/@protagonist', new_resource)
-      assert {:xmlObj, _, 'false'} = :xmerl_xpath.string('string(/movies/movie/characters/character[@actor="Anthony Daniels"]/@protagonist)', new_resource)
+      refute [] ==
+               :xmerl_xpath.string(
+                 '/movies/movie/characters/character[@actor="Anthony Daniels"]/@protagonist',
+                 new_resource
+               )
+
+      assert {:xmlObj, _, 'false'} =
+               :xmerl_xpath.string(
+                 'string(/movies/movie/characters/character[@actor="Anthony Daniels"]/@protagonist)',
+                 new_resource
+               )
     end
 
     test "valid file is not accepted with series type", files do
@@ -47,8 +56,17 @@ defmodule GradiValidation.XMLSchemaTest do
       assert {:ok, new_resource} = XMLSchema.validate(files[:series][:valid], :series)
       assert elem(new_resource, 0) == :xmlElement
 
-      refute [] == :xmerl_xpath.string('/seriesset/series/actors/actor[@character="Saul Goodman"]/@protagonist', new_resource)
-      assert {:xmlObj, _, 'false'} = :xmerl_xpath.string('string(/seriesset/series/actors/actor[@character="Saul Goodman"]/@protagonist)', new_resource)
+      refute [] ==
+               :xmerl_xpath.string(
+                 '/seriesset/series/actors/actor[@character="Saul Goodman"]/@protagonist',
+                 new_resource
+               )
+
+      assert {:xmlObj, _, 'false'} =
+               :xmerl_xpath.string(
+                 'string(/seriesset/series/actors/actor[@character="Saul Goodman"]/@protagonist)',
+                 new_resource
+               )
     end
 
     test "valid file is not accepted with movies type", files do
