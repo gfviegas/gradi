@@ -9,7 +9,8 @@ defmodule GradiWeb.CrawlerController do
     # file_obj = file |> Base.decode64! |> String.to_char_list |> :xmerl_scan.string
     case XMLSchema.validate(file.path, :series) do
       {:ok, new_file} ->
-        case new_file |> XMLMapper.map_series |> Gradi.Series.insert_series do
+        %{series: series} = new_file |> XMLMapper.map_series
+        case series |> Gradi.Series.insert_series do
           {:ok, _id} -> conn  |> send_resp(201, "OK")
           {:error, _id} -> conn  |> send_resp(409, "Erro")
         end

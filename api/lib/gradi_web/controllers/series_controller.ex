@@ -5,7 +5,8 @@ defmodule GradiWeb.SeriesController do
   alias GradiWeb.XMLMapper
 
   defp insert_series(file) do
-    file |> XMLMapper.map_series |> Gradi.Series.insert_series
+    %{series: series} = file |> XMLMapper.map_series
+    series |> Gradi.Series.insert_series
   end
 
   def series(conn, %{"series" => file}) do

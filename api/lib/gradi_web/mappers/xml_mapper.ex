@@ -19,24 +19,24 @@ defmodule GradiWeb.XMLMapper do
     doc |> xmap(
       series: [
         ~x"//seriesset/series"l,
-        imdb_id: ~x"./imdbid/text()",
-        title: ~x"./title/text()",
-        release_date: ~x"./release_date/text()",
-        runtime: ~x"./runtime/text()",
-        classification: ~x"./classification/text()",
-        description: ~x"./description/text()",
-        poster: ~x"./poster/text()",
+        imdb_id: ~x"./imdbid/text()"S,
+        title: ~x"./title/text()"S,
+        release_date: ~x"./release_date/text()"S,
+        runtime: ~x"./runtime/text()"S,
+        classification: ~x"./classification/text()"S,
+        description: ~x"./description/text()"S,
+        poster: ~x"./poster/text()"S,
         seasons: ~x"./seasons/text()"i,
         actors: [
           ~x"./actors/actor"l,
-          name: ~x"./text()",
-          character: ~x"./@character",
+          name: ~x"./text()"S,
+          character: ~x"./@character"S,
           protagonist: ~x"./@protagonist" |> transform_to_boolean
         ],
-        languages: ~x"./languages/language/text()"l,
-        countries: ~x"./countries/country/text()"l,
-        writers: ~x"./writers/writer/text()"l,
-        genres: ~x"./genres/genre/text()"l
+        languages: ~x"./languages/language/text()"sl,
+        countries: ~x"./countries/country/text()"sl,
+        writers: ~x"./writers/writer/text()"sl,
+        genres: ~x"./genres/genre/text()"sl
       ]
     )
   end
