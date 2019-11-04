@@ -101,4 +101,13 @@ defmodule Gradi.Directors do
   def change_director(%Director{} = director) do
     Director.changeset(director, %{})
   end
+
+  def upsert_director(%{} = director) do
+    %{name: name} = director
+
+    case Repo.get_by(Director, name: name) do
+      nil  -> %Director{} |> Map.merge(director) |> Repo.insert
+      post -> {:ok, :already_inserted}
+    end
+  end
 end

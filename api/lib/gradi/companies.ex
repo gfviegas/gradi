@@ -101,4 +101,13 @@ defmodule Gradi.Companies do
   def change_company(%Company{} = company) do
     Company.changeset(company, %{})
   end
+
+  def upsert_company(%{} = company) do
+    %{name: name} = company
+    
+    case Repo.get_by(Company, name: name) do
+      nil  -> %Company{} |> Map.merge(company) |> Repo.insert
+      post -> {:ok, :already_inserted}
+    end
+  end
 end

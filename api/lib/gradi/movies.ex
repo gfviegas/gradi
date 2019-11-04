@@ -35,8 +35,8 @@ defmodule Gradi.Movies do
     splitedTerms = String.split(dictionary, "|")
 
     #gera a regex de busca do mongo para cada termo
-    searchTerms = 
-      Enum.map(splitedTerms, 
+    searchTerms =
+      Enum.map(splitedTerms,
         fn term -> [
           title: "%#{term}%",
           description: "%#{term}%",
@@ -329,4 +329,17 @@ defmodule Gradi.Movies do
 
   """
   def get_character!(id), do: Repo.get!(Character, id)
+
+  def upsert_movie(%{} = movie) do
+    %{title: title} = movie
+
+    case Repo.get_by(Movie, title: title) do
+      nil  -> %Movie{} |> Map.merge(Map.delete(movie, :characters)) |> Repo.insert
+      post -> {:ok, :already_inserted}
+    end
+  end
+
+  def get_by_imdb_id(imdb_id) do
+    Repo.get_by(Movie, imdb_id: imdb_id)
+  end
 end

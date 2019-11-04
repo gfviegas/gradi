@@ -101,4 +101,13 @@ defmodule Gradi.Languages do
   def change_language(%Language{} = language) do
     Language.changeset(language, %{})
   end
+
+  def upsert_language(%{} = language) do
+    %{name: name} = language
+
+    case Repo.get_by(Language, name: name) do
+      nil  -> %Language{name: name} |> Repo.insert
+      post -> {:ok, :already_inserted}
+    end
+  end
 end

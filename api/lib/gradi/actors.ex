@@ -101,4 +101,13 @@ defmodule Gradi.Actors do
   def change_actor(%Actor{} = actor) do
     Actor.changeset(actor, %{})
   end
+
+  def upsert_actor(%{actor: name}) do
+    new_actor = %Actor{name: name}
+
+    case Repo.get_by(Actor, name: name) do
+      nil  -> new_actor |> Repo.insert
+      post -> {:ok, :already_inserted}
+    end
+  end
 end
