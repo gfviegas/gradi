@@ -5,15 +5,15 @@ const fs = require('fs')
 const OMDBService = require('./omdb')
 const ActorsService = require('./actors')
 
-const IMDB_IDS_ENDPOINT = 'https://www.imdb.com/search/keyword/?keywords=series&ref_=fn_al_kw_1'
-const quantidade = 2
-let imdb_ids_page = 1
+const IMDB_IDS_ENDPOINT = 'https://www.imdb.com/search/keyword/?keywords=computer&ref_=kw_ref_typ&sort=num_votes,desc&mode=detail&title_type=tvSeries'
+const quantidade = 5
+const imdbIdsPage = 1
 
 const crawl = async () => {
   console.log('--- INICIANDO ---')
   try {
-    console.log(`${IMDB_IDS_ENDPOINT}&page=${imdb_ids_page}`)
-    const response = await axios.get(`${IMDB_IDS_ENDPOINT}&page=${imdb_ids_page}`)
+    console.log(`${IMDB_IDS_ENDPOINT}&page=${imdbIdsPage}`)
+    const response = await axios.get(`${IMDB_IDS_ENDPOINT}&page=${imdbIdsPage}`)
 
     const $ = che.load(response.data)
     const imdbids = await $('.lister-item-header').map((i, element) => {
@@ -104,13 +104,6 @@ const getFromOmdb = async (imdbid) => {
 
     const formData = new FormData()
     formData.append('crawler', fs.createReadStream(outputFilePath))
-
-    const requestConfig = {
-      headers: {
-        'Content-Type': 'multipart/form-data'
-      },
-      data: formData
-    }
 
     const response = await axios.post('http://api:4000/crawler', formData, { headers: formData.getHeaders() })
     console.log(`Request HTTP com resposta de status ${response.status}`)
