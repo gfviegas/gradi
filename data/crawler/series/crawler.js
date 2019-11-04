@@ -6,7 +6,7 @@ const OMDBService = require('./omdb')
 const ActorsService = require('./actors')
 
 const IMDB_IDS_ENDPOINT = 'https://www.imdb.com/search/keyword/?keywords=computer&ref_=kw_ref_typ&sort=num_votes,desc&mode=detail&title_type=tvSeries'
-const quantidade = 5
+const quantidade = 2
 const imdbIdsPage = 1
 
 const crawl = async () => {

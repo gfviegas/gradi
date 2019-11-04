@@ -4,7 +4,7 @@
     <title>Fringe</title>
     <release_date>2008-09-09</release_date>
     <runtime>46 min</runtime>
-    <classification>null</classification>
+    <classification>14</classification>
     <genres>
       <genre>Drama</genre>
       <genre>Mystery</genre>
@@ -53,7 +53,7 @@
     <title>Futurama</title>
     <release_date>1999-03-28</release_date>
     <runtime>22 min</runtime>
-    <classification>null</classification>
+    <classification>---</classification>
     <genres>
       <genre>Animation</genre>
       <genre>Comedy</genre>
@@ -93,153 +93,5 @@
     </countries>
     <poster>https://m.media-amazon.com/images/M/MV5BNzA2ZDk2ZTUtMWU2Yi00NDVmLTk1ODEtMmFmMjQyNWYzODI0XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg</poster>
     <seasons>7</seasons>
-  </series>
-  <series>
-    <imdbid>tt2741602</imdbid>
-    <title>The Blacklist</title>
-    <release_date>2013-09-23</release_date>
-    <runtime>43 min</runtime>
-    <classification>16</classification>
-    <genres>
-      <genre>Crime</genre>
-      <genre>Drama</genre>
-      <genre>Mystery</genre>
-      <genre>Thriller</genre>
-    </genres>
-    <writers>
-      <writer>Jon Bokenkamp</writer>
-    </writers>
-    <actors>
-      <actor character="Donald Ressler">Megan Boone</actor>
-      <actor character="Harold Cooper">Harry Lennix</actor>
-      <actor character="Raymond 'Red' Reddington">James Spader</actor>
-      <actor character="Dembe Zuma">Hisham Tawfiq</actor>
-      <actor character="Aram Mojtabai">Amir Arison</actor>
-      <actor character="Samar Navabi">Mozhan Marnò</actor>
-      <actor character="Tom Keen">Ryan Eggold</actor>
-      <actor character="Mr. Kaplan">Susan Blommaert</actor>
-      <actor character="Baz">Baz</actor>
-      <actor character="Meera Malik">Parminder Nagra</actor>
-      <actor character="Reven Wright">Adriane Lenox</actor>
-      <actor character="Agnes Keen     / ...">Emily Kell</actor>
-      <actor character="Cynthia Panabaker">Deirdre Lovejoy</actor>
-      <actor character="Brimley">Teddy Coluca</actor>
-      <actor character="Matias Solomon">Edi Gathegi</actor>
-      <actor character="Agnes Keen     / ...">Katherine Kell</actor>
-      <actor character="Peter Kotsiopulos">David Strathairn</actor>
-      <actor character="Ian Garvey">Jonny Coyne</actor>
-      <actor character="Glen Carter">Clark Middleton</actor>
-    </actors>
-    <description>A new FBI profiler, Elizabeth Keen, has her entire life uprooted when a mysterious criminal, Raymond Reddington, who has eluded capture for decades, turns himself in and insists on speaking only to her.</description>
-    <languages>
-      <language>English</language>
-    </languages>
-    <countries>
-      <country>USA</country>
-    </countries>
-    <poster>https://m.media-amazon.com/images/M/MV5BZDU1OGI3NWItZTliOS00OWYxLTliNDktYTFjODcxNmE1NTNmXkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_SX300.jpg</poster>
-    <seasons>7</seasons>
-  </series>
-  <series>
-    <imdbid>tt0285331</imdbid>
-    <title>24</title>
-    <release_date>2001-11-06</release_date>
-    <runtime>44 min</runtime>
-    <classification>16</classification>
-    <genres>
-      <genre>Action</genre>
-      <genre>Crime</genre>
-      <genre>Drama</genre>
-      <genre>Thriller</genre>
-    </genres>
-    <writers>
-      <writer>Robert Cochran</writer>
-      <writer>Joel Surnow</writer>
-    </writers>
-    <actors>
-      <actor character="Chloe O'Brian">Kiefer Sutherland</actor>
-      <actor character="Tony Almeida">Carlos Bernard</actor>
-      <actor character="President David Palmer">Dennis Haysbert</actor>
-      <actor character="Kim Bauer">Elisha Cuthbert</actor>
-      <actor character="Bill Buchanan">James Morrison</actor>
-      <actor character="Michelle Dessler">Reiko Aylesworth</actor>
-      <actor character="Mike Novick">Jude Ciccolella</actor>
-      <actor character="Audrey Raines">Kim Raver</actor>
-      <actor character="Aaron Pierce">Glenn Morshower</actor>
-      <actor character="Wayne Palmer">D.B. Woodside</actor>
-      <actor character="Curtis Manning">Roger Cross</actor>
-      <actor character="Sherry Palmer">Penny Johnson Jerald</actor>
-      <actor character="President Allison Taylor">Cherry Jones</actor>
-      <actor character="President Charles Logan">Gregory Itzin</actor>
-      <actor character="Renee Walker">Annie Wersching</actor>
-      <actor character="Edgar Stiles">Louis Lombardi</actor>
-      <actor character="Nina Myers">Sarah Clarke</actor>
-      <actor character="Ethan Kanin">Bob Gunton</actor>
-      <actor character="Karen Hayes">Jayne Atkinson</actor>
-    </actors>
-    <description>Jack Bauer, Director of Field Ops for the Counter-Terrorist Unit of Los Angeles, races against the clock to subvert terrorist plots and save his nation from ultimate disaster.</description>
-    <languages>
-      <language>English</language>
-      <language>Russian</language>
-      <language>German</language>
-      <language>Korean</language>
-      <language>Arabic</language>
-      <language>Spanish</language>
-      <language>Serbian</language>
-      <language>Mandarin</language>
-    </languages>
-    <countries>
-      <country>USA</country>
-    </countries>
-    <poster>https://m.media-amazon.com/images/M/MV5BMTg5OTkyNzA0NF5BMl5BanBnXkFtZTcwMDYyMDUwMg@@._V1_SX300.jpg</poster>
-    <seasons>8</seasons>
-  </series>
-  <series>
-    <imdbid>tt1839578</imdbid>
-    <title>Person of Interest</title>
-    <release_date>2011-09-22</release_date>
-    <runtime>43 min</runtime>
-    <classification>16</classification>
-    <genres>
-      <genre>Action</genre>
-      <genre>Crime</genre>
-      <genre>Drama</genre>
-      <genre>Mystery</genre>
-      <genre>Sci-Fi</genre>
-      <genre>Thriller</genre>
-    </genres>
-    <writers>
-      <writer>Jonathan Nolan</writer>
-    </writers>
-    <actors>
-      <actor character="Lionel Fusco">Jim Caviezel</actor>
-      <actor character="Harold Finch">Michael Emerson</actor>
-      <actor character="Root">Amy Acker</actor>
-      <actor character="Joss Carter">Taraji P. Henson</actor>
-      <actor character="Sameen Shaw">Sarah Shahi</actor>
-      <actor character="John Greer">John Nolan</actor>
-      <actor character="Carl Elias">Enrico Colantoni</actor>
-      <actor character="Officer Patrick Simmons">Robert John Burke</actor>
-      <actor character="Detective Raymond Terney">Al Sapienza</actor>
-      <actor character="Hersh">Boris McGiver</actor>
-      <actor character="Scarface">David Valcin</actor>
-      <actor character="Nathan Ingram">Brett Cullen</actor>
-      <actor character="Alonzo Quinn">Clarke Peters</actor>
-      <actor character="Senator Ross Garrison">John Doman</actor>
-      <actor character="Zoe Morgan">Paige Turco</actor>
-      <actor character="Special Counsel">Jay O. Sanders</actor>
-      <actor character="Special Agent Nicholas Donnelly">Brennan Brown</actor>
-      <actor character="Control">Camryn Manheim</actor>
-      <actor character="Martine Rousseau">Cara Buono</actor>
-    </actors>
-    <description>An ex-assassin and a wealthy programmer save lives via a surveillance AI that sends them the identities of civilians involved in impending crimes. However, the details of the crimes--including the civilians' roles--are left a mystery.</description>
-    <languages>
-      <language>English</language>
-    </languages>
-    <countries>
-      <country>USA</country>
-    </countries>
-    <poster>https://m.media-amazon.com/images/M/MV5BZDU1NzA5YzUtNTdmNy00NTVjLWFhNzEtYWI1NmNkNTA1ZDBhXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg</poster>
-    <seasons>5</seasons>
   </series>
 </seriesset>
