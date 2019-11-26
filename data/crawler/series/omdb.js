@@ -20,7 +20,7 @@ module.exports = {
     return 'Hellow'
   },
   getFromOmdb (param) {
-    const max = 20
+    // const max = 20
     const jo = (typeof param === 'string') ? JSON.parse(param) : param
 
     // JSON.parse(document.evaluate('//html/body/div/div/div/div[2]/div/div/div[2]/pre//text()', document, null, 9, null).singleNodeValue.textContent.trim())

@@ -40,6 +40,47 @@
 			<character actor="Glenn Fleshler">Randall</character>
 			<character actor="Leigh Gill">Gary</character>
 			<character actor="Josh Pais">Hoyt Vaughn</character>
-		</characters>		
+		</characters>
+	</movie>
+	<movie>
+		<imdbid>tt0076759</imdbid>
+		<title>Star Wars: Episode IV - A New Hope</title>
+		<classification>14</classification>
+		<description>Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.</description>
+		<release_date>1977-05-25</release_date>
+		<revenue>775512064.0</revenue>
+		<poster>https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg</poster>
+		<genres>
+			<genre>Action</genre>
+			<genre>Adventure</genre>
+			<genre>Fantasy</genre>
+			<genre>Sci-fi</genre>
+			<!-- ... -->
+		</genres>
+		<writers>
+			<writer>George Lucas</writer>
+			<!-- ... -->
+		</writers>
+		<directors>
+			<director>George Lucas</director>
+			<!-- ... -->
+		</directors>
+		<languages>
+			<language>English</language>
+			<!-- ... -->
+		</languages>
+		<companies>
+			<company country="United States" logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Lucasfilm_logo.svg/800px-Lucasfilm_logo.svg.png">
+				Lucasfilm
+			</company>
+			<!-- ... -->
+		</companies>
+		<characters>
+			<character actor="Mark Hamill" protagonist="true">Luke Skywalker</character>
+			<character actor="Harrison Ford" protagonist="true">Han Solo</character>
+			<character actor="Anthony Daniels">C-3PO</character> <!-- Valor default de protagonist é false -->
+			<character actor="Kenny Baker">R2-D2</character>
+			<!-- ... -->
+		</characters>
 	</movie>
 </movies>
