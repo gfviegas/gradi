@@ -14,7 +14,7 @@
     "cheerio": "^1.0.0-rc.3",
     "form-data": "^2.5.1",
     "parse5": "^5.1.0",
-    "xmldom": "^0.1.27",
+    "xmldom": "^0.6.0",
     "xmlserializer": "^0.6.1",
     "xpath": "^0.0.27"
   }
